@@ -1,1 +1,0 @@
-import {ProductGrid} from '@/components/Catalog'; export default function Category({params}:{params:{locale:string;slug:string}}){return <ProductGrid locale={params.locale as 'de'|'en'} category={params.slug}/>}
