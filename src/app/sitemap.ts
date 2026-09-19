@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next'; export default function sitemap():MetadataRoute.Sitemap{const base='https://diamond-cleaning.example'; return ['de','en'].flatMap(l=>['','shop','about','contact','faq','cart'].map(p=>({url:`${base}/${l}/${p}`,lastModified:new Date()})))}
