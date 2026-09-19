@@ -1,4 +1,4 @@
-:root { --color-primary: #0a1e3e; --color-accent: #f6c321; --color-text: #222222; --color-text-light: #555555; --color-bg: #FFFFFF; --color-bg-alt: #F5F5F5; --color-border: #E0E0E0; --font-body: 'Barlow', system-ui, Arial, sans-serif; --font-heading: 'Barlow Condensed', system-ui, Arial, sans-serif; --spacing-xs: 0.25rem; --spacing-sm: 0.5rem; --spacing-md: 1rem; --spacing-lg: 2rem; --spacing-xl: 4rem; --radius-sm: 2px; --radius-md: 4px; --transition: all 0.2s ease-in-out; }
+:root { --color-primary: #f6c321; --color-accent: #e6b400; --color-text: #ffffff; --color-text-light: #a0aec0; --color-bg: #0a1e3e; --color-bg-alt: #0e1f42; --color-border: #1a325a; --font-body: 'Barlow', system-ui, Arial, sans-serif; --font-heading: 'Barlow Condensed', system-ui, Arial, sans-serif; --spacing-xs: 0.25rem; --spacing-sm: 0.5rem; --spacing-md: 1rem; --spacing-lg: 2rem; --spacing-xl: 4rem; --radius-sm: 2px; --radius-md: 4px; --transition: all 0.2s ease-in-out; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: var(--font-body); color: var(--color-text); background-color: var(--color-bg); line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
 main { flex: 1; }
@@ -6,16 +6,16 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); text-transform: upper
 a { color: var(--color-primary); text-decoration: none; transition: var(--transition); }
 a:hover { color: var(--color-text); }
 img { max-width: 100%; height: auto; display: block; }
-button, .btn { display: inline-block; background-color: var(--color-primary); color: #fff; border: none; padding: var(--spacing-sm) var(--spacing-lg); font-family: var(--font-heading); text-transform: uppercase; cursor: pointer; border-radius: var(--radius-sm); transition: var(--transition); font-size: 1rem; text-align: center; }
-button:hover, .btn:hover { background-color: var(--color-text); color: #fff; }
-.btn-accent { background-color: var(--color-accent); color: var(--color-text); }
-.btn-accent:hover { background-color: #e6b400; color: var(--color-text); }
+button, .btn { display: inline-block; background-color: var(--color-primary); color: #0a1e3e; border: none; padding: var(--spacing-sm) var(--spacing-lg); font-family: var(--font-heading); text-transform: uppercase; cursor: pointer; border-radius: var(--radius-sm); transition: var(--transition); font-size: 1rem; text-align: center; font-weight: bold; }
+button:hover, .btn:hover { background-color: var(--color-text); color: #0a1e3e; }
+.btn-accent { background-color: var(--color-accent); color: #0a1e3e; }
+.btn-accent:hover { background-color: #d5a616; color: #0a1e3e; }
 .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-md); }
 .grid { display: grid; gap: var(--spacing-lg); }
-header { border-bottom: 1px solid var(--color-border); background: #fff; position: sticky; top: 0; z-index: 100; }
-.header-top { background: var(--color-bg-alt); padding: var(--spacing-xs) 0; font-size: 0.8rem; text-align: right; }
+header { border-bottom: 1px solid var(--color-border); background: var(--color-bg-alt); position: sticky; top: 0; z-index: 100; }
+.header-top { background: #07152b; padding: var(--spacing-xs) 0; font-size: 0.8rem; text-align: right; }
 .lang-switcher button { background: none; color: var(--color-text-light); padding: 0 var(--spacing-xs); font-size: 0.8rem; }
-.lang-switcher button.active { font-weight: bold; color: var(--color-text); }
+.lang-switcher button.active { font-weight: bold; color: var(--color-primary); }
 .header-main { display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-md) 0; }
 .logo img { height: 40px; }
 nav ul { display: flex; list-style: none; gap: var(--spacing-lg); }
@@ -33,4 +33,5 @@ footer a:hover { color: var(--color-primary); }
 .mb-lg { margin-bottom: var(--spacing-lg); }
 .py-xl { padding: var(--spacing-xl) 0; }
 .bg-light { background-color: var(--color-bg-alt); }
+input, select, textarea { background-color: var(--color-bg-alt); color: var(--color-text); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: var(--spacing-sm); }
 @media (max-width: 768px) { nav ul { display: none; } .header-main { flex-direction: column; gap: var(--spacing-md); } }

@@ -1,5 +1,5 @@
 export const config = {
     brandName: "DIAMOND",
-    colors: { primary: "#0a1e3e", accent: "#f6c321" },
+    colors: { primary: "#f6c321", accent: "#e6b400" },
     contact: { email: "info@diamond.com", phone: "+49123456789" }
 };

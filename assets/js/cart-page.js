@@ -15,7 +15,7 @@ export async function initCartPage() {
             const itemTotal = p.price * item.quantity;
             total += itemTotal;
             const div = document.createElement('div'); div.className = 'cart-item';
-            div.innerHTML = '<div style="display:flex; gap:1rem; align-items:center; margin-bottom:1rem; border-bottom:1px solid #ccc; padding-bottom:1rem;"><img src="' + p.images[0] + '" width="50"><div style="flex:1;"><h4>' + t.name + '</h4><div>' + formatPrice(p.price, lang) + '</div></div><div><input type="number" min="1" value="' + item.quantity + '" class="qty-input" data-id="' + p.id + '" style="width:60px;"></div><div>' + formatPrice(itemTotal, lang) + '</div><button class="remove-btn btn" data-id="' + p.id + '">X</button></div>';
+            div.innerHTML = '<div style="display:flex; gap:1rem; align-items:center; margin-bottom:1rem; border-bottom:1px solid var(--color-border); padding-bottom:1rem;"><img src="' + p.images[0] + '" width="50"><div style="flex:1;"><h4>' + t.name + '</h4><div>' + formatPrice(p.price, lang) + '</div></div><div><input type="number" min="1" value="' + item.quantity + '" class="qty-input" data-id="' + p.id + '" style="width:60px;"></div><div>' + formatPrice(itemTotal, lang) + '</div><button class="remove-btn btn" data-id="' + p.id + '">X</button></div>';
             container.appendChild(div);
         });
         document.getElementById('cart-total').textContent = formatPrice(total, lang);
