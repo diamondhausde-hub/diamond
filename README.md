@@ -1,6 +1,19 @@
-# DIAMOND Cleaning Catalog
+# DIAMOND Cleaning Solutions — Catalog Storefront
 
-Production-ready bilingual catalog storefront for DIAMOND cleaning supplies. Built with Next.js App Router, TypeScript, Tailwind CSS and local JSON catalog data. German is the default language; English is available at `/en/...`.
+Bilingual (de/en) cleaning product catalog built with **Next.js App Router**, TypeScript, Tailwind CSS, and static HTML export for GitHub Pages deployment.
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router) with `output: 'export'` for static hosting
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Data**: Local JSON catalog (`src/data/products.json`, `src/data/de.json`, `src/data/en.json`)
+- **No backend required** — all pages pre-rendered at build time
+
+## Live Site
+
+- German (default): `/de`
+- English: `/en`
 
 ## Run locally
 
@@ -9,34 +22,45 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:3000/de`. For a production check use `npm run build && npm start`.
+Open `http://localhost:3000/de`. For a production build:
 
-## Project map
+```bash
+npm run build
+npm start
+```
 
-- `src/app/[locale]` – localized routes: home, shop, categories, product detail, about, contact, FAQ, legal pages and inquiry cart.
-- `src/components` – header, footer, cookie notice and reusable catalog/product UI.
-- `src/data/products.json` – 32 sample products with bilingual names, descriptions, specifications, usage and safety copy.
-- `src/data/de.json`, `src/data/en.json` – all interface copy and legal-page labels.
-- `src/lib/config.ts` – brand colour, contact placeholders and category registry.
-- `public/products` – neutral SVG product placeholders that can be replaced one-for-one.
+## Project Structure
 
-## Add a product
+- `src/app/[locale]/` — localized routes: home, shop, categories, product detail, about, contact, FAQ, legal pages, and inquiry cart
+- `src/components/` — header, footer, product grid, and client-side forms (CartForm, ContactForm, FaqForm, ProductDetailActions)
+- `src/data/` — product catalog and bilingual interface copy
+- `src/lib/config.ts` — brand colors, categories, legal slugs, contact placeholders
+- `public/products/` — neutral SVG product placeholders
+- `public/index.html` — root redirect to `/de`
 
-Add an object to `src/data/products.json` with the existing shape (`id`, `slug`, `category`, `type`, `surface`, `sizes`, `price`, `stock`, `badges`, `images`, `name`, `description`, `specs`, `usage`, `safety`). Put its image in `public/products` and reference it as `/products/file.svg` (or replace with an optimized image URL when moving to a CMS).
+## GitHub Pages Deployment
 
-## Add a language
+1. Set the GitHub Pages source to the `fix/asset-paths-and-design` branch (or merge to `main`)
+2. The `out/` folder is generated after `npm run build` — push it or configure CI to deploy automatically
+3. No database, payment provider, or tracking script is required
 
-Create another translation file beside `de.json` and `en.json`, then add the locale to the language links in `src/components/Header.tsx`. Product objects use the same locale keys for names, descriptions, specifications, usage and safety. Add the locale to any static generation strategy if you later enable full static export.
+## Add a Product
 
-## Deploy
+Add an object to `src/data/products.json` with the existing shape (`id`, `slug`, `category`, `type`, `surface`, `sizes`, `price`, `stock`, `badges`, `images`, `name`, `description`, `specs`, `usage`, `safety`). Put its image in `public/products` and reference it as `/products/file.svg`.
 
-Deploy the repository to Vercel or Netlify with Node.js 18+. No database, payment provider or tracking script is required. The inquiry form is intentionally front-end only; connect it to an email/API route before accepting live requests.
+## Add a Language
 
-## Before going live
+Create another translation file beside `de.json` and `en.json`, then add the locale to the language links in `src/components/Header.tsx`.
 
-1. Replace `public/diamond-logo.svg` only if the supplied logo is not the final artwork; the current file is the provided DIAMOND logo.
-2. Replace the neutral SVG product images with approved product photography and update alt text/product facts.
-3. Update `src/lib/config.ts` with the real legal entity, address, phone, email and brand colours.
-4. Replace the clearly marked legal placeholders under `/legal/*` with reviewed German legal texts.
-5. Replace the sample domain in `src/app/sitemap.ts` and add a real form/email integration.
-6. Review every product claim, material, availability and eco label before publication. No certification or “Made in Germany” claim is made by default.
+## Before Going Live
+
+1. Replace `public/diamond-logo.svg` with final artwork if needed
+2. Replace neutral SVG product images with approved product photography
+3. Update `src/lib/config.ts` with the real legal entity, address, phone, and email
+4. Replace the legal placeholders under `/legal/*` with reviewed German legal texts
+5. Connect the inquiry form to an email/API route
+6. Review every product claim, material, availability, and eco label before publication
+
+## License
+
+Internal project — DIAMOND Cleaning Solutions.
