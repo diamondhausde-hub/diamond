@@ -1,2 +1,43 @@
-import Link from 'next/link'; import Image from 'next/image'; import {ArrowRight, CheckCircle2, ShieldCheck, Ruler, Recycle} from 'lucide-react'; import products from '@/data/products.json'; import de from '@/data/de.json'; import en from '@/data/en.json'; import {categories} from '@/lib/config';
-export default function Home({params}:{params:{locale:string}}){const locale=params.locale as 'de'|'en'; const t=locale==='de'?de:en; const best=products.filter(p=>p.badges.includes('Bestseller')).slice(0,4); return <><section className="border-b bg-slate-50"><div className="container grid min-h-[560px] items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr]"><div><p className="mb-6 text-xs font-bold uppercase tracking-[.2em] text-diamond">{t.home.eyebrow}</p><h1 className="display max-w-3xl text-6xl font-bold leading-[.94] md:text-8xl">{t.home.title}</h1><p className="mt-7 max-w-xl text-lg leading-8 text-slate-600">{t.home.body}</p><div className="mt-9 flex flex-wrap gap-3"><Link href="/de/shop" className="focus-ring inline-flex items-center gap-3 bg-diamond px-6 py-4 text-sm font-bold text-white hover:bg-blue-900">{t.home.cta}<ArrowRight size={17}/></Link><Link href="/de/about" className="focus-ring inline-flex items-center border border-slate-300 px-6 py-4 text-sm font-bold hover:border-diamond hover:text-diamond">{t.home.secondary}</Link></div></div><div className="relative aspect-square max-w-xl justify-self-end"><div className="absolute inset-8 rotate-3 border-2 border-diamond/20"></div><div className="absolute inset-16 -rotate-6 border border-signal"></div><Image src="/products/p10.svg" alt="DIAMOND Bodenwischer Produkt" fill className="object-contain p-8" priority/></div></div></section><section className="container py-20"><div className="mb-8 flex items-end justify-between"><h2 className="display text-4xl font-bold">{t.home.categories}</h2><Link href="/de/shop" className="text-sm font-bold text-diamond">{t.common.viewAll} →</Link></div><div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{categories.map((c,i)=><Link key={c.slug} href={'/de/category/'+c.slug} className="group border border-slate-200 p-6 transition hover:border-diamond"><span className="text-xs font-bold text-slate-400">0{i+1}</span><h3 className="mt-10 text-xl font-bold group-hover:text-diamond">{c[locale]}</h3><span className="mt-4 inline-flex text-slate-400 group-hover:text-diamond"><ArrowRight size={18}/></span></Link>)}</div></section><section className="bg-slate-50 py-20"><div className="container"><div className="mb-8 flex items-end justify-between"><h2 className="display text-4xl font-bold">{t.home.bestsellers}</h2><Link href="/de/shop" className="text-sm font-bold text-diamond">{t.common.viewAll} →</Link></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{best.map(p=><div key={p.id} className="border bg-white"><Image src={p.images[0]} alt={p.name[locale]} width={500} height={375} className="w-full"/><div className="p-4"><h3 className="font-bold">{p.name[locale]}</h3><p className="mt-2 font-bold">{p.price.toFixed(2).replace('.',',')} €</p></div></div>)}</div></div></section><section className="container py-20"><h2 className="display mb-10 text-4xl font-bold">{t.home.why}</h2><div className="grid gap-8 border-y py-8 md:grid-cols-4">{[[Ruler,'Technische Klarheit','Daten, Größen und Anwendung auf einen Blick.'],[ShieldCheck,'Verlässlich im Einsatz','Materialien und Konstruktion für tägliche Nutzung.'],[CheckCircle2,'Konsequent praktisch','Produkte, die ohne Umwege funktionieren.'],[Recycle,'Bewusst verpackt','Weniger Material, mehr Wiederverwendung.']].map(([Icon,title,text]:any)=><div key={title as string}><Icon className="text-diamond" size={25}/><h3 className="mt-4 font-bold">{title}</h3><p className="mt-2 text-sm leading-6 text-slate-600">{text}</p></div>)}</div></section><section className="bg-diamond py-14 text-white"><div className="container flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><h2 className="display text-3xl font-bold">{t.home.newsletter}</h2><p className="mt-2 text-blue-100">{t.home.newsletterBody}</p></div><form className="flex w-full max-w-md gap-2"><input aria-label={t.home.email} placeholder={t.home.email} className="min-w-0 flex-1 bg-white px-4 py-3 text-sm text-ink"/><button className="bg-signal px-5 py-3 text-sm font-bold text-ink">{t.home.subscribe}</button></form></div></section></>}
+import Link from 'next/link';
+import Image from 'next/image';
+import {ArrowRight, CheckCircle2, ShieldCheck, Ruler, Recycle} from 'lucide-react';
+import products from '@/data/products.json';
+import de from '@/data/de.json';
+import en from '@/data/en.json';
+import {categories} from '@/lib/config';
+
+export async function generateStaticParams() {
+  return [{locale: 'de'}, {locale: 'en'}];
+}
+
+export default function Home({params}: {params: {locale: string}}) {
+  const locale = params.locale as 'de'|'en';
+  const t = locale === 'de' ? de : en;
+  const best = products.filter((p) => p.badges.includes('Bestseller')).slice(0, 4);
+  return (
+    <>
+      <section className="border-b bg-slate-50">
+        <div className="container grid min-h-[560px] items-center gap-12 py-16 lg:grid-cols-[1.05fr_.95fr]">
+          <div>
+            <p className="mb-6 text-xs font-bold uppercase tracking-[.2em] text-diamond">{t.home.eyebrow}</p>
+            <h1 className="display max-w-3xl text-6xl font-bold leading-[.94] md:text-8xl">{t.home.title}</h1>
+            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600">{t.home.body}</p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href="/de/shop" className="focus-ring inline-flex items-center gap-3 bg-diamond px-6 py-4 text-sm font-bold text-white hover:bg-blue-900">
+                {t.home.cta}<ArrowRight size={17}/>
+              </Link>
+              <Link href="/de/about" className="focus-ring inline-flex items-center border border-slate-300 px-6 py-4 text-sm font-bold hover:border-diamond hover:text-diamond">
+                {t.home.secondary}
+              </Link>
+            </div>
+          </div>
+          <div className="relative aspect-square max-w-xl justify-self-end">
+            <div className="absolute inset-8 rotate-3 border-2 border-diamond/20"></div>
+            <div className="absolute inset-16 -rotate-6 border border-signal"></div>
+            <Image src="/products/p10.svg" alt="DIAMOND Bodenwischer Produkt" fill className="object-contain p-8" priority/>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
