@@ -1,32 +1,3 @@
-import de from '@/data/de.json';
-import en from '@/data/en.json';
-import {legalSlugs} from '@/lib/config';
-import InfoPage from '@/components/InfoPage';
-
-export async function generateStaticParams() {
-  const params: {locale: string; slug: string}[] = [];
-  legalSlugs.forEach((slug) => {
-    ['de', 'en'].forEach((locale) => {
-      params.push({locale, slug});
-    });
-  });
-  return params;
-}
-
-export default function Legal({params}: {params: {locale: string; slug: string}}) {
-  const t = params.locale === 'de' ? de : en;
-  const title = (t.pages as any)[params.slug] || t.pages.impressum;
-  return (
-    <InfoPage title={title}>
-      <p className="mb-7 text-sm font-bold text-signal-700">{t.pages.legalNote}</p>
-      <div className="space-y-5 text-sm leading-8 text-slate-600">
-        <p>
-          <strong className="text-ink">DIAMOND Cleaning Solutions</strong>
-          <br/>Musterstraße 12<br/>10115 Berlin<br/>Deutschland
-        </p>
-        <p>Vertreten durch: Geschäftsführung (Platzhalter)<br/>E-Mail: service@diamond-cleaning.example<br/>Telefon: +49 (0) 30 555 018 40</p>
-        <p>Die Inhalte dieser Seite dienen als editierbare Platzhalter für das finale Impressum, Datenschutz, AGB und Widerrufsbelehrung. Bitte vor Veröffentlichung durch eine qualifizierte Rechtsberatung prüfen und mit den tatsächlichen Unternehmensdaten ersetzen.</p>
-      </div>
-    </InfoPage>
-  );
-}
+import de from '@/data/de.json'; import en from '@/data/en.json'; import InfoPage from '@/components/InfoPage'; import {legalSlugs} from '@/lib/config';
+export function generateStaticParams() { return legalSlugs.flatMap(slug => ['de','en'].map(locale => ({locale, slug}))); }
+export default function Legal({params}:{params:{locale:string;slug:string}}){const t=params.locale==='de'?de:en; const title=(t.pages as any)[params.slug]||t.pages.impressum; return <InfoPage title={title}><p className="mb-7 text-sm font-bold text-signal-700">{t.pages.legalNote}</p><div className="space-y-5 text-sm leading-8 text-slate-600"><p><strong className="text-ink">DIAMOND Cleaning Solutions</strong><br/>Musterstraße 12<br/>10115 Berlin<br/>Deutschland</p><p>Vertreten durch: Geschäftsführung (Platzhalter)<br/>E-Mail: service@diamond-cleaning.example<br/>Telefon: +49 (0) 30 555 018 40</p><p>Die Inhalte dieser Seite dienen als editierbare Platzhalter für das finale Impressum, Datenschutz, AGB und Widerrufsbelehrung. Bitte vor Veröffentlichung durch eine qualifizierte Rechtsberatung prüfen und mit den tatsächlichen Unternehmensdaten ersetzen.</p></div></InfoPage>}

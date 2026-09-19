@@ -1,7 +1,31 @@
-import FaqForm from '@/components/FaqForm';
+import InfoPage from '@/components/InfoPage';
+import de from '@/data/de.json'; import en from '@/data/en.json';
 
-export async function generateStaticParams() { return [{locale:'de'},{locale:'en'}]; }
+export function generateStaticParams() { return ['de','en'].map(locale => ({locale})); }
 
 export default function Faq({params}:{params:{locale:string}}) {
-  return <FaqForm locale={params.locale as 'de'|'en'}/>;
+  const t = params.locale==='de'?de:en;
+  const qs = params.locale==='de'?[
+    ['Wie funktioniert der Anfragekorb?','Legen Sie Produkte ab und senden Sie uns anschließend Ihre Mengenanfrage. Wir melden uns mit Verfügbarkeit und Konditionen.'],
+    ['Sind die Produkte sofort lieferbar?','Die Verfügbarkeit sehen Sie direkt am Produkt. Für größere Mengen prüfen wir den Bestand individuell.'],
+    ['Wo finde ich technische Daten?','Auf jeder Produktseite finden Sie Maße, Material, Verpackung und Anwendungshinweise.'],
+    ['Gibt es gewerbliche Konditionen?','Ja. Senden Sie uns Ihre Anfrage mit gewünschter Menge und Lieferadresse.']
+  ]:[
+    ['How does the inquiry cart work?','Add products and send us your quantity request. We will respond with availability and terms.'],
+    ['Are products available immediately?','Availability is shown on each product. We check larger quantities individually.'],
+    ['Where can I find technical data?','Each product page includes dimensions, material, packaging and usage notes.'],
+    ['Do you offer trade terms?','Yes. Send us your requested quantities and delivery address.']
+  ];
+  return (
+    <InfoPage title={t.pages.faqTitle}>
+      <div className="divide-y border-y">
+        {qs.map(([q,a])=>(
+          <details key={q} className="py-5">
+            <summary className="cursor-pointer font-bold">{q}</summary>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">{a}</p>
+          </details>
+        ))}
+      </div>
+    </InfoPage>
+  );
 }
