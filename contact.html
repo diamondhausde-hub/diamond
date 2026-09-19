@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DIAMOND Cleaning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .contact-form { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: var(--spacing-md); }
+        .form-group label { display: block; margin-bottom: var(--spacing-xs); font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: var(--spacing-sm); border: 1px solid var(--color-border); border-radius: var(--radius-sm); font-family: var(--font-body); }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main class="container py-xl">
+        <h1 class="text-center" data-i18n="nav_contact">Contact</h1>
+        <form class="contact-form mt-lg" action="mailto:info@diamond-cleaning.example.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label data-i18n="form_name">Name</label>
+                <input type="text" required>
+            </div>
+            <div class="form-group">
+                <label data-i18n="form_email">Email</label>
+                <input type="email" required>
+            </div>
+            <div class="form-group">
+                <label data-i18n="form_message">Message</label>
+                <textarea rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn" data-i18n="form_submit">Submit</button>
+        </form>
+    </main>
+    <footer></footer>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
