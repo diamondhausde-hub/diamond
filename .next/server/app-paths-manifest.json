@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/faq/page": "app/[locale]/faq/page.js",
+  "/[locale]/contact/page": "app/[locale]/contact/page.js",
+  "/[locale]/category/[slug]/page": "app/[locale]/category/[slug]/page.js",
+  "/[locale]/shop/page": "app/[locale]/shop/page.js",
+  "/[locale]/legal/[slug]/page": "app/[locale]/legal/[slug]/page.js",
+  "/[locale]/cart/page": "app/[locale]/cart/page.js",
+  "/[locale]/product/[slug]/page": "app/[locale]/product/[slug]/page.js",
+  "/[locale]/page": "app/[locale]/page.js"
+}
