@@ -5,7 +5,7 @@
     "category": "glass",
     "price": 7.24,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/glass,cleaning?lock=1"
     ],
     "i18n": {
       "de": {
@@ -32,7 +32,7 @@
     "category": "floor",
     "price": 29.31,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/floor,cleaning?lock=2"
     ],
     "i18n": {
       "de": {
@@ -59,7 +59,7 @@
     "category": "cloths",
     "price": 26.11,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/towel,cleaning?lock=3"
     ],
     "i18n": {
       "de": {
@@ -86,7 +86,7 @@
     "category": "brushes",
     "price": 35.88,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/brush,cleaning?lock=4"
     ],
     "i18n": {
       "de": {
@@ -113,7 +113,7 @@
     "category": "cleaners",
     "price": 33.58,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/spray,detergent?lock=5"
     ],
     "i18n": {
       "de": {
@@ -140,7 +140,7 @@
     "category": "accessories",
     "price": 44.64,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/bucket,cleaning?lock=6"
     ],
     "i18n": {
       "de": {
@@ -167,7 +167,7 @@
     "category": "glass",
     "price": 42.6,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/glass,cleaning?lock=7"
     ],
     "i18n": {
       "de": {
@@ -194,7 +194,7 @@
     "category": "floor",
     "price": 14.23,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/floor,cleaning?lock=8"
     ],
     "i18n": {
       "de": {
@@ -221,7 +221,7 @@
     "category": "mops",
     "price": 34.22,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/mop,cleaning?lock=9"
     ],
     "i18n": {
       "de": {
@@ -248,7 +248,7 @@
     "category": "cloths",
     "price": 26.43,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/towel,cleaning?lock=10"
     ],
     "i18n": {
       "de": {
@@ -275,7 +275,7 @@
     "category": "brushes",
     "price": 19.21,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/brush,cleaning?lock=11"
     ],
     "i18n": {
       "de": {
@@ -302,7 +302,7 @@
     "category": "cleaners",
     "price": 41.82,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/spray,detergent?lock=12"
     ],
     "i18n": {
       "de": {
@@ -329,7 +329,7 @@
     "category": "accessories",
     "price": 12.43,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/bucket,cleaning?lock=13"
     ],
     "i18n": {
       "de": {
@@ -356,7 +356,7 @@
     "category": "glass",
     "price": 21.12,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/glass,cleaning?lock=14"
     ],
     "i18n": {
       "de": {
@@ -383,7 +383,7 @@
     "category": "floor",
     "price": 29.5,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/floor,cleaning?lock=15"
     ],
     "i18n": {
       "de": {
@@ -410,7 +410,7 @@
     "category": "mops",
     "price": 21.09,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/mop,cleaning?lock=16"
     ],
     "i18n": {
       "de": {
@@ -437,7 +437,7 @@
     "category": "cloths",
     "price": 13.95,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/towel,cleaning?lock=17"
     ],
     "i18n": {
       "de": {
@@ -464,7 +464,7 @@
     "category": "brushes",
     "price": 18.06,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/brush,cleaning?lock=18"
     ],
     "i18n": {
       "de": {
@@ -491,7 +491,7 @@
     "category": "cleaners",
     "price": 30.24,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/spray,detergent?lock=19"
     ],
     "i18n": {
       "de": {
@@ -518,7 +518,7 @@
     "category": "accessories",
     "price": 11.6,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/bucket,cleaning?lock=20"
     ],
     "i18n": {
       "de": {
@@ -545,7 +545,7 @@
     "category": "glass",
     "price": 28.55,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/glass,cleaning?lock=21"
     ],
     "i18n": {
       "de": {
@@ -572,7 +572,7 @@
     "category": "floor",
     "price": 27.8,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/floor,cleaning?lock=22"
     ],
     "i18n": {
       "de": {
@@ -599,7 +599,7 @@
     "category": "mops",
     "price": 43.64,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/mop,cleaning?lock=23"
     ],
     "i18n": {
       "de": {
@@ -626,7 +626,7 @@
     "category": "cloths",
     "price": 23.29,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/towel,cleaning?lock=24"
     ],
     "i18n": {
       "de": {
@@ -653,7 +653,7 @@
     "category": "brushes",
     "price": 14.43,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/brush,cleaning?lock=25"
     ],
     "i18n": {
       "de": {
@@ -680,7 +680,7 @@
     "category": "cleaners",
     "price": 18.86,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/spray,detergent?lock=26"
     ],
     "i18n": {
       "de": {
@@ -707,7 +707,7 @@
     "category": "accessories",
     "price": 7.93,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/bucket,cleaning?lock=27"
     ],
     "i18n": {
       "de": {
@@ -734,7 +734,7 @@
     "category": "glass",
     "price": 27.9,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/glass,cleaning?lock=28"
     ],
     "i18n": {
       "de": {
@@ -761,7 +761,7 @@
     "category": "floor",
     "price": 40.3,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/floor,cleaning?lock=29"
     ],
     "i18n": {
       "de": {
@@ -788,7 +788,7 @@
     "category": "mops",
     "price": 36.31,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/mop,cleaning?lock=30"
     ],
     "i18n": {
       "de": {
@@ -815,7 +815,7 @@
     "category": "cloths",
     "price": 42.95,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/towel,cleaning?lock=31"
     ],
     "i18n": {
       "de": {
@@ -842,7 +842,7 @@
     "category": "brushes",
     "price": 15.69,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/brush,cleaning?lock=32"
     ],
     "i18n": {
       "de": {
@@ -869,7 +869,7 @@
     "category": "cleaners",
     "price": 23.13,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/spray,detergent?lock=33"
     ],
     "i18n": {
       "de": {
@@ -896,7 +896,7 @@
     "category": "accessories",
     "price": 42.64,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/bucket,cleaning?lock=34"
     ],
     "i18n": {
       "de": {
@@ -923,7 +923,7 @@
     "category": "glass",
     "price": 34.49,
     "images": [
-      "assets/img/products/placeholder.svg"
+      "https://loremflickr.com/400/400/glass,cleaning?lock=35"
     ],
     "i18n": {
       "de": {
