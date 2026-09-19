@@ -1,0 +1,2 @@
+export async function getProducts() { if (window.allProducts) return window.allProducts; try { const res = await fetch('./data/products.json'); const data = await res.json(); window.allProducts = data; return data; } catch (e) { console.error('Failed to load products', e); return []; } }
+export function formatPrice(price, lang) { return new Intl.NumberFormat(lang === 'de' ? 'de-DE' : 'en-US', { style: 'currency', currency: 'EUR' }).format(price); }

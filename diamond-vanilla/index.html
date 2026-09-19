@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIAMOND Cleaning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .hero { background-color: var(--color-bg-alt); padding: var(--spacing-xl) 0; text-align: center; }
+        .hero h1 { font-size: 3rem; color: var(--color-primary); }
+        .hero p { font-size: 1.2rem; margin-bottom: var(--spacing-lg); }
+        .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--spacing-md); margin-top: var(--spacing-lg); }
+        .cat-card { background: #fff; padding: var(--spacing-md); text-align: center; border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+        .cat-card:hover { border-color: var(--color-primary); }
+        .product-card { border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: var(--spacing-md); text-align: center; background: #fff; }
+        .product-card img { margin: 0 auto var(--spacing-md); max-height: 200px; }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 data-i18n="hero_title">Gründlich. Zuverlässig. Sauber.</h1>
+                <p data-i18n="hero_subtitle">Deutsche Ingenieurskunst für perfekte Sauberkeit.</p>
+                <a href="shop.html" class="btn btn-accent" data-i18n="btn_shop_now">Shop Now</a>
+            </div>
+        </section>
+        <section class="container py-xl">
+            <h2 class="text-center" data-i18n="filter_category">Categories</h2>
+            <div class="categories-grid">
+                <a href="shop.html?category=glass" class="cat-card"><h3 data-i18n="cat_glass">Glass</h3></a>
+                <a href="shop.html?category=floor" class="cat-card"><h3 data-i18n="cat_floor">Floor</h3></a>
+                <a href="shop.html?category=mops" class="cat-card"><h3 data-i18n="cat_mops">Mops</h3></a>
+                <a href="shop.html?category=cloths" class="cat-card"><h3 data-i18n="cat_cloths">Cloths</h3></a>
+            </div>
+        </section>
+        <section class="container py-xl bg-light">
+            <h2 class="text-center">Bestsellers</h2>
+            <div class="grid" id="bestseller-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

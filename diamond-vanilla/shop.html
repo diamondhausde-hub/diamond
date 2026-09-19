@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - DIAMOND Cleaning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .shop-layout { display: grid; grid-template-columns: 250px 1fr; gap: var(--spacing-lg); align-items: start; }
+        .sidebar { background: var(--color-bg-alt); padding: var(--spacing-md); border-radius: var(--radius-sm); }
+        .product-card { border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: var(--spacing-md); text-align: center; background: #fff; }
+        .product-card img { margin: 0 auto var(--spacing-md); max-height: 200px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--spacing-md); }
+        @media (max-width: 768px) { .shop-layout { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main class="container py-xl">
+        <h1 data-i18n="nav_shop">Shop</h1>
+        <div class="shop-layout mt-lg">
+            <aside class="sidebar">
+                <h3 data-i18n="filter_category">Category</h3>
+                <select class="filter-category" style="width: 100%; padding: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+                    <option value="">All</option>
+                    <option value="glass">Glass</option>
+                    <option value="floor">Floor</option>
+                    <option value="mops">Mops</option>
+                </select>
+            </aside>
+            <div class="product-grid" id="product-grid"></div>
+        </div>
+    </main>
+    <footer></footer>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

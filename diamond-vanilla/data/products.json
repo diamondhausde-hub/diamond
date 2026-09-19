@@ -1,0 +1,947 @@
+[
+  {
+    "id": "p1",
+    "slug": "product-1",
+    "category": "glass",
+    "price": 7.24,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Glasreinigungstücher 40 Stk.",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Glass Cleaning Wipes 40 pcs",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p2",
+    "slug": "product-2",
+    "category": "floor",
+    "price": 29.31,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Bodenreinigungstücher",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Floor Cleaning Wipes",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p3",
+    "slug": "product-3",
+    "category": "cloths",
+    "price": 26.11,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cloths Produkt 3",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cloths Product 3",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p4",
+    "slug": "product-4",
+    "category": "brushes",
+    "price": 35.88,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium brushes Produkt 4",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium brushes Product 4",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p5",
+    "slug": "product-5",
+    "category": "cleaners",
+    "price": 33.58,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cleaners Produkt 5",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cleaners Product 5",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p6",
+    "slug": "product-6",
+    "category": "accessories",
+    "price": 44.64,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium accessories Produkt 6",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium accessories Product 6",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p7",
+    "slug": "product-7",
+    "category": "glass",
+    "price": 42.6,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium glass Produkt 7",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium glass Product 7",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p8",
+    "slug": "product-8",
+    "category": "floor",
+    "price": 14.23,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium floor Produkt 8",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium floor Product 8",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p9",
+    "slug": "product-9",
+    "category": "mops",
+    "price": 34.22,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium mops Produkt 9",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium mops Product 9",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p10",
+    "slug": "product-10",
+    "category": "cloths",
+    "price": 26.43,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cloths Produkt 10",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cloths Product 10",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p11",
+    "slug": "product-11",
+    "category": "brushes",
+    "price": 19.21,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium brushes Produkt 11",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium brushes Product 11",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p12",
+    "slug": "product-12",
+    "category": "cleaners",
+    "price": 41.82,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cleaners Produkt 12",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cleaners Product 12",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p13",
+    "slug": "product-13",
+    "category": "accessories",
+    "price": 12.43,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium accessories Produkt 13",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium accessories Product 13",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p14",
+    "slug": "product-14",
+    "category": "glass",
+    "price": 21.12,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium glass Produkt 14",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium glass Product 14",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p15",
+    "slug": "product-15",
+    "category": "floor",
+    "price": 29.5,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium floor Produkt 15",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium floor Product 15",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p16",
+    "slug": "product-16",
+    "category": "mops",
+    "price": 21.09,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium mops Produkt 16",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium mops Product 16",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p17",
+    "slug": "product-17",
+    "category": "cloths",
+    "price": 13.95,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cloths Produkt 17",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cloths Product 17",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p18",
+    "slug": "product-18",
+    "category": "brushes",
+    "price": 18.06,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium brushes Produkt 18",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium brushes Product 18",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p19",
+    "slug": "product-19",
+    "category": "cleaners",
+    "price": 30.24,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cleaners Produkt 19",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cleaners Product 19",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p20",
+    "slug": "product-20",
+    "category": "accessories",
+    "price": 11.6,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium accessories Produkt 20",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium accessories Product 20",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p21",
+    "slug": "product-21",
+    "category": "glass",
+    "price": 28.55,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium glass Produkt 21",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium glass Product 21",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p22",
+    "slug": "product-22",
+    "category": "floor",
+    "price": 27.8,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium floor Produkt 22",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium floor Product 22",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p23",
+    "slug": "product-23",
+    "category": "mops",
+    "price": 43.64,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium mops Produkt 23",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium mops Product 23",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p24",
+    "slug": "product-24",
+    "category": "cloths",
+    "price": 23.29,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cloths Produkt 24",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cloths Product 24",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p25",
+    "slug": "product-25",
+    "category": "brushes",
+    "price": 14.43,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium brushes Produkt 25",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium brushes Product 25",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p26",
+    "slug": "product-26",
+    "category": "cleaners",
+    "price": 18.86,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cleaners Produkt 26",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cleaners Product 26",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p27",
+    "slug": "product-27",
+    "category": "accessories",
+    "price": 7.93,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium accessories Produkt 27",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium accessories Product 27",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p28",
+    "slug": "product-28",
+    "category": "glass",
+    "price": 27.9,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium glass Produkt 28",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium glass Product 28",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p29",
+    "slug": "product-29",
+    "category": "floor",
+    "price": 40.3,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium floor Produkt 29",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium floor Product 29",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p30",
+    "slug": "product-30",
+    "category": "mops",
+    "price": 36.31,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium mops Produkt 30",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium mops Product 30",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p31",
+    "slug": "product-31",
+    "category": "cloths",
+    "price": 42.95,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cloths Produkt 31",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cloths Product 31",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p32",
+    "slug": "product-32",
+    "category": "brushes",
+    "price": 15.69,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium brushes Produkt 32",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium brushes Product 32",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p33",
+    "slug": "product-33",
+    "category": "cleaners",
+    "price": 23.13,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium cleaners Produkt 33",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium cleaners Product 33",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p34",
+    "slug": "product-34",
+    "category": "accessories",
+    "price": 42.64,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium accessories Produkt 34",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium accessories Product 34",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  },
+  {
+    "id": "p35",
+    "slug": "product-35",
+    "category": "glass",
+    "price": 34.49,
+    "images": [
+      "assets/img/products/placeholder.svg"
+    ],
+    "i18n": {
+      "de": {
+        "name": "Premium glass Produkt 35",
+        "description": "Gründlich. Zuverlässig. Sauber.",
+        "specs": {
+          "Größe": "Standard"
+        },
+        "usage": "Nach Bedarf anwenden."
+      },
+      "en": {
+        "name": "Premium glass Product 35",
+        "description": "Thorough. Reliable. Clean.",
+        "specs": {
+          "Size": "Standard"
+        },
+        "usage": "Use as needed."
+      }
+    }
+  }
+]

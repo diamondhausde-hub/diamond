@@ -1,0 +1,6 @@
+export function initCart() { window.cart = JSON.parse(localStorage.getItem('cart') || '[]'); updateCartCount(); }
+export function addToCart(productId, quantity = 1) { const existing = window.cart.find(item => item.id === productId); if (existing) existing.quantity += quantity; else window.cart.push({ id: productId, quantity }); saveCart(); }
+export function removeFromCart(productId) { window.cart = window.cart.filter(item => item.id !== productId); saveCart(); }
+export function updateQuantity(productId, quantity) { const item = window.cart.find(item => item.id === productId); if (item) { item.quantity = parseInt(quantity); if (item.quantity <= 0) removeFromCart(productId); else saveCart(); } }
+function saveCart() { localStorage.setItem('cart', JSON.stringify(window.cart)); updateCartCount(); if (window.renderCart) window.renderCart(); }
+function updateCartCount() { const count = window.cart.reduce((sum, item) => sum + item.quantity, 0); const badge = document.querySelector('.cart-count'); if (badge) badge.textContent = count; }

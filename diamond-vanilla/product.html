@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - DIAMOND Cleaning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .product-detail-layout { display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); }
+        .product-gallery img { width: 100%; border: 1px solid var(--color-border); border-radius: var(--radius-sm); }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: var(--spacing-md); }
+        .specs-table td { padding: var(--spacing-sm); border-bottom: 1px solid var(--color-border); }
+        @media (max-width: 768px) { .product-detail-layout { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main class="container py-xl">
+        <div class="product-detail-layout">
+            <div class="product-gallery">
+                <img id="product-image" src="" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h1 id="product-name">Loading...</h1>
+                <h2 id="product-price" style="color: var(--color-primary);"></h2>
+                <p id="product-desc" class="mb-lg"></p>
+                <div class="mb-lg">
+                    <label>Qty:</label>
+                    <input type="number" id="qty" value="1" min="1" style="width: 60px; padding: var(--spacing-sm);">
+                </div>
+                <button id="add-to-cart" class="btn btn-accent mb-lg">Add to Cart</button>
+                
+                <h3 class="mt-lg">Specifications</h3>
+                <table class="specs-table">
+                    <tbody id="product-specs"></tbody>
+                </table>
+                <h3 class="mt-lg">Usage</h3>
+                <p id="product-usage"></p>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
