@@ -1,1 +1,0 @@
-﻿export default function InfoPage({title,children}:{title:string;children:React.ReactNode}){return <div className="container min-h-[520px] py-16"><p className="text-xs font-bold uppercase tracking-[.18em] text-diamond">DIAMOND</p><h1 className="display mt-4 text-6xl font-bold">{title}</h1><div className="mt-10 max-w-3xl">{children}</div></div>}
