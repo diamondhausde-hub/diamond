@@ -7,6 +7,7 @@ import { isLocale } from "@/i18n/config";
 import { products } from "@/data/products";
 import { Logo } from "@/components/Logo";
 import { ProductVisual } from "@/components/products/ProductVisual";
+import { withBasePath } from "@/lib/paths";
 import { CatalogueActions } from "@/components/catalogue/CatalogueActions";
 import { buildPageMetadata } from "@/lib/seo";
 
@@ -60,7 +61,16 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
             >
               <div className="sm:col-span-3">
                 <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-ice">
-                  <ProductVisual variant={product.visual} className="p-3" />
+                  {product.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={withBasePath(product.image)}
+                      alt={item.name}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <ProductVisual variant={product.visual} className="p-3" />
+                  )}
                 </div>
               </div>
               <div className="sm:col-span-9">
@@ -87,11 +97,11 @@ export default async function CatalogPage({ params }: { params: Promise<{ locale
                     </dl>
                   </div>
                   <div>
-                    {item.sizes.length > 0 ? (
+                    {product.sizes.length > 0 ? (
                       <>
                         <p className="field-label">{messages.product.availableSizes}</p>
                         <div className="flex flex-wrap gap-2">
-                          {item.sizes.map((size) => (
+                          {product.sizes.map((size) => (
                             <span
                               key={size}
                               className="border border-line-strong px-3 py-1.5 text-[11px] font-medium text-navy"

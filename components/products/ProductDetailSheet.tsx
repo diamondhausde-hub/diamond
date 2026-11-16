@@ -9,6 +9,7 @@ import { useMediaQuery } from "@/components/useMediaQuery";
 import { useWholesale } from "@/components/wholesale/WholesaleProvider";
 import { ProductVisual } from "@/components/products/ProductVisual";
 import { getProduct, type ProductId } from "@/data/products";
+import { withBasePath } from "@/lib/paths";
 import { getDirection } from "@/i18n/config";
 
 type Props = {
@@ -27,9 +28,9 @@ export function ProductDetailSheet({ productId, onClose }: Props) {
   const [size, setSize] = useState<string | null>(null);
 
   useEffect(() => {
-    if (item?.sizes?.length) setSize(item.sizes[0]);
+    if (product?.sizes?.length) setSize(product.sizes[0]);
     else setSize(null);
-  }, [item]);
+  }, [product]);
 
   const rtl = getDirection(locale) === "rtl";
   const offscreen = isDesktop
@@ -98,17 +99,33 @@ export function ProductDetailSheet({ productId, onClose }: Props) {
                           <X aria-hidden="true" size={16} />
                         </button>
                       </Dialog.Close>
-                      <div className="mx-auto aspect-[4/5] w-full max-w-[320px] px-3 pb-3 pt-10">
-                        {product.image ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img
-                            src={product.image}
-                            alt={item.name}
-                            className="h-full w-full object-cover"
-                          />
-                        ) : (
-                          <ProductVisual variant={product.visual} />
-                        )}
+                      <div className="mx-auto w-full max-w-[320px] px-3 pb-3 pt-10">
+                        <div className="aspect-[4/5] w-full">
+                          {product.image ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={withBasePath(product.image)}
+                              alt={item.name}
+                              className="h-full w-full object-cover"
+                            />
+                          ) : (
+                            <ProductVisual variant={product.visual} />
+                          )}
+                        </div>
+                        {product.gallery.length > 0 ? (
+                          <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
+                            {product.gallery.map((src) => (
+                              // eslint-disable-next-line @next/next/no-img-element
+                              <img
+                                key={src}
+                                src={withBasePath(src)}
+                                alt={item.name}
+                                className="h-16 w-16 shrink-0 border border-line object-cover"
+                                loading="lazy"
+                              />
+                            ))}
+                          </div>
+                        ) : null}
                       </div>
                     </div>
 
@@ -124,11 +141,11 @@ export function ProductDetailSheet({ productId, onClose }: Props) {
 
                       <p className="t-body mt-5">{item.detail}</p>
 
-                      {item.sizes.length > 0 ? (
+                      {product.sizes.length > 0 ? (
                         <div className="mt-7">
                           <p className="field-label">{messages.product.availableSizes}</p>
                           <div className="flex flex-wrap gap-2">
-                            {item.sizes.map((option) => (
+                            {product.sizes.map((option) => (
                               <button
                                 key={option}
                                 type="button"

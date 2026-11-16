@@ -165,83 +165,149 @@
   },
   "products": {
     "items": {
-      "glassCloth": {
+      "glass-cloth": {
         "name": "Diamond Glass & Mirror Cleaning Cloth",
         "short": "Experience a clearer finish with premium microfiber designed for effective glass and mirror cleaning.",
         "detail": "Designed to clean glass and mirrors efficiently, this microfiber cloth helps remove dirt and everyday marks while delivering a clean, streak-free finish.",
         "highlight": "Clean glass. Clear results.",
         "specs": [
-          { "label": "Material", "value": "German microfiber" },
-          { "label": "Density", "value": "450 GSM" },
-          { "label": "Finish", "value": "Lint-free cleaning" },
-          { "label": "Result", "value": "Streak-free finish" },
-          { "label": "Designed for", "value": "Glass & mirrors" },
-          { "label": "Use", "value": "Effective with water only" }
-        ],
-        "sizes": []
+          {
+            "label": "Material",
+            "value": "German microfiber"
+          },
+          {
+            "label": "Density",
+            "value": "450 GSM"
+          },
+          {
+            "label": "Finish",
+            "value": "Lint-free cleaning"
+          },
+          {
+            "label": "Result",
+            "value": "Streak-free finish"
+          },
+          {
+            "label": "Designed for",
+            "value": "Glass & mirrors"
+          },
+          {
+            "label": "Use",
+            "value": "Effective with water only"
+          }
+        ]
       },
-      "windowSqueegee": {
+      "window-squeegee": {
         "name": "Compact Window Squeegee",
         "short": "A practical window cleaning tool with a flexible rubber blade and comfortable handle.",
         "detail": "Designed for convenient glass and window cleaning, featuring a flexible blade that helps remove water and surface residue efficiently.",
         "highlight": "Smooth cleaning. Clear finish.",
         "specs": [
-          { "label": "Blade", "value": "Flexible German rubber / silicone" },
-          { "label": "Handle", "value": "Ergonomic design" }
-        ],
-        "sizes": ["25 cm", "35 cm"]
+          {
+            "label": "Blade",
+            "value": "Flexible German rubber / silicone"
+          },
+          {
+            "label": "Handle",
+            "value": "Ergonomic design"
+          }
+        ]
       },
-      "floorSqueegee": {
+      "floor-squeegee": {
         "name": "Professional Double-Blade Floor Squeegee",
         "short": "A practical floor-cleaning solution designed for effective water removal.",
         "detail": "The double-blade design helps collect and remove water from smooth floor surfaces, making everyday cleaning easier and more efficient.",
         "highlight": "Efficient floor drying.",
         "specs": [
-          { "label": "Blade", "value": "High-density double foam blade" },
-          { "label": "Surfaces", "value": "Ceramic and marble" },
-          { "label": "Performance", "value": "Efficient water removal" }
-        ],
-        "sizes": ["45 cm", "55 cm", "75 cm"]
+          {
+            "label": "Blade",
+            "value": "High-density double foam blade"
+          },
+          {
+            "label": "Surfaces",
+            "value": "Ceramic and marble"
+          },
+          {
+            "label": "Performance",
+            "value": "Efficient water removal"
+          }
+        ]
       },
-      "floorMop": {
+      "floor-mop": {
         "name": "Professional 360° Floor Mop",
         "short": "A versatile floor-cleaning tool with a full-rotation joint and washable microfiber refill.",
         "detail": "Designed for convenient floor cleaning, its rotating joint improves maneuverability while the washable microfiber refill supports repeated everyday use.",
         "highlight": "Flexible movement. Effective cleaning.",
         "specs": [
-          { "label": "Joint", "value": "360° rotation" },
-          { "label": "Refill", "value": "Highly absorbent microfiber" },
-          { "label": "Care", "value": "Washable refill" },
-          { "label": "Use", "value": "Practical everyday cleaning" }
-        ],
-        "sizes": []
+          {
+            "label": "Joint",
+            "value": "360° rotation"
+          },
+          {
+            "label": "Refill",
+            "value": "Highly absorbent microfiber"
+          },
+          {
+            "label": "Care",
+            "value": "Washable refill"
+          },
+          {
+            "label": "Use",
+            "value": "Practical everyday cleaning"
+          }
+        ]
       },
-      "brushesBrooms": {
+      "brushes-brooms": {
         "name": "Reinforced Cleaning Brushes & Brooms",
         "short": "Durable cleaning brushes designed for different surfaces and everyday cleaning tasks.",
         "detail": "A practical range of cleaning brushes designed for different cleaning requirements, with soft and hard bristle options.",
         "highlight": "The right brush for every task.",
         "specs": [
-          { "label": "Bristles", "value": "Reinforced polymer PBT" },
-          { "label": "Durability", "value": "Resistant to bending and heat" },
-          { "label": "Soft version", "value": "For indoor cleaning" },
-          { "label": "Hard version", "value": "For scrubbing" }
-        ],
-        "sizes": []
+          {
+            "label": "Bristles",
+            "value": "Reinforced polymer PBT"
+          },
+          {
+            "label": "Durability",
+            "value": "Resistant to bending and heat"
+          },
+          {
+            "label": "Soft version",
+            "value": "For indoor cleaning"
+          },
+          {
+            "label": "Hard version",
+            "value": "For scrubbing"
+          }
+        ]
       },
-      "wasteBags": {
+      "waste-bags": {
         "name": "DIAMOND Heavy-Duty Waste Bags",
         "short": "Durable waste bags designed for practical everyday waste collection.",
         "detail": "Designed for convenient waste collection, DIAMOND waste bags offer a practical combination of durability, capacity options, and everyday reliability.",
         "highlight": "Reliable strength for everyday use.",
         "specs": [
-          { "label": "Material", "value": "High-thickness film" },
-          { "label": "Construction", "value": "Leak-resistant" },
-          { "label": "Strength", "value": "Tear-resistant" },
-          { "label": "Base", "value": "Star-sealed" },
-          { "label": "Closure", "value": "Drawstring option" }
-        ],
-        "sizes": ["30 L", "60 L", "120 L", "240 L"]
+          {
+            "label": "Material",
+            "value": "High-thickness film"
+          },
+          {
+            "label": "Construction",
+            "value": "Leak-resistant"
+          },
+          {
+            "label": "Strength",
+            "value": "Tear-resistant"
+          },
+          {
+            "label": "Base",
+            "value": "Star-sealed"
+          },
+          {
+            "label": "Closure",
+            "value": "Drawstring option"
+          }
+        ]
       }
     }
   },

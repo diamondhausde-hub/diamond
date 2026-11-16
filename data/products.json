@@ -1,0 +1,80 @@
+[
+  {
+    "id": "glass-cloth",
+    "visual": "glassCloth",
+    "image": null,
+    "gallery": [],
+    "category": "glass",
+    "sizes": [],
+    "featured": true,
+    "visible": true,
+    "order": 1
+  },
+  {
+    "id": "window-squeegee",
+    "visual": "windowSqueegee",
+    "image": null,
+    "gallery": [],
+    "category": "glass",
+    "sizes": [
+      "25 cm",
+      "35 cm"
+    ],
+    "featured": true,
+    "visible": true,
+    "order": 2
+  },
+  {
+    "id": "floor-squeegee",
+    "visual": "floorSqueegee",
+    "image": null,
+    "gallery": [],
+    "category": "floor",
+    "sizes": [
+      "45 cm",
+      "55 cm",
+      "75 cm"
+    ],
+    "featured": true,
+    "visible": true,
+    "order": 3
+  },
+  {
+    "id": "floor-mop",
+    "visual": "floorMop",
+    "image": null,
+    "gallery": [],
+    "category": "floor",
+    "sizes": [],
+    "featured": false,
+    "visible": true,
+    "order": 4
+  },
+  {
+    "id": "brushes-brooms",
+    "visual": "brushesBrooms",
+    "image": null,
+    "gallery": [],
+    "category": "brushes",
+    "sizes": [],
+    "featured": false,
+    "visible": true,
+    "order": 5
+  },
+  {
+    "id": "waste-bags",
+    "visual": "wasteBags",
+    "image": null,
+    "gallery": [],
+    "category": "bags",
+    "sizes": [
+      "30 L",
+      "60 L",
+      "120 L",
+      "240 L"
+    ],
+    "featured": false,
+    "visible": true,
+    "order": 6
+  }
+]

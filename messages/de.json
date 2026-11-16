@@ -165,83 +165,149 @@
   },
   "products": {
     "items": {
-      "glassCloth": {
+      "glass-cloth": {
         "name": "DIAMOND Glas- und Spiegelreinigungstuch",
         "short": "Ein klareres Ergebnis mit Premium-Mikrofaser, speziell für die wirksame Reinigung von Glas und Spiegeln.",
         "detail": "Dieses Mikrofasertuch wurde für die effiziente Reinigung von Glas und Spiegeln entwickelt. Es entfernt Schmutz und alltägliche Spuren und sorgt für ein sauberes, streifenfreies Finish.",
         "highlight": "Sauberes Glas. Klare Ergebnisse.",
         "specs": [
-          { "label": "Material", "value": "Deutsche Mikrofaser" },
-          { "label": "Dichte", "value": "450 g/m²" },
-          { "label": "Finish", "value": "Fusselfreie Reinigung" },
-          { "label": "Ergebnis", "value": "Streifenfreies Finish" },
-          { "label": "Geeignet für", "value": "Glas & Spiegel" },
-          { "label": "Anwendung", "value": "Wirksam mit Wasser allein" }
-        ],
-        "sizes": []
+          {
+            "label": "Material",
+            "value": "Deutsche Mikrofaser"
+          },
+          {
+            "label": "Dichte",
+            "value": "450 g/m²"
+          },
+          {
+            "label": "Finish",
+            "value": "Fusselfreie Reinigung"
+          },
+          {
+            "label": "Ergebnis",
+            "value": "Streifenfreies Finish"
+          },
+          {
+            "label": "Geeignet für",
+            "value": "Glas & Spiegel"
+          },
+          {
+            "label": "Anwendung",
+            "value": "Wirksam mit Wasser allein"
+          }
+        ]
       },
-      "windowSqueegee": {
+      "window-squeegee": {
         "name": "Kompakter Fensterabzieher",
         "short": "Ein praktisches Werkzeug für die Fensterreinigung mit flexibler Gummiklinge und komfortablem Griff.",
         "detail": "Für die bequeme Reinigung von Glas und Fenstern entwickelt. Die flexible Klinge entfernt Wasser und Oberflächenrückstände effizient.",
         "highlight": "Sanfte Reinigung. Klares Finish.",
         "specs": [
-          { "label": "Klinge", "value": "Flexibler deutscher Gummi / Silikon" },
-          { "label": "Griff", "value": "Ergonomisches Design" }
-        ],
-        "sizes": ["25 cm", "35 cm"]
+          {
+            "label": "Klinge",
+            "value": "Flexibler deutscher Gummi / Silikon"
+          },
+          {
+            "label": "Griff",
+            "value": "Ergonomisches Design"
+          }
+        ]
       },
-      "floorSqueegee": {
+      "floor-squeegee": {
         "name": "Professioneller Bodenabzieher mit Doppelklinge",
         "short": "Eine praktische Lösung für die Bodenreinigung, entwickelt für eine wirksame Wasserentfernung.",
         "detail": "Die Doppelklingen-Konstruktion sammelt Wasser auf glatten Bodenflächen und entfernt es zuverlässig — für eine einfachere und effizientere tägliche Reinigung.",
         "highlight": "Effizientes Bodentrocknen.",
         "specs": [
-          { "label": "Klinge", "value": "Hochdichte Doppelschaumklinge" },
-          { "label": "Oberflächen", "value": "Keramik und Marmor" },
-          { "label": "Leistung", "value": "Effiziente Wasserentfernung" }
-        ],
-        "sizes": ["45 cm", "55 cm", "75 cm"]
+          {
+            "label": "Klinge",
+            "value": "Hochdichte Doppelschaumklinge"
+          },
+          {
+            "label": "Oberflächen",
+            "value": "Keramik und Marmor"
+          },
+          {
+            "label": "Leistung",
+            "value": "Effiziente Wasserentfernung"
+          }
+        ]
       },
-      "floorMop": {
+      "floor-mop": {
         "name": "Professioneller 360°-Bodenwischer",
         "short": "Ein vielseitiges Werkzeug für die Bodenreinigung mit voll drehendem Gelenk und waschbarem Mikrofaser-Bezug.",
         "detail": "Entwickelt für eine bequeme Bodenreinigung: Das drehbare Gelenk verbessert die Wendigkeit, während der waschbare Mikrofaser-Bezug den täglichen Dauerbetrieb unterstützt.",
         "highlight": "Flexible Bewegung. Wirksame Reinigung.",
         "specs": [
-          { "label": "Gelenk", "value": "360°-Drehung" },
-          { "label": "Bezug", "value": "Hochsaugfähige Mikrofaser" },
-          { "label": "Pflege", "value": "Waschbarer Bezug" },
-          { "label": "Anwendung", "value": "Praktische tägliche Reinigung" }
-        ],
-        "sizes": []
+          {
+            "label": "Gelenk",
+            "value": "360°-Drehung"
+          },
+          {
+            "label": "Bezug",
+            "value": "Hochsaugfähige Mikrofaser"
+          },
+          {
+            "label": "Pflege",
+            "value": "Waschbarer Bezug"
+          },
+          {
+            "label": "Anwendung",
+            "value": "Praktische tägliche Reinigung"
+          }
+        ]
       },
-      "brushesBrooms": {
+      "brushes-brooms": {
         "name": "Verstärkte Reinigungsbürsten & Besen",
         "short": "Langlebige Reinigungsbürsten für verschiedene Oberflächen und alltägliche Reinigungsaufgaben.",
         "detail": "Eine praktische Auswahl an Reinigungsbürsten für unterschiedliche Anforderungen — mit weichen und harten Borsten.",
         "highlight": "Die richtige Bürste für jede Aufgabe.",
         "specs": [
-          { "label": "Borsten", "value": "Verstärktes PBT-Polymer" },
-          { "label": "Langlebigkeit", "value": "Verbiegungs- und hitzebeständig" },
-          { "label": "Weiche Ausführung", "value": "Für die Innenreinigung" },
-          { "label": "Harte Ausführung", "value": "Zum Schrubben" }
-        ],
-        "sizes": []
+          {
+            "label": "Borsten",
+            "value": "Verstärktes PBT-Polymer"
+          },
+          {
+            "label": "Langlebigkeit",
+            "value": "Verbiegungs- und hitzebeständig"
+          },
+          {
+            "label": "Weiche Ausführung",
+            "value": "Für die Innenreinigung"
+          },
+          {
+            "label": "Harte Ausführung",
+            "value": "Zum Schrubben"
+          }
+        ]
       },
-      "wasteBags": {
+      "waste-bags": {
         "name": "DIAMOND Hochleistungs-Abfallbeutel",
         "short": "Robuste Abfallbeutel für die praktische tägliche Abfallsammlung.",
         "detail": "Die DIAMOND Abfallbeutel sind auf eine bequeme Abfallsammlung ausgelegt und verbinden Haltbarkeit, verschiedene Füllmengen und Alltagszuverlässigkeit.",
         "highlight": "Zuverlässige Stärke für den täglichen Einsatz.",
         "specs": [
-          { "label": "Material", "value": "Folie mit hoher Dicke" },
-          { "label": "Konstruktion", "value": "Auslaufsicher" },
-          { "label": "Festigkeit", "value": "Reißfest" },
-          { "label": "Boden", "value": "Sternförmig verschweißt" },
-          { "label": "Verschluss", "value": "Kordelzug-Option" }
-        ],
-        "sizes": ["30 l", "60 l", "120 l", "240 l"]
+          {
+            "label": "Material",
+            "value": "Folie mit hoher Dicke"
+          },
+          {
+            "label": "Konstruktion",
+            "value": "Auslaufsicher"
+          },
+          {
+            "label": "Festigkeit",
+            "value": "Reißfest"
+          },
+          {
+            "label": "Boden",
+            "value": "Sternförmig verschweißt"
+          },
+          {
+            "label": "Verschluss",
+            "value": "Kordelzug-Option"
+          }
+        ]
       }
     }
   },

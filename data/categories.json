@@ -1,0 +1,6 @@
+[
+  { "id": "glass", "labelKey": "glass" },
+  { "id": "floor", "labelKey": "floor" },
+  { "id": "brushes", "labelKey": "brushes" },
+  { "id": "bags", "labelKey": "bags" }
+]
