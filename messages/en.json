@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "siteName": "DIAMOND",
+    "slogan": "Cleanliness you can trust",
+    "pages": {
+      "home": {
+        "title": "DIAMOND — Cleaning Tools & Household Essentials",
+        "description": "DIAMOND brings together carefully selected cleaning tools and household essentials, designed to make everyday cleaning easier, more effective and more reliable."
+      },
+      "products": {
+        "title": "The Collection — DIAMOND",
+        "description": "Explore the DIAMOND range of cleaning tools and household essentials, designed with a focus on quality, practicality and reliability."
+      },
+      "glassLab": {
+        "title": "The Glass Cleaning Lab — DIAMOND",
+        "description": "See the difference a considered glass cleaning routine makes. Explore the DIAMOND glass and mirror collection."
+      },
+      "about": {
+        "title": "About DIAMOND — Cleanliness You Can Trust",
+        "description": "DIAMOND is a premier brand specialising in modern household cleaning tools and essential daily utilities, built on quality and international standards."
+      },
+      "wholesale": {
+        "title": "Wholesale & Distribution — DIAMOND",
+        "description": "Partner with DIAMOND. Wholesale enquiries for distributors, retailers, supermarkets and professional cleaning businesses."
+      },
+      "contact": {
+        "title": "Contact — DIAMOND",
+        "description": "Have a question about DIAMOND products or interested in working with us? Our team would be pleased to hear from you."
+      },
+      "catalog": {
+        "title": "Product Catalogue — DIAMOND",
+        "description": "The complete DIAMOND product catalogue with specifications and available sizes. Print or save as PDF."
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "glassLab": "Glass Lab",
+    "about": "About Us",
+    "wholesale": "Wholesale",
+    "contact": "Contact",
+    "catalog": "Product catalogue",
+    "language": "Language",
+    "close": "Close",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu"
+  },
+  "common": {
+    "viewDetails": "View details",
+    "exploreProducts": "Explore products",
+    "discoverDiamond": "Discover DIAMOND",
+    "learnMore": "Learn more",
+    "viewAll": "View all products",
+    "close": "Close",
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "optional": "Optional",
+    "all": "All products",
+    "print": "Print / Save as PDF",
+    "addToEnquiry": "Add to wholesale enquiry",
+    "addedToEnquiry": "Added to your wholesale enquiry.",
+    "reviewEnquiry": "Review enquiry",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "step": "Step",
+    "selected": "Selected",
+    "backToTop": "Back to top"
+  },
+  "gateway": {
+    "welcome": "Welcome to DIAMOND",
+    "select": "Select your preferred language to continue.",
+    "languageLabel": "Language",
+    "continue": "Continue",
+    "footnote": "You can change the language at any time."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Quality in every detail",
+      "title": "Better cleaning.\nBetter everyday living.",
+      "description": "DIAMOND brings together carefully selected cleaning tools and household essentials designed to make everyday cleaning easier, more effective, and more reliable.",
+      "primary": "Explore products",
+      "secondary": "Discover DIAMOND",
+      "visualEyebrow": "Featured",
+      "visualName": "Glass & mirror cleaning cloth",
+      "visualSpec": "450 GSM · German microfiber",
+      "visualNote": "Effective with water only.",
+      "imageAlt": "The DIAMOND glass and mirror cleaning cloth"
+    },
+    "highlights": {
+      "eyebrow": "The DIAMOND standard",
+      "title": "A considered approach to everyday cleaning.",
+      "items": [
+        {
+          "title": "Product quality",
+          "description": "Carefully selected materials and reliable everyday performance."
+        },
+        {
+          "title": "Practical design",
+          "description": "Thoughtful products designed for comfort, simplicity and efficiency."
+        },
+        {
+          "title": "Everyday reliability",
+          "description": "Cleaning essentials made to support modern homes and professional use."
+        }
+      ]
+    },
+    "featured": {
+      "eyebrow": "The collection",
+      "title": "Products designed for everyday performance.",
+      "description": "A focused range of tools, each made for a specific job and built to be used every day.",
+      "cta": "View the collection"
+    },
+    "lab": {
+      "eyebrow": "The Glass Cleaning Lab",
+      "title": "See the difference. Experience the clarity.",
+      "description": "Discover how the right tools help achieve a cleaner, clearer glass surface — with less effort and no unnecessary products.",
+      "cta": "Enter the lab"
+    },
+    "about": {
+      "eyebrow": "About DIAMOND",
+      "title": "Cleanliness you can trust.",
+      "description": "A brand built on quality, practical design and the quiet confidence of products that simply work.",
+      "cta": "Our story"
+    },
+    "wholesale": {
+      "eyebrow": "Wholesale & distribution",
+      "title": "Let's grow together.",
+      "description": "A reliable partner for distributors, retailers, supermarkets and professional cleaning businesses.",
+      "cta": "Request a wholesale quote"
+    }
+  },
+  "catalog": {
+    "eyebrow": "Our collection",
+    "title": "Products designed for everyday performance.",
+    "description": "Explore the DIAMOND range of cleaning tools and household essentials, designed with a focus on quality, practicality, and reliability.",
+    "searchLabel": "Search products",
+    "searchPlaceholder": "Search our products...",
+    "clearSearch": "Clear search",
+    "noResults": "No products found. Try another search.",
+    "filtersLabel": "Filter by category",
+    "resultsLabel": "Products",
+    "catalogueLink": "Download the catalogue"
+  },
+  "categories": {
+    "all": "All products",
+    "glass": "Glass cleaning",
+    "floor": "Floor cleaning",
+    "brushes": "Brushes & brooms",
+    "bags": "Waste bags"
+  },
+  "product": {
+    "detailsTitle": "Product details",
+    "category": "Category",
+    "description": "Description",
+    "specifications": "Specifications",
+    "availableSizes": "Available sizes",
+    "keyHighlight": "Key highlight",
+    "size": "Size",
+    "addToWholesale": "Add to wholesale enquiry",
+    "close": "Close product details",
+    "imageAlt": "DIAMOND product"
+  },
+  "products": {
+    "items": {
+      "glassCloth": {
+        "name": "Diamond Glass & Mirror Cleaning Cloth",
+        "short": "Experience a clearer finish with premium microfiber designed for effective glass and mirror cleaning.",
+        "detail": "Designed to clean glass and mirrors efficiently, this microfiber cloth helps remove dirt and everyday marks while delivering a clean, streak-free finish.",
+        "highlight": "Clean glass. Clear results.",
+        "specs": [
+          { "label": "Material", "value": "German microfiber" },
+          { "label": "Density", "value": "450 GSM" },
+          { "label": "Finish", "value": "Lint-free cleaning" },
+          { "label": "Result", "value": "Streak-free finish" },
+          { "label": "Designed for", "value": "Glass & mirrors" },
+          { "label": "Use", "value": "Effective with water only" }
+        ],
+        "sizes": []
+      },
+      "windowSqueegee": {
+        "name": "Compact Window Squeegee",
+        "short": "A practical window cleaning tool with a flexible rubber blade and comfortable handle.",
+        "detail": "Designed for convenient glass and window cleaning, featuring a flexible blade that helps remove water and surface residue efficiently.",
+        "highlight": "Smooth cleaning. Clear finish.",
+        "specs": [
+          { "label": "Blade", "value": "Flexible German rubber / silicone" },
+          { "label": "Handle", "value": "Ergonomic design" }
+        ],
+        "sizes": ["25 cm", "35 cm"]
+      },
+      "floorSqueegee": {
+        "name": "Professional Double-Blade Floor Squeegee",
+        "short": "A practical floor-cleaning solution designed for effective water removal.",
+        "detail": "The double-blade design helps collect and remove water from smooth floor surfaces, making everyday cleaning easier and more efficient.",
+        "highlight": "Efficient floor drying.",
+        "specs": [
+          { "label": "Blade", "value": "High-density double foam blade" },
+          { "label": "Surfaces", "value": "Ceramic and marble" },
+          { "label": "Performance", "value": "Efficient water removal" }
+        ],
+        "sizes": ["45 cm", "55 cm", "75 cm"]
+      },
+      "floorMop": {
+        "name": "Professional 360° Floor Mop",
+        "short": "A versatile floor-cleaning tool with a full-rotation joint and washable microfiber refill.",
+        "detail": "Designed for convenient floor cleaning, its rotating joint improves maneuverability while the washable microfiber refill supports repeated everyday use.",
+        "highlight": "Flexible movement. Effective cleaning.",
+        "specs": [
+          { "label": "Joint", "value": "360° rotation" },
+          { "label": "Refill", "value": "Highly absorbent microfiber" },
+          { "label": "Care", "value": "Washable refill" },
+          { "label": "Use", "value": "Practical everyday cleaning" }
+        ],
+        "sizes": []
+      },
+      "brushesBrooms": {
+        "name": "Reinforced Cleaning Brushes & Brooms",
+        "short": "Durable cleaning brushes designed for different surfaces and everyday cleaning tasks.",
+        "detail": "A practical range of cleaning brushes designed for different cleaning requirements, with soft and hard bristle options.",
+        "highlight": "The right brush for every task.",
+        "specs": [
+          { "label": "Bristles", "value": "Reinforced polymer PBT" },
+          { "label": "Durability", "value": "Resistant to bending and heat" },
+          { "label": "Soft version", "value": "For indoor cleaning" },
+          { "label": "Hard version", "value": "For scrubbing" }
+        ],
+        "sizes": []
+      },
+      "wasteBags": {
+        "name": "DIAMOND Heavy-Duty Waste Bags",
+        "short": "Durable waste bags designed for practical everyday waste collection.",
+        "detail": "Designed for convenient waste collection, DIAMOND waste bags offer a practical combination of durability, capacity options, and everyday reliability.",
+        "highlight": "Reliable strength for everyday use.",
+        "specs": [
+          { "label": "Material", "value": "High-thickness film" },
+          { "label": "Construction", "value": "Leak-resistant" },
+          { "label": "Strength", "value": "Tear-resistant" },
+          { "label": "Base", "value": "Star-sealed" },
+          { "label": "Closure", "value": "Drawstring option" }
+        ],
+        "sizes": ["30 L", "60 L", "120 L", "240 L"]
+      }
+    }
+  },
+  "glassLab": {
+    "eyebrow": "The Glass Cleaning Lab",
+    "title": "See the difference. Experience the clarity.",
+    "subtitle": "See the difference. Experience the clarity.",
+    "description": "Discover how the right cleaning tools help achieve a cleaner and clearer glass surface.",
+    "before": "Before",
+    "after": "After",
+    "instruction": "Drag the handle, or use the arrow keys.",
+    "sliderLabel": "Compare glass before and after cleaning",
+    "disclaimer": "For illustration only. Results depend on surface condition, technique and the products used.",
+    "stepsEyebrow": "A simple routine",
+    "stepsTitle": "Three steps to a clearer surface.",
+    "steps": [
+      {
+        "title": "Prepare",
+        "description": "Remove loose dust and debris from the glass before you begin."
+      },
+      {
+        "title": "Clean",
+        "description": "Work in sections with the microfiber cloth and water, then draw the squeegee blade across the surface."
+      },
+      {
+        "title": "Finish",
+        "description": "Wipe the blade and frame dry for a clean, even result without marks."
+      }
+    ],
+    "relatedEyebrow": "The tools",
+    "relatedTitle": "Made for glass and mirrors.",
+    "relatedCta": "Explore glass cleaning"
+  },
+  "about": {
+    "eyebrow": "About DIAMOND",
+    "title": "About DIAMOND",
+    "subtitle": "Cleanliness you can trust.",
+    "story": [
+      "DIAMOND is a premier brand specializing in the supply and distribution of modern household cleaning tools and essential daily utilities. Built on a commitment to uncompromising quality and international standards, we bring efficiency, durability, and convenience directly into modern homes.",
+      "Our core mission is to provide innovative and practical household essentials—ranging from advanced cleaning tools to high-quality plastic utilities—designed to meet the highest market standards and earn the lasting trust of our customers."
+    ],
+    "whyTitle": "Why choose DIAMOND?",
+    "why": [
+      {
+        "title": "Exceptional quality & durability",
+        "description": "Our products are crafted from carefully selected materials, designed to withstand daily use while delivering reliable, long-lasting performance."
+      },
+      {
+        "title": "Modern & ergonomic design",
+        "description": "We focus on practical, user-friendly designs that make household chores faster, easier, and more efficient."
+      },
+      {
+        "title": "Reliability & standards",
+        "description": "We bridge the gap between quality and everyday practicality, delivering reliable household essentials designed to provide lasting value."
+      }
+    ],
+    "closingLabel": "Our promise",
+    "closing": "DIAMOND... Cleanliness you can trust.",
+    "focusEyebrow": "What we do",
+    "focus": [
+      "Modern cleaning tools",
+      "Household essentials",
+      "Supply & distribution"
+    ],
+    "cta": "Explore the collection"
+  },
+  "wholesale": {
+    "eyebrow": "Wholesale & distribution",
+    "title": "Let's grow together.",
+    "description": "Looking for a reliable cleaning products supplier? DIAMOND welcomes wholesale enquiries, distributors, retailers, supermarkets, and professional cleaning businesses.",
+    "descriptionSecondary": "Contact our team to discuss product availability and request a tailored quotation.",
+    "cta": "Request a wholesale quote",
+    "processEyebrow": "How it works",
+    "processTitle": "A straightforward way to start.",
+    "process": [
+      {
+        "title": "Share your requirements",
+        "description": "Tell us which products, sizes and quantities you are interested in."
+      },
+      {
+        "title": "Receive a tailored quote",
+        "description": "Our team reviews availability and prepares a quotation for your business."
+      },
+      {
+        "title": "Plan your supply",
+        "description": "Confirm the details and arrange a supply rhythm that works for you."
+      }
+    ],
+    "form": {
+      "title": "Wholesale enquiry",
+      "intro": "Complete the details below and review your selected products before sending.",
+      "name": "Full name",
+      "company": "Company name",
+      "phone": "Phone number",
+      "email": "Email address",
+      "businessType": "Business type",
+      "country": "Country",
+      "products": "Selected products",
+      "message": "Additional message",
+      "messagePlaceholder": "Anything we should know about your requirements?",
+      "notes": "Quantities can be adjusted before sending.",
+      "empty": "Your enquiry list is empty.",
+      "emptyHint": "Add products to your list while browsing the collection.",
+      "browse": "Browse products",
+      "total": "items in your enquiry",
+      "sendWhatsApp": "Send via WhatsApp",
+      "sendEmail": "Send via email",
+      "sending": "Preparing...",
+      "emailOpened": "Your email app should open with the enquiry prepared. Please review and send it.",
+      "whatsappOpened": "WhatsApp should open with the enquiry prepared. Please review and send it.",
+      "unavailable": "Online submission is not available at the moment. Please try again later.",
+      "businessTypes": {
+        "distributor": "Distributor",
+        "supermarket": "Supermarket",
+        "retailer": "Retailer",
+        "cleaningCompany": "Cleaning company",
+        "other": "Other"
+      },
+      "validation": {
+        "required": "This field is required.",
+        "email": "Enter a valid email address.",
+        "phone": "Enter a valid phone number.",
+        "products": "Add at least one product to your enquiry."
+      },
+      "productQuantity": "Quantity",
+      "removeProduct": "Remove product"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "We're here to help.",
+    "description": "Have a question about our products or interested in working with DIAMOND? Our team would be pleased to hear from you.",
+    "name": "Name",
+    "email": "Email address",
+    "subject": "Subject",
+    "message": "Message",
+    "messagePlaceholder": "How can we help?",
+    "cta": "Send message",
+    "validation": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address."
+    },
+    "emailNote": "This opens your email app with your message prepared. Please review and send it.",
+    "unavailable": "Online messaging is not available at the moment. Please try again later.",
+    "directTitle": "Direct contact",
+    "phone": "Phone",
+    "address": "Address"
+  },
+  "footer": {
+    "description": "Practical cleaning tools and household essentials designed for quality, durability and everyday reliability.",
+    "explore": "Explore",
+    "company": "Company",
+    "rights": "All rights reserved.",
+    "language": "Language",
+    "catalogue": "Product catalogue"
+  },
+  "catalogue": {
+    "eyebrow": "DIAMOND",
+    "title": "Product catalogue",
+    "description": "The complete DIAMOND range, with specifications and available sizes.",
+    "printHint": "Use your browser's print dialog to save this catalogue as a PDF.",
+    "note": "Specifications are subject to change. Product imagery is illustrative.",
+    "back": "Back to the collection",
+    "download": "Download catalogue"
+  },
+  "preview": {
+    "open": "Mobile preview",
+    "title": "Mobile preview",
+    "desktop": "Desktop view",
+    "close": "Close mobile preview",
+    "hint": "The preview uses the real responsive layout."
+  },
+  "notFound": {
+    "title": "Page not found.",
+    "description": "The page you are looking for isn't here.",
+    "home": "Back to home"
+  }
+}

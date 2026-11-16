@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "siteName": "DIAMOND",
+    "slogan": "Pulizia di cui fidarsi",
+    "pages": {
+      "home": {
+        "title": "DIAMOND — Strumenti per la pulizia e accessori per la casa",
+        "description": "DIAMOND riunisce strumenti per la pulizia e accessori per la casa selezionati con cura, pensati per rendere le pulizie quotidiane più semplici, efficaci e affidabili."
+      },
+      "products": {
+        "title": "La collezione — DIAMOND",
+        "description": "Scopri la gamma DIAMOND di strumenti per la pulizia e accessori per la casa, con un'attenzione costante a qualità, praticità e affidabilità."
+      },
+      "glassLab": {
+        "title": "Il laboratorio del vetro — DIAMOND",
+        "description": "Scopri la differenza di una routine mirata per la pulizia del vetro. Esplora la collezione DIAMOND per vetro e specchi."
+      },
+      "about": {
+        "title": "Chi è DIAMOND — Pulizia di cui fidarsi",
+        "description": "DIAMOND è un marchio premium specializzato in strumenti moderni per la pulizia della casa e accessori quotidiani essenziali, fondato su qualità e standard internazionali."
+      },
+      "wholesale": {
+        "title": "Ingrosso e distribuzione — DIAMOND",
+        "description": "Diventa partner di DIAMOND. Richieste di ingrosso per distributori, rivenditori, supermercati e imprese di pulizia professionale."
+      },
+      "contact": {
+        "title": "Contatti — DIAMOND",
+        "description": "Hai una domanda sui prodotti DIAMOND o vuoi collaborare con noi? Il nostro team sarà lieto di ascoltarti."
+      },
+      "catalog": {
+        "title": "Catalogo prodotti — DIAMOND",
+        "description": "Il catalogo completo dei prodotti DIAMOND con specifiche e misure disponibili. Stampa o salva in PDF."
+      }
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Prodotti",
+    "glassLab": "Lab del vetro",
+    "about": "Chi siamo",
+    "wholesale": "Ingrosso",
+    "contact": "Contatti",
+    "catalog": "Catalogo prodotti",
+    "language": "Lingua",
+    "close": "Chiudi",
+    "skipToContent": "Vai al contenuto",
+    "openMenu": "Apri menu"
+  },
+  "common": {
+    "viewDetails": "Vedi dettagli",
+    "exploreProducts": "Scopri i prodotti",
+    "discoverDiamond": "Scopri DIAMOND",
+    "learnMore": "Scopri di più",
+    "viewAll": "Vedi tutti i prodotti",
+    "close": "Chiudi",
+    "remove": "Rimuovi",
+    "quantity": "Quantità",
+    "decrease": "Riduci quantità",
+    "increase": "Aumenta quantità",
+    "optional": "Facoltativo",
+    "all": "Tutti i prodotti",
+    "print": "Stampa / Salva in PDF",
+    "addToEnquiry": "Aggiungi alla richiesta di ingrosso",
+    "addedToEnquiry": "Aggiunto alla tua richiesta di ingrosso.",
+    "reviewEnquiry": "Rivedi richiesta",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp",
+    "step": "Passo",
+    "selected": "Selezionato",
+    "backToTop": "Torna su"
+  },
+  "gateway": {
+    "welcome": "Benvenuti in DIAMOND",
+    "select": "Scegli la lingua preferita per continuare.",
+    "languageLabel": "Lingua",
+    "continue": "Continua",
+    "footnote": "Puoi cambiare lingua in qualsiasi momento."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Qualità in ogni dettaglio",
+      "title": "Pulire meglio.\nVivere meglio ogni giorno.",
+      "description": "DIAMOND riunisce strumenti per la pulizia e accessori per la casa selezionati con cura, pensati per rendere le pulizie quotidiane più semplici, efficaci e affidabili.",
+      "primary": "Scopri i prodotti",
+      "secondary": "Scopri DIAMOND",
+      "visualEyebrow": "In evidenza",
+      "visualName": "Panno per vetri e specchi",
+      "visualSpec": "450 g/m² · Microfibra tedesca",
+      "visualNote": "Efficace con sola acqua.",
+      "imageAlt": "Il panno DIAMOND per vetri e specchi"
+    },
+    "highlights": {
+      "eyebrow": "Lo standard DIAMOND",
+      "title": "Un approccio ragionato alla pulizia quotidiana.",
+      "items": [
+        {
+          "title": "Qualità del prodotto",
+          "description": "Materiali selezionati con cura e prestazioni affidabili ogni giorno."
+        },
+        {
+          "title": "Design pratico",
+          "description": "Prodotti pensati per comfort, semplicità ed efficienza."
+        },
+        {
+          "title": "Affidabilità quotidiana",
+          "description": "Accessori per la pulizia adatti alle case moderne e all'uso professionale."
+        }
+      ]
+    },
+    "featured": {
+      "eyebrow": "La collezione",
+      "title": "Prodotti pensati per le prestazioni di ogni giorno.",
+      "description": "Una gamma mirata di strumenti, ciascuno realizzato per un compito specifico e per l'uso quotidiano.",
+      "cta": "Vedi la collezione"
+    },
+    "lab": {
+      "eyebrow": "Il laboratorio del vetro",
+      "title": "Nota la differenza. Ritrova la limpidezza.",
+      "description": "Scopri come gli strumenti giusti aiutano a ottenere una superficie in vetro più pulita e limpida — con meno fatica e senza prodotti superflui.",
+      "cta": "Entra nel laboratorio"
+    },
+    "about": {
+      "eyebrow": "Chi è DIAMOND",
+      "title": "Pulizia di cui fidarsi.",
+      "description": "Un marchio fondato sulla qualità, sul design pratico e sulla tranquilla certezza di prodotti che funzionano, semplicemente.",
+      "cta": "La nostra storia"
+    },
+    "wholesale": {
+      "eyebrow": "Ingrosso e distribuzione",
+      "title": "Cresciamo insieme.",
+      "description": "Un partner affidabile per distributori, rivenditori, supermercati e imprese di pulizia professionale.",
+      "cta": "Richiedi un preventivo all'ingrosso"
+    }
+  },
+  "catalog": {
+    "eyebrow": "La nostra collezione",
+    "title": "Prodotti pensati per le prestazioni di ogni giorno.",
+    "description": "Scopri la gamma DIAMOND di strumenti per la pulizia e accessori per la casa, con un'attenzione costante a qualità, praticità e affidabilità.",
+    "searchLabel": "Cerca prodotti",
+    "searchPlaceholder": "Cerca tra i nostri prodotti...",
+    "clearSearch": "Cancella ricerca",
+    "noResults": "Nessun prodotto trovato. Prova un'altra ricerca.",
+    "filtersLabel": "Filtra per categoria",
+    "resultsLabel": "prodotti",
+    "catalogueLink": "Scarica il catalogo"
+  },
+  "categories": {
+    "all": "Tutti i prodotti",
+    "glass": "Pulizia del vetro",
+    "floor": "Pulizia dei pavimenti",
+    "brushes": "Spazzole & scope",
+    "bags": "Sacchi rifiuti"
+  },
+  "product": {
+    "detailsTitle": "Dettagli del prodotto",
+    "category": "Categoria",
+    "description": "Descrizione",
+    "specifications": "Specifiche",
+    "availableSizes": "Misure disponibili",
+    "keyHighlight": "Punto di forza",
+    "size": "Misura",
+    "addToWholesale": "Aggiungi alla richiesta di ingrosso",
+    "close": "Chiudi dettagli del prodotto",
+    "imageAlt": "Prodotto DIAMOND"
+  },
+  "products": {
+    "items": {
+      "glassCloth": {
+        "name": "Panno DIAMOND per vetri e specchi",
+        "short": "Una finitura più limpida con microfibra premium pensata per pulire efficacemente vetri e specchi.",
+        "detail": "Progettato per pulire vetri e specchi in modo efficiente, questo panno in microfibra rimuove sporco e segni quotidiani offrendo una finitura pulita e senza aloni.",
+        "highlight": "Vetro pulito. Risultati nitidi.",
+        "specs": [
+          { "label": "Materiale", "value": "Microfibra tedesca" },
+          { "label": "Densità", "value": "450 g/m²" },
+          { "label": "Finitura", "value": "Pulizia senza pelucchi" },
+          { "label": "Risultato", "value": "Finitura senza aloni" },
+          { "label": "Ideale per", "value": "Vetri & specchi" },
+          { "label": "Uso", "value": "Efficace con sola acqua" }
+        ],
+        "sizes": []
+      },
+      "windowSqueegee": {
+        "name": "Tergivetro compatto",
+        "short": "Un pratico strumento per la pulizia delle finestre, con lama flessibile in gomma e impugnatura confortevole.",
+        "detail": "Progettato per pulire comodamente vetri e finestre, presenta una lama flessibile che rimuove efficacemente acqua e residui superficiali.",
+        "highlight": "Pulizia fluida. Finitura limpida.",
+        "specs": [
+          { "label": "Lama", "value": "Gomma / silicone tedesco flessibile" },
+          { "label": "Impugnatura", "value": "Design ergonomico" }
+        ],
+        "sizes": ["25 cm", "35 cm"]
+      },
+      "floorSqueegee": {
+        "name": "Tergipavimento professionale a doppia lama",
+        "short": "Una soluzione pratica per la pulizia dei pavimenti, pensata per rimuovere l'acqua in modo efficace.",
+        "detail": "Il design a doppia lama raccoglie e rimuove l'acqua dalle superfici lisce, rendendo le pulizie quotidiane più semplici ed efficienti.",
+        "highlight": "Asciugatura efficiente dei pavimenti.",
+        "specs": [
+          { "label": "Lama", "value": "Doppia lama in schiuma ad alta densità" },
+          { "label": "Superfici", "value": "Ceramica e marmo" },
+          { "label": "Prestazioni", "value": "Rimozione efficiente dell'acqua" }
+        ],
+        "sizes": ["45 cm", "55 cm", "75 cm"]
+      },
+      "floorMop": {
+        "name": "Lavapavimenti professionale 360°",
+        "short": "Uno strumento versatile per la pulizia dei pavimenti, con snodo a rotazione completa e ricambio in microfibra lavabile.",
+        "detail": "Progettato per pulire i pavimenti con facilità, lo snodo rotante migliora la manovrabilità mentre il ricambio in microfibra lavabile supporta l'uso quotidiano ripetuto.",
+        "highlight": "Movimento flessibile. Pulizia efficace.",
+        "specs": [
+          { "label": "Snodo", "value": "Rotazione a 360°" },
+          { "label": "Ricambio", "value": "Microfibra altamente assorbente" },
+          { "label": "Cura", "value": "Ricambio lavabile" },
+          { "label": "Uso", "value": "Pulizia quotidiana pratica" }
+        ],
+        "sizes": []
+      },
+      "brushesBrooms": {
+        "name": "Spazzole e scope rinforzate",
+        "short": "Spazzole per la pulizia resistenti, pensate per diverse superfici e attività quotidiane.",
+        "detail": "Una gamma pratica di spazzole per la pulizia, adatta a diverse esigenze e disponibile con setole morbide o dure.",
+        "highlight": "La spazzola giusta per ogni compito.",
+        "specs": [
+          { "label": "Setole", "value": "Polimero PBT rinforzato" },
+          { "label": "Durata", "value": "Resistente alla deformazione e al calore" },
+          { "label": "Versione morbida", "value": "Per la pulizia interna" },
+          { "label": "Versione dura", "value": "Per lo sfregamento" }
+        ],
+        "sizes": []
+      },
+      "wasteBags": {
+        "name": "Sacchi rifiuti DIAMOND ad alta resistenza",
+        "short": "Sacchi rifiuti resistenti, pensati per la raccolta pratica dei rifiuti quotidiani.",
+        "detail": "Pensati per una raccolta comoda, i sacchi DIAMOND offrono un equilibrio pratico tra resistenza, capacità disponibili e affidabilità quotidiana.",
+        "highlight": "Forza affidabile per l'uso quotidiano.",
+        "specs": [
+          { "label": "Materiale", "value": "Film ad alta densità" },
+          { "label": "Struttura", "value": "Resistente alle perdite" },
+          { "label": "Robustezza", "value": "Resistente agli strappi" },
+          { "label": "Fondo", "value": "Saldatura a stella" },
+          { "label": "Chiusura", "value": "Opzione con laccio" }
+        ],
+        "sizes": ["30 L", "60 L", "120 L", "240 L"]
+      }
+    }
+  },
+  "glassLab": {
+    "eyebrow": "Il laboratorio del vetro",
+    "title": "Nota la differenza. Ritrova la limpidezza.",
+    "subtitle": "Nota la differenza. Ritrova la limpidezza.",
+    "description": "Scopri come gli strumenti giusti aiutano a ottenere una superficie in vetro più pulita e limpida.",
+    "before": "Prima",
+    "after": "Dopo",
+    "instruction": "Trascina la maniglia o usa i tasti freccia.",
+    "sliderLabel": "Confronta il vetro prima e dopo la pulizia",
+    "disclaimer": "Solo a scopo illustrativo. I risultati dipendono dallo stato della superficie, dalla tecnica e dai prodotti utilizzati.",
+    "stepsEyebrow": "Una routine semplice",
+    "stepsTitle": "Tre passi per una superficie più limpida.",
+    "steps": [
+      {
+        "title": "Prepara",
+        "description": "Rimuovi polvere e residui sciolti dal vetro prima di iniziare."
+      },
+      {
+        "title": "Pulisci",
+        "description": "Lavora a zone con il panno in microfibra e acqua, poi passa la lama del tergivetro sulla superficie."
+      },
+      {
+        "title": "Rifinisci",
+        "description": "Asciuga la lama e il telaio per un risultato pulito e uniforme, senza segni."
+      }
+    ],
+    "relatedEyebrow": "Gli strumenti",
+    "relatedTitle": "Pensati per vetri e specchi.",
+    "relatedCta": "Scopri la pulizia del vetro"
+  },
+  "about": {
+    "eyebrow": "Chi è DIAMOND",
+    "title": "Chi è DIAMOND",
+    "subtitle": "Pulizia di cui fidarsi.",
+    "story": [
+      "DIAMOND è un marchio premium specializzato nella fornitura e distribuzione di strumenti moderni per la pulizia della casa e accessori quotidiani essenziali. Con un impegno verso una qualità senza compromessi e gli standard internazionali, portiamo efficienza, durata e comodità direttamente nelle case moderne.",
+      "La nostra missione è offrire accessori per la casa innovativi e pratici — dagli strumenti di pulizia avanzati agli articoli in plastica di alta qualità — progettati per soddisfare i più alti standard di mercato e conquistare la fiducia duratura dei nostri clienti."
+    ],
+    "whyTitle": "Perché scegliere DIAMOND?",
+    "why": [
+      {
+        "title": "Qualità e durata eccezionali",
+        "description": "I nostri prodotti sono realizzati con materiali selezionati con cura, pensati per resistere all'uso quotidiano offrendo prestazioni affidabili e durature."
+      },
+      {
+        "title": "Design moderno ed ergonomico",
+        "description": "Ci concentriamo su design pratici e intuitivi che rendono le faccende domestiche più rapide, semplici ed efficienti."
+      },
+      {
+        "title": "Affidabilità e standard",
+        "description": "Uniamo qualità e praticità quotidiana, offrendo accessori per la casa affidabili e di valore duraturo."
+      }
+    ],
+    "closingLabel": "La nostra promessa",
+    "closing": "DIAMOND... Pulizia di cui fidarsi.",
+    "focusEyebrow": "Cosa facciamo",
+    "focus": [
+      "Strumenti moderni per la pulizia",
+      "Accessori per la casa",
+      "Fornitura & distribuzione"
+    ],
+    "cta": "Scopri la collezione"
+  },
+  "wholesale": {
+    "eyebrow": "Ingrosso e distribuzione",
+    "title": "Cresciamo insieme.",
+    "description": "Cerchi un fornitore affidabile di prodotti per la pulizia? DIAMOND accoglie richieste di ingrosso da distributori, rivenditori, supermercati e imprese di pulizia professionale.",
+    "descriptionSecondary": "Contatta il nostro team per discutere la disponibilità dei prodotti e richiedere un preventivo personalizzato.",
+    "cta": "Richiedi un preventivo all'ingrosso",
+    "processEyebrow": "Come funziona",
+    "processTitle": "Un modo semplice per iniziare.",
+    "process": [
+      {
+        "title": "Condividi le tue esigenze",
+        "description": "Indica quali prodotti, misure e quantità ti interessano."
+      },
+      {
+        "title": "Ricevi un preventivo personalizzato",
+        "description": "Il nostro team verifica la disponibilità e prepara un preventivo per la tua attività."
+      },
+      {
+        "title": "Pianifica la fornitura",
+        "description": "Conferma i dettagli e concordiamo un ritmo di fornitura adatto alle tue esigenze."
+      }
+    ],
+    "form": {
+      "title": "Richiesta di ingrosso",
+      "intro": "Completa i dati qui sotto e rivedi i prodotti selezionati prima dell'invio.",
+      "name": "Nome completo",
+      "company": "Nome dell'azienda",
+      "phone": "Numero di telefono",
+      "email": "Indirizzo e-mail",
+      "businessType": "Tipo di attività",
+      "country": "Paese",
+      "products": "Prodotti selezionati",
+      "message": "Messaggio aggiuntivo",
+      "messagePlaceholder": "C'è qualcosa che dovremmo sapere sulle tue esigenze?",
+      "notes": "Le quantità possono essere modificate prima dell'invio.",
+      "empty": "La tua lista di richiesta è vuota.",
+      "emptyHint": "Aggiungi prodotti alla lista mentre esplori la collezione.",
+      "browse": "Sfoglia i prodotti",
+      "total": "articoli nella tua richiesta",
+      "sendWhatsApp": "Invia tramite WhatsApp",
+      "sendEmail": "Invia via e-mail",
+      "sending": "Preparazione...",
+      "emailOpened": "La tua app e-mail dovrebbe aprirsi con la richiesta preparata. Controllala e inviala.",
+      "whatsappOpened": "WhatsApp dovrebbe aprirsi con la richiesta preparata. Controllala e inviala.",
+      "unavailable": "L'invio online non è disponibile al momento. Riprova più tardi.",
+      "businessTypes": {
+        "distributor": "Distributore",
+        "supermarket": "Supermercato",
+        "retailer": "Rivenditore",
+        "cleaningCompany": "Impresa di pulizie",
+        "other": "Altro"
+      },
+      "validation": {
+        "required": "Questo campo è obbligatorio.",
+        "email": "Inserisci un indirizzo e-mail valido.",
+        "phone": "Inserisci un numero di telefono valido.",
+        "products": "Aggiungi almeno un prodotto alla richiesta."
+      },
+      "productQuantity": "Quantità",
+      "removeProduct": "Rimuovi prodotto"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contatti",
+    "title": "Siamo qui per aiutarti.",
+    "description": "Hai una domanda sui nostri prodotti o vuoi collaborare con DIAMOND? Il nostro team sarà lieto di ascoltarti.",
+    "name": "Nome",
+    "email": "Indirizzo e-mail",
+    "subject": "Oggetto",
+    "message": "Messaggio",
+    "messagePlaceholder": "Come possiamo aiutarti?",
+    "cta": "Invia messaggio",
+    "validation": {
+      "required": "Questo campo è obbligatorio.",
+      "email": "Inserisci un indirizzo e-mail valido."
+    },
+    "emailNote": "La tua app e-mail si aprirà con il messaggio preparato. Controllalo e invialo.",
+    "unavailable": "La messaggistica online non è disponibile al momento. Riprova più tardi.",
+    "directTitle": "Contatto diretto",
+    "phone": "Telefono",
+    "address": "Indirizzo"
+  },
+  "footer": {
+    "description": "Strumenti per la pulizia pratici e accessori per la casa pensati per qualità, durata e affidabilità quotidiana.",
+    "explore": "Esplora",
+    "company": "Azienda",
+    "rights": "Tutti i diritti riservati.",
+    "language": "Lingua",
+    "catalogue": "Catalogo prodotti"
+  },
+  "catalogue": {
+    "eyebrow": "DIAMOND",
+    "title": "Catalogo prodotti",
+    "description": "La collezione DIAMOND completa, con specifiche e misure disponibili.",
+    "printHint": "Usa la finestra di stampa del browser per salvare questo catalogo in PDF.",
+    "note": "Le specifiche possono cambiare. Le immagini dei prodotti sono illustrative.",
+    "back": "Torna alla collezione",
+    "download": "Scarica il catalogo"
+  },
+  "preview": {
+    "open": "Anteprima mobile",
+    "title": "Anteprima mobile",
+    "desktop": "Vista desktop",
+    "close": "Chiudi anteprima mobile",
+    "hint": "L'anteprima utilizza il layout responsive reale."
+  },
+  "notFound": {
+    "title": "Pagina non trovata.",
+    "description": "La pagina che cerchi non è disponibile.",
+    "home": "Torna alla home"
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "siteName": "DIAMOND",
+    "slogan": "Sauberkeit, der Sie vertrauen können",
+    "pages": {
+      "home": {
+        "title": "DIAMOND — Reinigungswerkzeuge & Haushaltshelfer",
+        "description": "DIAMOND vereint sorgfältig ausgewählte Reinigungswerkzeuge und Haushaltshelfer, die den Alltag einfacher, wirksamer und zuverlässiger machen."
+      },
+      "products": {
+        "title": "Die Kollektion — DIAMOND",
+        "description": "Entdecken Sie die DIAMOND Kollektion aus Reinigungswerkzeugen und Haushaltshelfern — mit Fokus auf Qualität, Praktikabilität und Zuverlässigkeit."
+      },
+      "glassLab": {
+        "title": "Das Glaslabor — DIAMOND",
+        "description": "Erleben Sie den Unterschied einer durchdachten Glasreinigung. Entdecken Sie die DIAMOND Kollektion für Glas und Spiegel."
+      },
+      "about": {
+        "title": "Über DIAMOND — Sauberkeit, der Sie vertrauen können",
+        "description": "DIAMOND ist eine Premium-Marke für moderne Reinigungswerkzeuge und unverzichtbare Haushaltshelfer — aufgebaut auf Qualität und internationalen Standards."
+      },
+      "wholesale": {
+        "title": "Großhandel & Distribution — DIAMOND",
+        "description": "Werden Sie Partner von DIAMOND. Großhandelsanfragen für Distributoren, Einzelhändler, Supermärkte und professionelle Reinigungsunternehmen."
+      },
+      "contact": {
+        "title": "Kontakt — DIAMOND",
+        "description": "Haben Sie eine Frage zu DIAMOND Produkten oder möchten Sie mit uns zusammenarbeiten? Wir freuen uns auf Ihre Nachricht."
+      },
+      "catalog": {
+        "title": "Produktkatalog — DIAMOND",
+        "description": "Der vollständige DIAMOND Produktkatalog mit Spezifikationen und verfügbaren Größen. Drucken oder als PDF speichern."
+      }
+    }
+  },
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "glassLab": "Glaslabor",
+    "about": "Über uns",
+    "wholesale": "Großhandel",
+    "contact": "Kontakt",
+    "catalog": "Produktkatalog",
+    "language": "Sprache",
+    "close": "Schließen",
+    "skipToContent": "Zum Inhalt springen",
+    "openMenu": "Menü öffnen"
+  },
+  "common": {
+    "viewDetails": "Details ansehen",
+    "exploreProducts": "Produkte entdecken",
+    "discoverDiamond": "DIAMOND entdecken",
+    "learnMore": "Mehr erfahren",
+    "viewAll": "Alle Produkte ansehen",
+    "close": "Schließen",
+    "remove": "Entfernen",
+    "quantity": "Menge",
+    "decrease": "Menge verringern",
+    "increase": "Menge erhöhen",
+    "optional": "Optional",
+    "all": "Alle Produkte",
+    "print": "Drucken / als PDF speichern",
+    "addToEnquiry": "Zur Großhandelsanfrage hinzufügen",
+    "addedToEnquiry": "Zur Großhandelsanfrage hinzugefügt.",
+    "reviewEnquiry": "Anfrage prüfen",
+    "email": "E-Mail",
+    "whatsapp": "WhatsApp",
+    "step": "Schritt",
+    "selected": "Ausgewählt",
+    "backToTop": "Nach oben"
+  },
+  "gateway": {
+    "welcome": "Willkommen bei DIAMOND",
+    "select": "Wählen Sie Ihre bevorzugte Sprache, um fortzufahren.",
+    "languageLabel": "Sprache",
+    "continue": "Weiter",
+    "footnote": "Sie können die Sprache jederzeit ändern."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Qualität in jedem Detail",
+      "title": "Besser reinigen.\nBesser leben.",
+      "description": "DIAMOND vereint sorgfältig ausgewählte Reinigungswerkzeuge und Haushaltshelfer, die die tägliche Reinigung einfacher, wirksamer und zuverlässiger machen.",
+      "primary": "Produkte entdecken",
+      "secondary": "DIAMOND entdecken",
+      "visualEyebrow": "Empfohlen",
+      "visualName": "Glas- und Spiegelreinigungstuch",
+      "visualSpec": "450 g/m² · Deutsche Mikrofaser",
+      "visualNote": "Wirksam mit Wasser allein.",
+      "imageAlt": "Das DIAMOND Glas- und Spiegelreinigungstuch"
+    },
+    "highlights": {
+      "eyebrow": "Der DIAMOND Standard",
+      "title": "Ein durchdachter Ansatz für die tägliche Reinigung.",
+      "items": [
+        {
+          "title": "Produktqualität",
+          "description": "Sorgfältig ausgewählte Materialien und zuverlässige Alltagsleistung."
+        },
+        {
+          "title": "Praktisches Design",
+          "description": "Durchdachte Produkte für Komfort, Einfachheit und Effizienz."
+        },
+        {
+          "title": "Alltagstauglichkeit",
+          "description": "Reinigungshelfer für moderne Haushalte und den professionellen Einsatz."
+        }
+      ]
+    },
+    "featured": {
+      "eyebrow": "Die Kollektion",
+      "title": "Produkte für überzeugende Alltagsleistung.",
+      "description": "Eine fokussierte Auswahl an Werkzeugen — jedes für eine bestimmte Aufgabe gemacht und für den täglichen Einsatz gebaut.",
+      "cta": "Kollektion ansehen"
+    },
+    "lab": {
+      "eyebrow": "Das Glaslabor",
+      "title": "Sehen Sie den Unterschied. Erleben Sie Klarheit.",
+      "description": "Entdecken Sie, wie die richtigen Werkzeuge zu einer saubereren, klareren Glasfläche verhelfen — mit weniger Aufwand und ohne unnötige Produkte.",
+      "cta": "Ins Labor"
+    },
+    "about": {
+      "eyebrow": "Über DIAMOND",
+      "title": "Sauberkeit, der Sie vertrauen können.",
+      "description": "Eine Marke, die auf Qualität, praktischem Design und dem stillen Vertrauen in Produkte setzt, die einfach funktionieren.",
+      "cta": "Unsere Geschichte"
+    },
+    "wholesale": {
+      "eyebrow": "Großhandel & Distribution",
+      "title": "Wachsen wir gemeinsam.",
+      "description": "Ein zuverlässiger Partner für Distributoren, Einzelhändler, Supermärkte und professionelle Reinigungsunternehmen.",
+      "cta": "Großhandelsangebot anfragen"
+    }
+  },
+  "catalog": {
+    "eyebrow": "Unsere Kollektion",
+    "title": "Produkte für überzeugende Alltagsleistung.",
+    "description": "Entdecken Sie die DIAMOND Kollektion aus Reinigungswerkzeugen und Haushaltshelfern — mit Fokus auf Qualität, Praktikabilität und Zuverlässigkeit.",
+    "searchLabel": "Produkte suchen",
+    "searchPlaceholder": "Unsere Produkte durchsuchen ...",
+    "clearSearch": "Suche löschen",
+    "noResults": "Keine Produkte gefunden. Versuchen Sie eine andere Suche.",
+    "filtersLabel": "Nach Kategorie filtern",
+    "resultsLabel": "Produkte",
+    "catalogueLink": "Katalog herunterladen"
+  },
+  "categories": {
+    "all": "Alle Produkte",
+    "glass": "Glasreinigung",
+    "floor": "Bodenreinigung",
+    "brushes": "Bürsten & Besen",
+    "bags": "Abfallbeutel"
+  },
+  "product": {
+    "detailsTitle": "Produktdetails",
+    "category": "Kategorie",
+    "description": "Beschreibung",
+    "specifications": "Spezifikationen",
+    "availableSizes": "Verfügbare Größen",
+    "keyHighlight": "Wichtigstes Merkmal",
+    "size": "Größe",
+    "addToWholesale": "Zur Großhandelsanfrage hinzufügen",
+    "close": "Produktdetails schließen",
+    "imageAlt": "DIAMOND Produkt"
+  },
+  "products": {
+    "items": {
+      "glassCloth": {
+        "name": "DIAMOND Glas- und Spiegelreinigungstuch",
+        "short": "Ein klareres Ergebnis mit Premium-Mikrofaser, speziell für die wirksame Reinigung von Glas und Spiegeln.",
+        "detail": "Dieses Mikrofasertuch wurde für die effiziente Reinigung von Glas und Spiegeln entwickelt. Es entfernt Schmutz und alltägliche Spuren und sorgt für ein sauberes, streifenfreies Finish.",
+        "highlight": "Sauberes Glas. Klare Ergebnisse.",
+        "specs": [
+          { "label": "Material", "value": "Deutsche Mikrofaser" },
+          { "label": "Dichte", "value": "450 g/m²" },
+          { "label": "Finish", "value": "Fusselfreie Reinigung" },
+          { "label": "Ergebnis", "value": "Streifenfreies Finish" },
+          { "label": "Geeignet für", "value": "Glas & Spiegel" },
+          { "label": "Anwendung", "value": "Wirksam mit Wasser allein" }
+        ],
+        "sizes": []
+      },
+      "windowSqueegee": {
+        "name": "Kompakter Fensterabzieher",
+        "short": "Ein praktisches Werkzeug für die Fensterreinigung mit flexibler Gummiklinge und komfortablem Griff.",
+        "detail": "Für die bequeme Reinigung von Glas und Fenstern entwickelt. Die flexible Klinge entfernt Wasser und Oberflächenrückstände effizient.",
+        "highlight": "Sanfte Reinigung. Klares Finish.",
+        "specs": [
+          { "label": "Klinge", "value": "Flexibler deutscher Gummi / Silikon" },
+          { "label": "Griff", "value": "Ergonomisches Design" }
+        ],
+        "sizes": ["25 cm", "35 cm"]
+      },
+      "floorSqueegee": {
+        "name": "Professioneller Bodenabzieher mit Doppelklinge",
+        "short": "Eine praktische Lösung für die Bodenreinigung, entwickelt für eine wirksame Wasserentfernung.",
+        "detail": "Die Doppelklingen-Konstruktion sammelt Wasser auf glatten Bodenflächen und entfernt es zuverlässig — für eine einfachere und effizientere tägliche Reinigung.",
+        "highlight": "Effizientes Bodentrocknen.",
+        "specs": [
+          { "label": "Klinge", "value": "Hochdichte Doppelschaumklinge" },
+          { "label": "Oberflächen", "value": "Keramik und Marmor" },
+          { "label": "Leistung", "value": "Effiziente Wasserentfernung" }
+        ],
+        "sizes": ["45 cm", "55 cm", "75 cm"]
+      },
+      "floorMop": {
+        "name": "Professioneller 360°-Bodenwischer",
+        "short": "Ein vielseitiges Werkzeug für die Bodenreinigung mit voll drehendem Gelenk und waschbarem Mikrofaser-Bezug.",
+        "detail": "Entwickelt für eine bequeme Bodenreinigung: Das drehbare Gelenk verbessert die Wendigkeit, während der waschbare Mikrofaser-Bezug den täglichen Dauerbetrieb unterstützt.",
+        "highlight": "Flexible Bewegung. Wirksame Reinigung.",
+        "specs": [
+          { "label": "Gelenk", "value": "360°-Drehung" },
+          { "label": "Bezug", "value": "Hochsaugfähige Mikrofaser" },
+          { "label": "Pflege", "value": "Waschbarer Bezug" },
+          { "label": "Anwendung", "value": "Praktische tägliche Reinigung" }
+        ],
+        "sizes": []
+      },
+      "brushesBrooms": {
+        "name": "Verstärkte Reinigungsbürsten & Besen",
+        "short": "Langlebige Reinigungsbürsten für verschiedene Oberflächen und alltägliche Reinigungsaufgaben.",
+        "detail": "Eine praktische Auswahl an Reinigungsbürsten für unterschiedliche Anforderungen — mit weichen und harten Borsten.",
+        "highlight": "Die richtige Bürste für jede Aufgabe.",
+        "specs": [
+          { "label": "Borsten", "value": "Verstärktes PBT-Polymer" },
+          { "label": "Langlebigkeit", "value": "Verbiegungs- und hitzebeständig" },
+          { "label": "Weiche Ausführung", "value": "Für die Innenreinigung" },
+          { "label": "Harte Ausführung", "value": "Zum Schrubben" }
+        ],
+        "sizes": []
+      },
+      "wasteBags": {
+        "name": "DIAMOND Hochleistungs-Abfallbeutel",
+        "short": "Robuste Abfallbeutel für die praktische tägliche Abfallsammlung.",
+        "detail": "Die DIAMOND Abfallbeutel sind auf eine bequeme Abfallsammlung ausgelegt und verbinden Haltbarkeit, verschiedene Füllmengen und Alltagszuverlässigkeit.",
+        "highlight": "Zuverlässige Stärke für den täglichen Einsatz.",
+        "specs": [
+          { "label": "Material", "value": "Folie mit hoher Dicke" },
+          { "label": "Konstruktion", "value": "Auslaufsicher" },
+          { "label": "Festigkeit", "value": "Reißfest" },
+          { "label": "Boden", "value": "Sternförmig verschweißt" },
+          { "label": "Verschluss", "value": "Kordelzug-Option" }
+        ],
+        "sizes": ["30 l", "60 l", "120 l", "240 l"]
+      }
+    }
+  },
+  "glassLab": {
+    "eyebrow": "Das Glaslabor",
+    "title": "Sehen Sie den Unterschied. Erleben Sie Klarheit.",
+    "subtitle": "Sehen Sie den Unterschied. Erleben Sie Klarheit.",
+    "description": "Entdecken Sie, wie die richtigen Reinigungswerkzeuge zu einer saubereren und klareren Glasfläche verhelfen.",
+    "before": "Vorher",
+    "after": "Nachher",
+    "instruction": "Ziehen Sie den Griff oder verwenden Sie die Pfeiltasten.",
+    "sliderLabel": "Glas vor und nach der Reinigung vergleichen",
+    "disclaimer": "Nur zur Veranschaulichung. Ergebnisse hängen von Oberflächenzustand, Technik und verwendeten Produkten ab.",
+    "stepsEyebrow": "Eine einfache Routine",
+    "stepsTitle": "Drei Schritte zu einer klareren Fläche.",
+    "steps": [
+      {
+        "title": "Vorbereiten",
+        "description": "Entfernen Sie losen Staub und Schmutz vom Glas, bevor Sie beginnen."
+      },
+      {
+        "title": "Reinigen",
+        "description": "Arbeiten Sie abschnittsweise mit Mikrofasertuch und Wasser und ziehen Sie anschließend die Abzieherklinge über die Fläche."
+      },
+      {
+        "title": "Vollenden",
+        "description": "Trocknen Sie Klinge und Rahmen ab — für ein sauberes, gleichmäßiges Ergebnis ohne Spuren."
+      }
+    ],
+    "relatedEyebrow": "Die Werkzeuge",
+    "relatedTitle": "Für Glas und Spiegel gemacht.",
+    "relatedCta": "Glasreinigung entdecken"
+  },
+  "about": {
+    "eyebrow": "Über DIAMOND",
+    "title": "Über DIAMOND",
+    "subtitle": "Sauberkeit, der Sie vertrauen können.",
+    "story": [
+      "DIAMOND ist eine Premium-Marke für die Lieferung und Distribution moderner Reinigungswerkzeuge und unverzichtbarer Haushaltshelfer. Gegründet auf einem kompromisslosen Qualitätsanspruch und internationalen Standards bringen wir Effizienz, Langlebigkeit und Komfort direkt in moderne Haushalte.",
+      "Unsere zentrale Mission ist es, innovative und praktische Haushaltshelfer anzubieten — von fortschrittlichen Reinigungswerkzeugen bis hin zu hochwertigen Kunststoffartikeln —, die höchsten Marktstandards entsprechen und das dauerhafte Vertrauen unserer Kunden gewinnen."
+    ],
+    "whyTitle": "Warum DIAMOND?",
+    "why": [
+      {
+        "title": "Außergewöhnliche Qualität & Langlebigkeit",
+        "description": "Unsere Produkte werden aus sorgfältig ausgewählten Materialien gefertigt und sind für den täglichen Gebrauch konzipiert — mit zuverlässiger, dauerhafter Leistung."
+      },
+      {
+        "title": "Modernes & ergonomisches Design",
+        "description": "Wir setzen auf praktische, benutzerfreundliche Designs, die Hausarbeiten schneller, einfacher und effizienter machen."
+      },
+      {
+        "title": "Zuverlässigkeit & Standards",
+        "description": "Wir verbinden Qualität mit Alltagstauglichkeit und liefern zuverlässige Haushaltshelfer mit bleibendem Wert."
+      }
+    ],
+    "closingLabel": "Unser Versprechen",
+    "closing": "DIAMOND ... Sauberkeit, der Sie vertrauen können.",
+    "focusEyebrow": "Was wir tun",
+    "focus": [
+      "Moderne Reinigungswerkzeuge",
+      "Haushaltshelfer",
+      "Lieferung & Distribution"
+    ],
+    "cta": "Kollektion entdecken"
+  },
+  "wholesale": {
+    "eyebrow": "Großhandel & Distribution",
+    "title": "Wachsen wir gemeinsam.",
+    "description": "Sie suchen einen zuverlässigen Lieferanten für Reinigungsprodukte? DIAMOND freut sich über Großhandelsanfragen von Distributoren, Einzelhändlern, Supermärkten und professionellen Reinigungsunternehmen.",
+    "descriptionSecondary": "Kontaktieren Sie unser Team, um die Produktverfügbarkeit zu besprechen und ein individuelles Angebot anzufordern.",
+    "cta": "Großhandelsangebot anfragen",
+    "processEyebrow": "So funktioniert es",
+    "processTitle": "Ein unkomplizierter Start.",
+    "process": [
+      {
+        "title": "Anforderungen mitteilen",
+        "description": "Teilen Sie uns mit, welche Produkte, Größen und Mengen Sie interessieren."
+      },
+      {
+        "title": "Individuelles Angebot erhalten",
+        "description": "Unser Team prüft die Verfügbarkeit und erstellt ein Angebot für Ihr Unternehmen."
+      },
+      {
+        "title": "Lieferung planen",
+        "description": "Bestätigen Sie die Details und vereinbaren Sie einen Lieferrhythmus, der zu Ihnen passt."
+      }
+    ],
+    "form": {
+      "title": "Großhandelsanfrage",
+      "intro": "Füllen Sie die Angaben unten aus und prüfen Sie Ihre ausgewählten Produkte vor dem Versand.",
+      "name": "Vollständiger Name",
+      "company": "Firmenname",
+      "phone": "Telefonnummer",
+      "email": "E-Mail-Adresse",
+      "businessType": "Unternehmensart",
+      "country": "Land",
+      "products": "Ausgewählte Produkte",
+      "message": "Zusätzliche Nachricht",
+      "messagePlaceholder": "Gibt es etwas, das wir über Ihre Anforderungen wissen sollten?",
+      "notes": "Die Mengen können vor dem Versand angepasst werden.",
+      "empty": "Ihre Anfrageliste ist leer.",
+      "emptyHint": "Fügen Sie Produkte hinzu, während Sie die Kollektion durchsuchen.",
+      "browse": "Produkte ansehen",
+      "total": "Artikel in Ihrer Anfrage",
+      "sendWhatsApp": "Per WhatsApp senden",
+      "sendEmail": "Per E-Mail senden",
+      "sending": "Wird vorbereitet ...",
+      "emailOpened": "Ihre E-Mail-App sollte sich mit der vorbereiteten Anfrage öffnen. Bitte prüfen und versenden Sie sie.",
+      "whatsappOpened": "WhatsApp sollte sich mit der vorbereiteten Anfrage öffnen. Bitte prüfen und versenden Sie sie.",
+      "unavailable": "Die Online-Übermittlung ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.",
+      "businessTypes": {
+        "distributor": "Distributor",
+        "supermarket": "Supermarkt",
+        "retailer": "Einzelhändler",
+        "cleaningCompany": "Reinigungsunternehmen",
+        "other": "Sonstiges"
+      },
+      "validation": {
+        "required": "Dieses Feld ist erforderlich.",
+        "email": "Geben Sie eine gültige E-Mail-Adresse ein.",
+        "phone": "Geben Sie eine gültige Telefonnummer ein.",
+        "products": "Fügen Sie mindestens ein Produkt zu Ihrer Anfrage hinzu."
+      },
+      "productQuantity": "Menge",
+      "removeProduct": "Produkt entfernen"
+    }
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Wir sind für Sie da.",
+    "description": "Haben Sie eine Frage zu unseren Produkten oder möchten Sie mit DIAMOND zusammenarbeiten? Wir freuen uns auf Ihre Nachricht.",
+    "name": "Name",
+    "email": "E-Mail-Adresse",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "messagePlaceholder": "Wie können wir helfen?",
+    "cta": "Nachricht senden",
+    "validation": {
+      "required": "Dieses Feld ist erforderlich.",
+      "email": "Geben Sie eine gültige E-Mail-Adresse ein."
+    },
+    "emailNote": "Ihre E-Mail-App öffnet sich mit der vorbereiteten Nachricht. Bitte prüfen und versenden Sie sie.",
+    "unavailable": "Die Online-Nachricht ist derzeit nicht verfügbar. Bitte versuchen Sie es später erneut.",
+    "directTitle": "Direkter Kontakt",
+    "phone": "Telefon",
+    "address": "Adresse"
+  },
+  "footer": {
+    "description": "Praktische Reinigungswerkzeuge und Haushaltshelfer für Qualität, Langlebigkeit und Alltagszuverlässigkeit.",
+    "explore": "Entdecken",
+    "company": "Unternehmen",
+    "rights": "Alle Rechte vorbehalten.",
+    "language": "Sprache",
+    "catalogue": "Produktkatalog"
+  },
+  "catalogue": {
+    "eyebrow": "DIAMOND",
+    "title": "Produktkatalog",
+    "description": "Die vollständige DIAMOND Kollektion mit Spezifikationen und verfügbaren Größen.",
+    "printHint": "Nutzen Sie den Druckdialog Ihres Browsers, um diesen Katalog als PDF zu speichern.",
+    "note": "Spezifikationen können sich ändern. Produktabbildungen sind illustrativ.",
+    "back": "Zurück zur Kollektion",
+    "download": "Katalog herunterladen"
+  },
+  "preview": {
+    "open": "Mobilvorschau",
+    "title": "Mobilvorschau",
+    "desktop": "Desktop-Ansicht",
+    "close": "Mobilvorschau schließen",
+    "hint": "Die Vorschau verwendet das echte responsive Layout."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden.",
+    "description": "Die gesuchte Seite existiert nicht.",
+    "home": "Zurück zur Startseite"
+  }
+}

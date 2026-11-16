@@ -1,0 +1,422 @@
+{
+  "meta": {
+    "siteName": "DIAMOND",
+    "slogan": "Une propreté de confiance",
+    "pages": {
+      "home": {
+        "title": "DIAMOND — Outils de nettoyage & essentiels du foyer",
+        "description": "DIAMOND réunit des outils de nettoyage et des essentiels du foyer soigneusement sélectionnés pour rendre le nettoyage quotidien plus simple, plus efficace et plus fiable."
+      },
+      "products": {
+        "title": "La collection — DIAMOND",
+        "description": "Découvrez la gamme DIAMOND d'outils de nettoyage et d'essentiels du foyer, pensés pour la qualité, le pragmatisme et la fiabilité."
+      },
+      "glassLab": {
+        "title": "Le laboratoire du verre — DIAMOND",
+        "description": "Découvrez la différence qu'apporte une routine de nettoyage du verre bien pensée. Explorez la collection DIAMOND pour le verre et les miroirs."
+      },
+      "about": {
+        "title": "À propos de DIAMOND — Une propreté de confiance",
+        "description": "DIAMOND est une marque premium spécialisée dans les outils de nettoyage ménagers modernes et les essentiels du quotidien, fondée sur la qualité et les standards internationaux."
+      },
+      "wholesale": {
+        "title": "Vente en gros & distribution — DIAMOND",
+        "description": "Devenez partenaire de DIAMOND. Demandes de vente en gros pour distributeurs, détaillants, supermarchés et entreprises de nettoyage professionnel."
+      },
+      "contact": {
+        "title": "Contact — DIAMOND",
+        "description": "Une question sur les produits DIAMOND ou envie de travailler avec nous ? Notre équipe sera ravie de vous lire."
+      },
+      "catalog": {
+        "title": "Catalogue produits — DIAMOND",
+        "description": "Le catalogue complet des produits DIAMOND avec caractéristiques et tailles disponibles. Imprimez-le ou enregistrez-le en PDF."
+      }
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "glassLab": "Labo verre",
+    "about": "À propos",
+    "wholesale": "Vente en gros",
+    "contact": "Contact",
+    "catalog": "Catalogue produits",
+    "language": "Langue",
+    "close": "Fermer",
+    "skipToContent": "Aller au contenu",
+    "openMenu": "Ouvrir le menu"
+  },
+  "common": {
+    "viewDetails": "Voir les détails",
+    "exploreProducts": "Découvrir les produits",
+    "discoverDiamond": "Découvrir DIAMOND",
+    "learnMore": "En savoir plus",
+    "viewAll": "Voir tous les produits",
+    "close": "Fermer",
+    "remove": "Retirer",
+    "quantity": "Quantité",
+    "decrease": "Diminuer la quantité",
+    "increase": "Augmenter la quantité",
+    "optional": "Facultatif",
+    "all": "Tous les produits",
+    "print": "Imprimer / Enregistrer en PDF",
+    "addToEnquiry": "Ajouter à la demande de gros",
+    "addedToEnquiry": "Ajouté à votre demande de gros.",
+    "reviewEnquiry": "Vérifier la demande",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp",
+    "step": "Étape",
+    "selected": "Sélectionné",
+    "backToTop": "Retour en haut"
+  },
+  "gateway": {
+    "welcome": "Bienvenue chez DIAMOND",
+    "select": "Choisissez votre langue préférée pour continuer.",
+    "languageLabel": "Langue",
+    "continue": "Continuer",
+    "footnote": "Vous pouvez changer de langue à tout moment."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "La qualité dans chaque détail",
+      "title": "Mieux nettoyer.\nMieux vivre au quotidien.",
+      "description": "DIAMOND réunit des outils de nettoyage et des essentiels du foyer soigneusement sélectionnés pour rendre le nettoyage quotidien plus simple, plus efficace et plus fiable.",
+      "primary": "Découvrir les produits",
+      "secondary": "Découvrir DIAMOND",
+      "visualEyebrow": "À la une",
+      "visualName": "Chiffon de nettoyage pour verre et miroir",
+      "visualSpec": "450 g/m² · Microfibre allemande",
+      "visualNote": "Efficace à l'eau seule.",
+      "imageAlt": "Le chiffon DIAMOND pour verre et miroir"
+    },
+    "highlights": {
+      "eyebrow": "L'exigence DIAMOND",
+      "title": "Une approche réfléchie du nettoyage quotidien.",
+      "items": [
+        {
+          "title": "Qualité des produits",
+          "description": "Des matériaux soigneusement sélectionnés et une performance fiable au quotidien."
+        },
+        {
+          "title": "Design pratique",
+          "description": "Des produits pensés pour le confort, la simplicité et l'efficacité."
+        },
+        {
+          "title": "Fiabilité au quotidien",
+          "description": "Des essentiels de nettoyage adaptés aux foyers modernes et à un usage professionnel."
+        }
+      ]
+    },
+    "featured": {
+      "eyebrow": "La collection",
+      "title": "Des produits pensés pour la performance quotidienne.",
+      "description": "Une gamme ciblée d'outils, chacun conçu pour une tâche précise et fait pour être utilisé tous les jours.",
+      "cta": "Voir la collection"
+    },
+    "lab": {
+      "eyebrow": "Le laboratoire du verre",
+      "title": "Voyez la différence. Retrouvez la clarté.",
+      "description": "Découvrez comment les bons outils permettent d'obtenir une surface vitrée plus propre et plus claire — avec moins d'effort et sans produits superflus.",
+      "cta": "Entrer dans le labo"
+    },
+    "about": {
+      "eyebrow": "À propos de DIAMOND",
+      "title": "Une propreté de confiance.",
+      "description": "Une marque fondée sur la qualité, le design pratique et la tranquille assurance de produits qui fonctionnent, tout simplement.",
+      "cta": "Notre histoire"
+    },
+    "wholesale": {
+      "eyebrow": "Vente en gros & distribution",
+      "title": "Grandissons ensemble.",
+      "description": "Un partenaire fiable pour les distributeurs, détaillants, supermarchés et entreprises de nettoyage professionnel.",
+      "cta": "Demander un devis en gros"
+    }
+  },
+  "catalog": {
+    "eyebrow": "Notre collection",
+    "title": "Des produits pensés pour la performance quotidienne.",
+    "description": "Découvrez la gamme DIAMOND d'outils de nettoyage et d'essentiels du foyer, pensés pour la qualité, le pragmatisme et la fiabilité.",
+    "searchLabel": "Rechercher des produits",
+    "searchPlaceholder": "Rechercher dans nos produits...",
+    "clearSearch": "Effacer la recherche",
+    "noResults": "Aucun produit trouvé. Essayez une autre recherche.",
+    "filtersLabel": "Filtrer par catégorie",
+    "resultsLabel": "produits",
+    "catalogueLink": "Télécharger le catalogue"
+  },
+  "categories": {
+    "all": "Tous les produits",
+    "glass": "Nettoyage du verre",
+    "floor": "Nettoyage des sols",
+    "brushes": "Brosses & balais",
+    "bags": "Sacs poubelle"
+  },
+  "product": {
+    "detailsTitle": "Détails du produit",
+    "category": "Catégorie",
+    "description": "Description",
+    "specifications": "Caractéristiques",
+    "availableSizes": "Tailles disponibles",
+    "keyHighlight": "Point fort",
+    "size": "Taille",
+    "addToWholesale": "Ajouter à la demande de gros",
+    "close": "Fermer les détails du produit",
+    "imageAlt": "Produit DIAMOND"
+  },
+  "products": {
+    "items": {
+      "glassCloth": {
+        "name": "Chiffon DIAMOND pour verre et miroir",
+        "short": "Une finition plus nette grâce à une microfibre premium conçue pour nettoyer efficacement le verre et les miroirs.",
+        "detail": "Conçu pour nettoyer efficacement le verre et les miroirs, ce chiffon en microfibre élimine la saleté et les marques du quotidien tout en offrant une finition propre et sans traces.",
+        "highlight": "Un verre propre. Des résultats nets.",
+        "specs": [
+          { "label": "Matière", "value": "Microfibre allemande" },
+          { "label": "Densité", "value": "450 g/m²" },
+          { "label": "Finition", "value": "Nettoyage sans peluches" },
+          { "label": "Résultat", "value": "Finition sans traces" },
+          { "label": "Conçu pour", "value": "Verre & miroirs" },
+          { "label": "Utilisation", "value": "Efficace à l'eau seule" }
+        ],
+        "sizes": []
+      },
+      "windowSqueegee": {
+        "name": "Raclette compacte pour vitres",
+        "short": "Un outil pratique pour nettoyer les vitres, avec une lame souple en caoutchouc et une poignée confortable.",
+        "detail": "Conçue pour faciliter le nettoyage du verre et des fenêtres, elle dispose d'une lame souple qui élimine efficacement l'eau et les résidus de surface.",
+        "highlight": "Un nettoyage fluide. Une finition nette.",
+        "specs": [
+          { "label": "Lame", "value": "Caoutchouc / silicone allemand souple" },
+          { "label": "Poignée", "value": "Design ergonomique" }
+        ],
+        "sizes": ["25 cm", "35 cm"]
+      },
+      "floorSqueegee": {
+        "name": "Raclette professionnelle à double lame pour sols",
+        "short": "Une solution pratique pour le nettoyage des sols, conçue pour éliminer efficacement l'eau.",
+        "detail": "Sa double lame permet de rassembler et d'évacuer l'eau sur les sols lisses, pour un nettoyage quotidien plus simple et plus efficace.",
+        "highlight": "Un séchage efficace des sols.",
+        "specs": [
+          { "label": "Lame", "value": "Double lame en mousse haute densité" },
+          { "label": "Surfaces", "value": "Céramique et marbre" },
+          { "label": "Performance", "value": "Élimination efficace de l'eau" }
+        ],
+        "sizes": ["45 cm", "55 cm", "75 cm"]
+      },
+      "floorMop": {
+        "name": "Balai à plat professionnel 360°",
+        "short": "Un outil polyvalent pour nettoyer les sols, doté d'une articulation à rotation complète et d'une recharge microfibre lavable.",
+        "detail": "Conçu pour faciliter le nettoyage des sols, son articulation rotative améliore la maniabilité, tandis que la recharge microfibre lavable accompagne un usage quotidien répété.",
+        "highlight": "Un mouvement souple. Un nettoyage efficace.",
+        "specs": [
+          { "label": "Articulation", "value": "Rotation à 360°" },
+          { "label": "Recharge", "value": "Microfibre très absorbante" },
+          { "label": "Entretien", "value": "Recharge lavable" },
+          { "label": "Utilisation", "value": "Nettoyage quotidien pratique" }
+        ],
+        "sizes": []
+      },
+      "brushesBrooms": {
+        "name": "Brosses et balais de nettoyage renforcés",
+        "short": "Des brosses de nettoyage durables, conçues pour différentes surfaces et tâches quotidiennes.",
+        "detail": "Une gamme pratique de brosses de nettoyage adaptées à différents besoins, avec des options de poils souples et durs.",
+        "highlight": "La bonne brosse pour chaque tâche.",
+        "specs": [
+          { "label": "Poils", "value": "Polymère PBT renforcé" },
+          { "label": "Durabilité", "value": "Résistant à la déformation et à la chaleur" },
+          { "label": "Version souple", "value": "Pour le nettoyage intérieur" },
+          { "label": "Version dure", "value": "Pour le récurage" }
+        ],
+        "sizes": []
+      },
+      "wasteBags": {
+        "name": "Sacs poubelle renforcés DIAMOND",
+        "short": "Des sacs poubelle résistants, conçus pour la collecte pratique des déchets au quotidien.",
+        "detail": "Conçus pour faciliter la collecte des déchets, les sacs DIAMOND associent résistance, capacités adaptées et fiabilité au quotidien.",
+        "highlight": "Une solidité fiable au quotidien.",
+        "specs": [
+          { "label": "Matière", "value": "Film haute épaisseur" },
+          { "label": "Construction", "value": "Résistant aux fuites" },
+          { "label": "Solidité", "value": "Résistant à la déchirure" },
+          { "label": "Fond", "value": "Soudure en étoile" },
+          { "label": "Fermeture", "value": "Option cordon de serrage" }
+        ],
+        "sizes": ["30 L", "60 L", "120 L", "240 L"]
+      }
+    }
+  },
+  "glassLab": {
+    "eyebrow": "Le laboratoire du verre",
+    "title": "Voyez la différence. Retrouvez la clarté.",
+    "subtitle": "Voyez la différence. Retrouvez la clarté.",
+    "description": "Découvrez comment les bons outils de nettoyage permettent d'obtenir une surface vitrée plus propre et plus claire.",
+    "before": "Avant",
+    "after": "Après",
+    "instruction": "Faites glisser la poignée ou utilisez les flèches du clavier.",
+    "sliderLabel": "Comparer le verre avant et après nettoyage",
+    "disclaimer": "Illustration uniquement. Les résultats dépendent de l'état de la surface, de la technique et des produits utilisés.",
+    "stepsEyebrow": "Une routine simple",
+    "stepsTitle": "Trois étapes pour une surface plus nette.",
+    "steps": [
+      {
+        "title": "Préparer",
+        "description": "Retirez la poussière et les résidus libres du verre avant de commencer."
+      },
+      {
+        "title": "Nettoyer",
+        "description": "Travaillez par zones avec le chiffon microfibre et de l'eau, puis passez la lame de la raclette sur la surface."
+      },
+      {
+        "title": "Finir",
+        "description": "Séchez la lame et le cadre pour un résultat propre et régulier, sans marques."
+      }
+    ],
+    "relatedEyebrow": "Les outils",
+    "relatedTitle": "Pensés pour le verre et les miroirs.",
+    "relatedCta": "Découvrir le nettoyage du verre"
+  },
+  "about": {
+    "eyebrow": "À propos de DIAMOND",
+    "title": "À propos de DIAMOND",
+    "subtitle": "Une propreté de confiance.",
+    "story": [
+      "DIAMOND est une marque premium spécialisée dans la fourniture et la distribution d'outils de nettoyage ménagers modernes et d'essentiels du quotidien. Portée par un engagement envers une qualité sans compromis et les standards internationaux, nous apportons efficacité, durabilité et confort directement dans les foyers modernes.",
+      "Notre mission est de proposer des essentiels du foyer innovants et pratiques — des outils de nettoyage avancés aux articles en plastique de haute qualité — conçus pour répondre aux exigences du marché et gagner la confiance durable de nos clients."
+    ],
+    "whyTitle": "Pourquoi choisir DIAMOND ?",
+    "why": [
+      {
+        "title": "Qualité et durabilité exceptionnelles",
+        "description": "Nos produits sont fabriqués à partir de matériaux soigneusement sélectionnés, pensés pour résister à un usage quotidien et offrir une performance fiable dans le temps."
+      },
+      {
+        "title": "Un design moderne et ergonomique",
+        "description": "Nous privilégions des designs pratiques et intuitifs qui rendent les tâches ménagères plus rapides, plus simples et plus efficaces."
+      },
+      {
+        "title": "Fiabilité et exigences",
+        "description": "Nous faisons le lien entre qualité et praticité quotidienne, en proposant des essentiels du foyer fiables et porteurs de valeur durable."
+      }
+    ],
+    "closingLabel": "Notre promesse",
+    "closing": "DIAMOND... Une propreté de confiance.",
+    "focusEyebrow": "Notre métier",
+    "focus": [
+      "Outils de nettoyage modernes",
+      "Essentiels du foyer",
+      "Fourniture & distribution"
+    ],
+    "cta": "Découvrir la collection"
+  },
+  "wholesale": {
+    "eyebrow": "Vente en gros & distribution",
+    "title": "Grandissons ensemble.",
+    "description": "Vous cherchez un fournisseur fiable de produits de nettoyage ? DIAMOND accueille les demandes de vente en gros des distributeurs, détaillants, supermarchés et entreprises de nettoyage professionnel.",
+    "descriptionSecondary": "Contactez notre équipe pour discuter de la disponibilité des produits et demander un devis personnalisé.",
+    "cta": "Demander un devis en gros",
+    "processEyebrow": "Comment ça marche",
+    "processTitle": "Un démarrage simple.",
+    "process": [
+      {
+        "title": "Partagez vos besoins",
+        "description": "Indiquez-nous les produits, tailles et quantités qui vous intéressent."
+      },
+      {
+        "title": "Recevez un devis personnalisé",
+        "description": "Notre équipe vérifie la disponibilité et prépare un devis adapté à votre entreprise."
+      },
+      {
+        "title": "Planifiez votre approvisionnement",
+        "description": "Confirmez les détails et convenez d'un rythme d'approvisionnement qui vous convient."
+      }
+    ],
+    "form": {
+      "title": "Demande de vente en gros",
+      "intro": "Complétez les informations ci-dessous et vérifiez vos produits sélectionnés avant l'envoi.",
+      "name": "Nom complet",
+      "company": "Nom de l'entreprise",
+      "phone": "Numéro de téléphone",
+      "email": "Adresse e-mail",
+      "businessType": "Type d'activité",
+      "country": "Pays",
+      "products": "Produits sélectionnés",
+      "message": "Message complémentaire",
+      "messagePlaceholder": "Y a-t-il un point à nous préciser concernant vos besoins ?",
+      "notes": "Les quantités peuvent être ajustées avant l'envoi.",
+      "empty": "Votre liste de demande est vide.",
+      "emptyHint": "Ajoutez des produits à votre liste en parcourant la collection.",
+      "browse": "Parcourir les produits",
+      "total": "articles dans votre demande",
+      "sendWhatsApp": "Envoyer via WhatsApp",
+      "sendEmail": "Envoyer par e-mail",
+      "sending": "Préparation...",
+      "emailOpened": "Votre application e-mail devrait s'ouvrir avec la demande préparée. Vérifiez-la et envoyez-la.",
+      "whatsappOpened": "WhatsApp devrait s'ouvrir avec la demande préparée. Vérifiez-la et envoyez-la.",
+      "unavailable": "L'envoi en ligne n'est pas disponible pour le moment. Veuillez réessayer plus tard.",
+      "businessTypes": {
+        "distributor": "Distributeur",
+        "supermarket": "Supermarché",
+        "retailer": "Détaillant",
+        "cleaningCompany": "Entreprise de nettoyage",
+        "other": "Autre"
+      },
+      "validation": {
+        "required": "Ce champ est obligatoire.",
+        "email": "Saisissez une adresse e-mail valide.",
+        "phone": "Saisissez un numéro de téléphone valide.",
+        "products": "Ajoutez au moins un produit à votre demande."
+      },
+      "productQuantity": "Quantité",
+      "removeProduct": "Retirer le produit"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Nous sommes là pour vous aider.",
+    "description": "Une question sur nos produits ou envie de travailler avec DIAMOND ? Notre équipe sera ravie de vous lire.",
+    "name": "Nom",
+    "email": "Adresse e-mail",
+    "subject": "Objet",
+    "message": "Message",
+    "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+    "cta": "Envoyer le message",
+    "validation": {
+      "required": "Ce champ est obligatoire.",
+      "email": "Saisissez une adresse e-mail valide."
+    },
+    "emailNote": "Votre application e-mail s'ouvre avec votre message préparé. Vérifiez-le et envoyez-le.",
+    "unavailable": "La messagerie en ligne n'est pas disponible pour le moment. Veuillez réessayer plus tard.",
+    "directTitle": "Contact direct",
+    "phone": "Téléphone",
+    "address": "Adresse"
+  },
+  "footer": {
+    "description": "Des outils de nettoyage pratiques et des essentiels du foyer pensés pour la qualité, la durabilité et la fiabilité au quotidien.",
+    "explore": "Explorer",
+    "company": "Entreprise",
+    "rights": "Tous droits réservés.",
+    "language": "Langue",
+    "catalogue": "Catalogue produits"
+  },
+  "catalogue": {
+    "eyebrow": "DIAMOND",
+    "title": "Catalogue produits",
+    "description": "La collection DIAMOND complète, avec caractéristiques et tailles disponibles.",
+    "printHint": "Utilisez la boîte de dialogue d'impression de votre navigateur pour enregistrer ce catalogue en PDF.",
+    "note": "Les caractéristiques peuvent évoluer. Les visuels des produits sont illustratifs.",
+    "back": "Retour à la collection",
+    "download": "Télécharger le catalogue"
+  },
+  "preview": {
+    "open": "Aperçu mobile",
+    "title": "Aperçu mobile",
+    "desktop": "Vue bureau",
+    "close": "Fermer l'aperçu mobile",
+    "hint": "L'aperçu utilise la véritable mise en page responsive."
+  },
+  "notFound": {
+    "title": "Page introuvable.",
+    "description": "La page que vous recherchez n'existe pas.",
+    "home": "Retour à l'accueil"
+  }
+}

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>DIAMOND — Page not found</title>
+    <style>
+      :root {
+        --navy: #0b2545;
+        --emerald: #1d8a4e;
+        --gold: #f5b700;
+        --ice: #f4f7fa;
+        --muted: #64748b;
+        --line: #e1e8f0;
+        --ink: #182538;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+      body {
+        background: #ffffff;
+        color: var(--ink);
+        font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      html[lang="ar"] body {
+        font-family: "Segoe UI", Tahoma, "Noto Kufi Arabic", sans-serif;
+      }
+      html[lang="zh"] body {
+        font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+      }
+      .wrap {
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+      }
+      .shell {
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 clamp(20px, 4vw, 56px);
+      }
+      .bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+        gap: 24px;
+      }
+      .bar img {
+        display: block;
+        width: 148px;
+        height: auto;
+      }
+      .bar span {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+      .content {
+        padding: 72px 0 88px;
+      }
+      .rule {
+        width: 44px;
+        height: 2px;
+        background: var(--gold);
+        margin-bottom: 40px;
+      }
+      .code {
+        font-size: clamp(96px, 18vw, 220px);
+        line-height: 0.82;
+        letter-spacing: -0.055em;
+        font-weight: 500;
+        color: var(--navy);
+      }
+      h1 {
+        margin: 40px 0 0;
+        font-size: clamp(28px, 4vw, 48px);
+        line-height: 1.05;
+        letter-spacing: -0.03em;
+        font-weight: 500;
+        color: var(--navy);
+      }
+      p {
+        margin: 18px 0 0;
+        max-width: 44ch;
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 36px;
+      }
+      a.button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 22px;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        border: 1px solid var(--navy);
+        color: var(--navy);
+        background: transparent;
+        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      }
+      a.button.primary {
+        background: var(--emerald);
+        border-color: var(--emerald);
+        color: #ffffff;
+      }
+      a.button:hover {
+        border-color: var(--navy);
+        background: var(--navy);
+        color: #ffffff;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+      }
+      .foot {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 26px 0;
+      }
+      .langs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+      }
+      .langs a {
+        font-size: 11px;
+        color: var(--muted);
+        text-decoration: none;
+      }
+      .langs a:hover {
+        color: var(--emerald);
+      }
+      .copy {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      html[dir="rtl"] .rule {
+        margin-inline-start: 0;
+      }
+      @media (max-width: 640px) {
+        .content {
+          padding: 52px 0 64px;
+        }
+        .bar span {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="shell bar">
+          <a href="/en/" aria-label="DIAMOND">
+            <img src="/brand/logo.svg" alt="DIAMOND" width="148" height="28" />
+          </a>
+          <span data-slogan>Cleanliness you can trust</span>
+        </div>
+      </header>
+
+      <main>
+        <div class="shell content">
+          <div class="rule" aria-hidden="true"></div>
+          <div class="code" aria-hidden="true">404</div>
+          <h1 data-title>Page not found.</h1>
+          <p data-description>The page you are looking for isn't here.</p>
+          <div class="actions">
+            <a class="button primary" data-home href="/en/">Back to home</a>
+            <a class="button" data-products href="/en/products/">Products</a>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="shell foot">
+          <nav class="langs" aria-label="Languages">
+            <a href="/en/" data-lang="en" lang="en">English</a>
+            <a href="/ar/" data-lang="ar" lang="ar">العربية</a>
+            <a href="/de/" data-lang="de" lang="de">Deutsch</a>
+            <a href="/fr/" data-lang="fr" lang="fr">Français</a>
+            <a href="/it/" data-lang="it" lang="it">Italiano</a>
+            <a href="/zh/" data-lang="zh" lang="zh-Hans">中文</a>
+          </nav>
+          <p class="copy" data-copy>© DIAMOND. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var copy = {
+          en: {
+            title: "Page not found.",
+            description: "The page you are looking for isn't here.",
+            home: "Back to home",
+            products: "Products",
+            slogan: "Cleanliness you can trust",
+            rights: "All rights reserved.",
+            dir: "ltr",
+          },
+          ar: {
+            title: "الصفحة غير موجودة.",
+            description: "الصفحة التي تبحث عنها غير متوفرة.",
+            home: "العودة إلى الرئيسية",
+            products: "المنتجات",
+            slogan: "نظافة تثقون بها",
+            rights: "جميع الحقوق محفوظة.",
+            dir: "rtl",
+          },
+          de: {
+            title: "Seite nicht gefunden.",
+            description: "Die gesuchte Seite existiert nicht.",
+            home: "Zurück zur Startseite",
+            products: "Produkte",
+            slogan: "Sauberkeit, der Sie vertrauen können",
+            rights: "Alle Rechte vorbehalten.",
+            dir: "ltr",
+          },
+          fr: {
+            title: "Page introuvable.",
+            description: "La page que vous recherchez n'existe pas.",
+            home: "Retour à l'accueil",
+            products: "Produits",
+            slogan: "Une propreté de confiance",
+            rights: "Tous droits réservés.",
+            dir: "ltr",
+          },
+          it: {
+            title: "Pagina non trovata.",
+            description: "La pagina che cerchi non è disponibile.",
+            home: "Torna alla home",
+            products: "Prodotti",
+            slogan: "Pulizia di cui fidarsi",
+            rights: "Tutti i diritti riservati.",
+            dir: "ltr",
+          },
+          zh: {
+            title: "页面未找到。",
+            description: "您要查找的页面不存在。",
+            home: "返回首页",
+            products: "产品",
+            slogan: "值得信赖的洁净",
+            rights: "版权所有。",
+            dir: "ltr",
+          },
+        };
+
+        var segment = location.pathname.split("/")[1] || "en";
+        var locale = copy[segment] ? segment : "en";
+        var t = copy[locale];
+
+        document.documentElement.lang = locale === "zh" ? "zh-Hans" : locale;
+        document.documentElement.dir = t.dir;
+        document.title = "DIAMOND — " + t.title;
+
+        function set(selector, text) {
+          var el = document.querySelector(selector);
+          if (el) el.textContent = text;
+        }
+
+        set("[data-title]", t.title);
+        set("[data-description]", t.description);
+        set("[data-slogan]", t.slogan);
+        set("[data-copy]", "© " + new Date().getFullYear() + " DIAMOND. " + t.rights);
+
+        var home = document.querySelector("[data-home]");
+        var products = document.querySelector("[data-products]");
+        if (home) {
+          home.textContent = t.home;
+          home.setAttribute("href", "/" + locale + "/");
+        }
+        if (products) {
+          products.textContent = t.products;
+          products.setAttribute("href", "/" + locale + "/products/");
+        }
+      })();
+    </script>
+  </body>
+</html>
