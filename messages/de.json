@@ -165,7 +165,7 @@
   },
   "products": {
     "items": {
-      "glassCloth": {
+      "glass-cloth": {
         "name": "DIAMOND Glas- und Spiegelreinigungstuch",
         "short": "Ein klareres Ergebnis mit Premium-Mikrofaser, speziell für die wirksame Reinigung von Glas und Spiegeln.",
         "detail": "Dieses Mikrofasertuch wurde für die effiziente Reinigung von Glas und Spiegeln entwickelt. Es entfernt Schmutz und alltägliche Spuren und sorgt für ein sauberes, streifenfreies Finish.",
@@ -197,7 +197,7 @@
           }
         ]
       },
-      "windowSqueegee": {
+      "window-squeegee": {
         "name": "Kompakter Fensterabzieher",
         "short": "Ein praktisches Werkzeug für die Fensterreinigung mit flexibler Gummiklinge und komfortablem Griff.",
         "detail": "Für die bequeme Reinigung von Glas und Fenstern entwickelt. Die flexible Klinge entfernt Wasser und Oberflächenrückstände effizient.",
@@ -213,7 +213,7 @@
           }
         ]
       },
-      "floorSqueegee": {
+      "floor-squeegee": {
         "name": "Professioneller Bodenabzieher mit Doppelklinge",
         "short": "Eine praktische Lösung für die Bodenreinigung, entwickelt für eine wirksame Wasserentfernung.",
         "detail": "Die Doppelklingen-Konstruktion sammelt Wasser auf glatten Bodenflächen und entfernt es zuverlässig — für eine einfachere und effizientere tägliche Reinigung.",
@@ -233,7 +233,7 @@
           }
         ]
       },
-      "floorMop": {
+      "floor-mop": {
         "name": "Professioneller 360°-Bodenwischer",
         "short": "Ein vielseitiges Werkzeug für die Bodenreinigung mit voll drehendem Gelenk und waschbarem Mikrofaser-Bezug.",
         "detail": "Entwickelt für eine bequeme Bodenreinigung: Das drehbare Gelenk verbessert die Wendigkeit, während der waschbare Mikrofaser-Bezug den täglichen Dauerbetrieb unterstützt.",
@@ -257,7 +257,7 @@
           }
         ]
       },
-      "brushesBrooms": {
+      "brushes-brooms": {
         "name": "Verstärkte Reinigungsbürsten & Besen",
         "short": "Langlebige Reinigungsbürsten für verschiedene Oberflächen und alltägliche Reinigungsaufgaben.",
         "detail": "Eine praktische Auswahl an Reinigungsbürsten für unterschiedliche Anforderungen — mit weichen und harten Borsten.",
@@ -281,7 +281,7 @@
           }
         ]
       },
-      "wasteBags": {
+      "waste-bags": {
         "name": "DIAMOND Hochleistungs-Abfallbeutel",
         "short": "Robuste Abfallbeutel für die praktische tägliche Abfallsammlung.",
         "detail": "Die DIAMOND Abfallbeutel sind auf eine bequeme Abfallsammlung ausgelegt und verbinden Haltbarkeit, verschiedene Füllmengen und Alltagszuverlässigkeit.",

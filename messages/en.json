@@ -165,7 +165,7 @@
   },
   "products": {
     "items": {
-      "glassCloth": {
+      "glass-cloth": {
         "name": "Diamond Glass & Mirror Cleaning Cloth",
         "short": "Experience a clearer finish with premium microfiber designed for effective glass and mirror cleaning.",
         "detail": "Designed to clean glass and mirrors efficiently, this microfiber cloth helps remove dirt and everyday marks while delivering a clean, streak-free finish.",
@@ -197,7 +197,7 @@
           }
         ]
       },
-      "windowSqueegee": {
+      "window-squeegee": {
         "name": "Compact Window Squeegee",
         "short": "A practical window cleaning tool with a flexible rubber blade and comfortable handle.",
         "detail": "Designed for convenient glass and window cleaning, featuring a flexible blade that helps remove water and surface residue efficiently.",
@@ -213,7 +213,7 @@
           }
         ]
       },
-      "floorSqueegee": {
+      "floor-squeegee": {
         "name": "Professional Double-Blade Floor Squeegee",
         "short": "A practical floor-cleaning solution designed for effective water removal.",
         "detail": "The double-blade design helps collect and remove water from smooth floor surfaces, making everyday cleaning easier and more efficient.",
@@ -233,7 +233,7 @@
           }
         ]
       },
-      "floorMop": {
+      "floor-mop": {
         "name": "Professional 360° Floor Mop",
         "short": "A versatile floor-cleaning tool with a full-rotation joint and washable microfiber refill.",
         "detail": "Designed for convenient floor cleaning, its rotating joint improves maneuverability while the washable microfiber refill supports repeated everyday use.",
@@ -257,7 +257,7 @@
           }
         ]
       },
-      "brushesBrooms": {
+      "brushes-brooms": {
         "name": "Reinforced Cleaning Brushes & Brooms",
         "short": "Durable cleaning brushes designed for different surfaces and everyday cleaning tasks.",
         "detail": "A practical range of cleaning brushes designed for different cleaning requirements, with soft and hard bristle options.",
@@ -281,7 +281,7 @@
           }
         ]
       },
-      "wasteBags": {
+      "waste-bags": {
         "name": "DIAMOND Heavy-Duty Waste Bags",
         "short": "Durable waste bags designed for practical everyday waste collection.",
         "detail": "Designed for convenient waste collection, DIAMOND waste bags offer a practical combination of durability, capacity options, and everyday reliability.",

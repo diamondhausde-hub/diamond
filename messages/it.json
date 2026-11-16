@@ -165,7 +165,7 @@
   },
   "products": {
     "items": {
-      "glassCloth": {
+      "glass-cloth": {
         "name": "Panno DIAMOND per vetri e specchi",
         "short": "Una finitura più limpida con microfibra premium pensata per pulire efficacemente vetri e specchi.",
         "detail": "Progettato per pulire vetri e specchi in modo efficiente, questo panno in microfibra rimuove sporco e segni quotidiani offrendo una finitura pulita e senza aloni.",
@@ -197,7 +197,7 @@
           }
         ]
       },
-      "windowSqueegee": {
+      "window-squeegee": {
         "name": "Tergivetro compatto",
         "short": "Un pratico strumento per la pulizia delle finestre, con lama flessibile in gomma e impugnatura confortevole.",
         "detail": "Progettato per pulire comodamente vetri e finestre, presenta una lama flessibile che rimuove efficacemente acqua e residui superficiali.",
@@ -213,7 +213,7 @@
           }
         ]
       },
-      "floorSqueegee": {
+      "floor-squeegee": {
         "name": "Tergipavimento professionale a doppia lama",
         "short": "Una soluzione pratica per la pulizia dei pavimenti, pensata per rimuovere l'acqua in modo efficace.",
         "detail": "Il design a doppia lama raccoglie e rimuove l'acqua dalle superfici lisce, rendendo le pulizie quotidiane più semplici ed efficienti.",
@@ -233,7 +233,7 @@
           }
         ]
       },
-      "floorMop": {
+      "floor-mop": {
         "name": "Lavapavimenti professionale 360°",
         "short": "Uno strumento versatile per la pulizia dei pavimenti, con snodo a rotazione completa e ricambio in microfibra lavabile.",
         "detail": "Progettato per pulire i pavimenti con facilità, lo snodo rotante migliora la manovrabilità mentre il ricambio in microfibra lavabile supporta l'uso quotidiano ripetuto.",
@@ -257,7 +257,7 @@
           }
         ]
       },
-      "brushesBrooms": {
+      "brushes-brooms": {
         "name": "Spazzole e scope rinforzate",
         "short": "Spazzole per la pulizia resistenti, pensate per diverse superfici e attività quotidiane.",
         "detail": "Una gamma pratica di spazzole per la pulizia, adatta a diverse esigenze e disponibile con setole morbide o dure.",
@@ -281,7 +281,7 @@
           }
         ]
       },
-      "wasteBags": {
+      "waste-bags": {
         "name": "Sacchi rifiuti DIAMOND ad alta resistenza",
         "short": "Sacchi rifiuti resistenti, pensati per la raccolta pratica dei rifiuti quotidiani.",
         "detail": "Pensati per una raccolta comoda, i sacchi DIAMOND offrono un equilibrio pratico tra resistenza, capacità disponibili e affidabilità quotidiana.",

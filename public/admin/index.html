@@ -1,0 +1,1714 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://raw.githubusercontent.com; connect-src https://api.github.com; base-uri 'none'; form-action 'none'"
+    />
+    <title>DIAMOND — لوحة التحكم</title>
+    <style>
+      :root {
+        --navy: #0b2545;
+        --emerald: #1d8a4e;
+        --gold: #f5b700;
+        --ink: #182538;
+        --muted: #64748b;
+        --line: #e1e8f0;
+        --line-strong: #cbd5e1;
+        --ice: #f4f7fa;
+        --danger: #b42318;
+        --ok: #14663a;
+        --radius: 4px;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; }
+      body {
+        background: var(--ice);
+        color: var(--ink);
+        font-family: "Segoe UI", Tahoma, -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      button, input, select, textarea { font: inherit; }
+      button { cursor: pointer; }
+      a { color: var(--emerald); }
+      .hidden { display: none !important; }
+      .sr-only {
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+      }
+
+      /* Login */
+      .login-wrap {
+        min-height: 100dvh; display: flex; align-items: center; justify-content: center;
+        padding: 24px 18px; background: var(--navy);
+      }
+      .login-card {
+        width: 100%; max-width: 460px; background: #fff; padding: 30px 26px;
+        border-top: 3px solid var(--gold);
+      }
+      .brand { display: flex; align-items: center; gap: 10px; color: var(--navy); font-weight: 700; letter-spacing: .08em; }
+      .brand-mark { width: 26px; height: 26px; border-radius: 50%; background: var(--emerald); position: relative; flex: none; }
+      .brand-mark::after {
+        content: ""; position: absolute; inset: 7px; border: 2px solid #fff;
+        transform: rotate(45deg); border-radius: 1px;
+      }
+      .login-card h1 { font-size: 21px; margin: 22px 0 4px; color: var(--navy); }
+      .login-card p.hint { color: var(--muted); font-size: 12px; margin: 0 0 22px; }
+      details.help { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 14px; }
+      details.help summary { cursor: pointer; font-size: 12px; font-weight: 600; color: var(--navy); }
+      details.help ol { font-size: 12px; color: var(--muted); padding-inline-start: 18px; }
+
+      /* Layout */
+      .app { min-height: 100dvh; display: flex; }
+      .side {
+        display: none; width: 232px; flex: none; background: var(--navy); color: #fff;
+        padding: 22px 14px; position: sticky; top: 0; height: 100dvh;
+      }
+      @media (min-width: 900px) { .side { display: flex; flex-direction: column; } }
+      .side .brand { color: #fff; padding: 0 10px 20px; border-bottom: 1px solid rgba(255,255,255,.14); }
+      .nav-list { display: flex; flex-direction: column; gap: 2px; margin-top: 16px; }
+      .nav-item {
+        display: flex; align-items: center; gap: 10px; width: 100%; border: 0; background: transparent;
+        color: rgba(255,255,255,.72); text-align: start; padding: 11px 12px; border-radius: var(--radius);
+        font-size: 13px;
+      }
+      .nav-item:hover { background: rgba(255,255,255,.08); color: #fff; }
+      .nav-item.active { background: var(--emerald); color: #fff; }
+      .nav-item .ico { width: 18px; text-align: center; opacity: .9; }
+      .side-foot { margin-top: auto; border-top: 1px solid rgba(255,255,255,.14); padding-top: 14px; }
+      .side-foot button { width: 100%; margin-bottom: 6px; }
+      .main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+      .topbar {
+        background: #fff; border-bottom: 1px solid var(--line); padding: 12px 16px;
+        display: flex; align-items: center; justify-content: space-between; gap: 10px;
+        position: sticky; top: 0; z-index: 20;
+      }
+      .topbar h2 { font-size: 15px; margin: 0; color: var(--navy); }
+      .topbar-actions { display: flex; gap: 6px; align-items: center; }
+      .content { padding: 18px 16px 96px; max-width: 1100px; width: 100%; margin: 0 auto; }
+      @media (min-width: 900px) { .content { padding-bottom: 30px; } }
+
+      .bottom {
+        position: fixed; inset-inline: 0; bottom: 0; z-index: 30; background: #fff;
+        border-top: 1px solid var(--line); display: flex; justify-content: space-around;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      @media (min-width: 900px) { .bottom { display: none; } }
+      .bottom button {
+        flex: 1; min-width: 0; border: 0; background: transparent; color: var(--muted);
+        padding: 8px 2px 7px; font-size: 10px; display: flex; flex-direction: column;
+        align-items: center; gap: 2px;
+      }
+      .bottom button.active { color: var(--emerald); }
+      .bottom .ico { font-size: 17px; line-height: 1; }
+
+      /* Common UI */
+      .btn {
+        border: 1px solid var(--navy); background: var(--navy); color: #fff; border-radius: var(--radius);
+        padding: 9px 14px; font-size: 12px; font-weight: 600; min-height: 40px;
+        display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      }
+      .btn:hover { opacity: .9; }
+      .btn:disabled { opacity: .5; cursor: not-allowed; }
+      .btn.primary { background: var(--emerald); border-color: var(--emerald); }
+      .btn.ghost { background: #fff; color: var(--navy); }
+      .btn.danger { background: #fff; color: var(--danger); border-color: #e2a9a3; }
+      .btn.small { min-height: 32px; padding: 5px 9px; font-size: 11px; }
+      .btn.big { min-height: 52px; font-size: 15px; width: 100%; }
+      .field { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+      .field label { font-size: 11px; color: var(--muted); font-weight: 600; }
+      .field input, .field select, .field textarea {
+        width: 100%; border: 1px solid var(--line-strong); background: #fff; color: var(--ink);
+        padding: 9px 10px; min-height: 42px; border-radius: var(--radius); outline: none;
+      }
+      .field textarea { min-height: 84px; resize: vertical; }
+      .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--emerald); }
+      .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+      .grid { display: grid; gap: 12px; }
+      @media (min-width: 700px) { .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); } .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+      .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+      .card + .card { margin-top: 12px; }
+      .card h3 { margin: 0 0 10px; font-size: 14px; color: var(--navy); }
+      .muted { color: var(--muted); font-size: 12px; }
+      .tiny { font-size: 11px; }
+      .badge { display: inline-block; background: var(--gold); color: var(--navy); border-radius: 99px; padding: 1px 8px; font-size: 11px; font-weight: 700; }
+      .badge.green { background: var(--emerald); color: #fff; }
+      .pill { border: 1px solid var(--line-strong); border-radius: 99px; padding: 4px 9px; font-size: 11px; background: #fff; }
+      .notice { border-inline-start: 3px solid var(--emerald); background: #f0f8f3; color: var(--ok); padding: 9px 11px; font-size: 12px; margin: 10px 0; }
+      .notice.warn { border-color: var(--gold); background: #fffaf0; color: #8a5a00; }
+      .notice.error { border-color: var(--danger); background: #fdf2f0; color: var(--danger); }
+      .tabs { display: flex; gap: 4px; overflow-x: auto; border-bottom: 1px solid var(--line); padding-bottom: 6px; margin-bottom: 14px; }
+      .tabs button { border: 0; background: transparent; white-space: nowrap; padding: 7px 10px; font-size: 12px; color: var(--muted); border-radius: var(--radius); }
+      .tabs button.active { background: var(--navy); color: #fff; }
+      .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--danger); margin-inline-start: 4px; }
+      .switch { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; cursor: pointer; }
+      .switch input { width: 18px; height: 18px; accent-color: var(--emerald); }
+
+      .list-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+      .list-row:last-child { border-bottom: 0; }
+      .thumb { width: 52px; height: 52px; flex: none; object-fit: cover; background: var(--ice); border: 1px solid var(--line); }
+      .grow { flex: 1; min-width: 0; }
+      .title-line { font-weight: 600; color: var(--navy); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .actions { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+      .stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
+      @media (min-width: 700px) { .stats { grid-template-columns: repeat(3,1fr); } }
+      .stat { background: #fff; border: 1px solid var(--line); padding: 14px; }
+      .stat b { display: block; font-size: 25px; color: var(--navy); line-height: 1.2; }
+      .stat span { font-size: 11px; color: var(--muted); }
+
+      .images { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+      @media (min-width: 700px) { .images { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+      .image-card { border: 1px solid var(--line); background: #fff; }
+      .image-card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: var(--ice); }
+      .image-card .meta { padding: 7px; font-size: 10px; color: var(--muted); word-break: break-all; }
+      .image-card .actions { padding: 0 7px 7px; }
+
+      details.tree { border: 1px solid var(--line); background: #fff; margin-bottom: 6px; }
+      details.tree > summary { cursor: pointer; padding: 10px 12px; font-weight: 600; color: var(--navy); font-size: 12px; }
+      .tree-body { padding: 0 12px 12px; border-top: 1px solid var(--line); }
+      .leaf { padding: 10px 0; border-bottom: 1px solid var(--line); }
+      .leaf:last-child { border-bottom: 0; }
+      .leaf .path { font-family: Consolas, monospace; font-size: 10px; color: var(--muted); word-break: break-all; }
+      .leaf .ref { font-size: 12px; color: var(--ink); background: var(--ice); padding: 6px 8px; margin: 4px 0; white-space: pre-wrap; }
+      .leaf textarea { min-height: 46px; }
+      .leaf .warn { color: var(--danger); font-size: 10px; }
+
+      .modal-backdrop {
+        position: fixed; inset: 0; z-index: 60; background: rgba(11,37,69,.55);
+        display: flex; align-items: flex-end; justify-content: center; padding: 0;
+      }
+      @media (min-width: 700px) { .modal-backdrop { align-items: center; padding: 20px; } }
+      .modal {
+        background: #fff; width: 100%; max-width: 720px; max-height: 92dvh; overflow: auto;
+        padding: 18px; border-top: 3px solid var(--gold);
+      }
+      @media (min-width: 700px) { .modal { border-radius: var(--radius); } }
+      .modal-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+      .modal-head h3 { margin: 0; font-size: 16px; color: var(--navy); }
+      .modal-foot { display: flex; gap: 8px; justify-content: flex-end; margin-top: 18px; flex-wrap: wrap; }
+
+      #toast {
+        position: fixed; inset-inline: 12px; bottom: 78px; z-index: 80; display: flex;
+        flex-direction: column; gap: 6px; align-items: center; pointer-events: none;
+      }
+      @media (min-width: 900px) { #toast { bottom: 18px; } }
+      .toast { background: var(--navy); color: #fff; padding: 9px 14px; font-size: 12px; border-radius: var(--radius); max-width: 520px; }
+      .toast.err { background: var(--danger); }
+      .toast.ok { background: var(--emerald); }
+    </style>
+  </head>
+  <body>
+    <div id="loginView" class="login-wrap"></div>
+
+    <div id="appView" class="app hidden">
+      <aside class="side">
+        <div class="brand"><span class="brand-mark"></span><span>DIAMOND</span></div>
+        <div id="sideNav" class="nav-list"></div>
+        <div class="side-foot">
+          <button class="btn ghost small" id="btnLogoutSide" type="button">تسجيل الخروج</button>
+          <button class="btn danger small" id="btnForgetSide" type="button">نسيان هذا الجهاز</button>
+        </div>
+      </aside>
+      <div class="main">
+        <header class="topbar">
+          <h2 id="screenTitle">لوحة التحكم</h2>
+          <div class="topbar-actions">
+            <span id="changeBadge" class="badge hidden">0</span>
+            <button class="btn ghost small" id="btnLogoutTop" type="button">خروج</button>
+          </div>
+        </header>
+        <main class="content" id="screens">
+          <section class="screen" id="screen-dashboard"></section>
+          <section class="screen hidden" id="screen-products"></section>
+          <section class="screen hidden" id="screen-categories"></section>
+          <section class="screen hidden" id="screen-texts"></section>
+          <section class="screen hidden" id="screen-images"></section>
+          <section class="screen hidden" id="screen-settings"></section>
+          <section class="screen hidden" id="screen-publish"></section>
+          <section class="screen hidden" id="screen-history"></section>
+        </main>
+      </div>
+      <nav class="bottom" id="bottomNav"></nav>
+    </div>
+
+    <div id="modalRoot"></div>
+    <div id="toast" aria-live="polite"></div>
+
+    <script>
+      "use strict";
+
+      /* ─────────────────────────── Constants ─────────────────────────── */
+      const OWNER = "diamondhausde-hub";
+      const REPO = "diamond";
+      const BRANCH = "main";
+      const API = "https://api.github.com";
+      const LIVE = "https://diamondhausde-hub.github.io/diamond/";
+      const ACTIONS = "https://github.com/" + OWNER + "/" + REPO + "/actions";
+      const ENC_KEY = "diamond.admin.encrypted";
+      const DRAFT_KEY = "diamond.admin.draft";
+
+      const LOCALES = [
+        { code: "en", label: "English", dir: "ltr" },
+        { code: "ar", label: "العربية", dir: "rtl" },
+        { code: "de", label: "Deutsch", dir: "ltr" },
+        { code: "fr", label: "Français", dir: "ltr" },
+        { code: "it", label: "Italiano", dir: "ltr" },
+        { code: "zh", label: "中文", dir: "ltr", lang: "zh-Hans" }
+      ];
+      const PATHS = {
+        products: "data/products.json",
+        categories: "data/categories.json",
+        settings: "config/site.json",
+        messages: LOCALES.map((l) => "messages/" + l.code + ".json")
+      };
+      const VISUALS = ["glassCloth", "windowSqueegee", "floorSqueegee", "floorMop", "brushesBrooms", "wasteBags"];
+      const ALL_JSON_PATHS = [PATHS.products, PATHS.categories, PATHS.settings, ...PATHS.messages];
+
+      const SCREENS = [
+        { id: "dashboard", title: "لوحة التحكم", icon: "⌂", label: "الرئيسية" },
+        { id: "products", title: "المنتجات", icon: "▣", label: "المنتجات" },
+        { id: "categories", title: "الفئات والفلاتر", icon: "≡", label: "الفئات" },
+        { id: "texts", title: "النصوص", icon: "✎", label: "النصوص" },
+        { id: "images", title: "الصور", icon: "▧", label: "الصور" },
+        { id: "settings", title: "الإعدادات", icon: "⚙", label: "الإعدادات" },
+        { id: "publish", title: "النشر", icon: "↑", label: "النشر" },
+        { id: "history", title: "السجل", icon: "◷", label: "السجل" }
+      ];
+      const MOBILE_TABS = ["dashboard", "products", "texts", "images", "more"];
+
+      const state = {
+        token: null,
+        authed: false,
+        wrong: 0,
+        lockUntil: 0,
+        lastActivity: Date.now(),
+        files: {},
+        images: [],
+        pendingUploads: [],
+        imageDeletions: [],
+        changes: [],
+        currentScreen: "dashboard",
+        textsLang: "en",
+        textsQuery: "",
+        textsMissingOnly: false,
+        productsFilter: ""
+      };
+
+      /* ─────────────────────────── DOM helpers ─────────────────────────── */
+      function h(tag, props, ...children) {
+        const node = document.createElement(tag);
+        props = props || {};
+        for (const key of Object.keys(props)) {
+          const value = props[key];
+          if (value === null || value === undefined || value === false) continue;
+          if (key === "class") node.className = value;
+          else if (key === "text") node.textContent = value;
+          else if (key === "dir") node.dir = value;
+          else if (key === "lang") node.lang = value;
+          else if (key === "value") node.value = value;
+          else if (key === "checked") node.checked = Boolean(value);
+          else if (key === "disabled") node.disabled = Boolean(value);
+          else if (key.slice(0, 2) === "on" && typeof value === "function") {
+            node.addEventListener(key.slice(2).toLowerCase(), value);
+          } else node.setAttribute(key, value === true ? "" : value);
+        }
+        appendChildren(node, children);
+        return node;
+      }
+      function appendChildren(node, children) {
+        for (const child of children.flat()) {
+          if (child === null || child === undefined || child === false) continue;
+          node.append(child.nodeType ? child : document.createTextNode(String(child)));
+        }
+      }
+      function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+      function toast(message, kind) {
+        const box = h("div", { class: "toast" + (kind ? " " + kind : ""), text: message });
+        document.getElementById("toast").append(box);
+        setTimeout(() => box.remove(), 4200);
+      }
+      function modal(title, body, foot) {
+        const root = document.getElementById("modalRoot");
+        clear(root);
+        const panel = h("div", { class: "modal" },
+          h("div", { class: "modal-head" },
+            h("h3", { text: title }),
+            h("button", { class: "btn ghost small", type: "button", text: "إغلاق", onclick: closeModal })
+          ),
+          body,
+          foot ? h("div", { class: "modal-foot" }, foot) : null
+        );
+        const backdrop = h("div", { class: "modal-backdrop", onclick: (e) => { if (e.target === backdrop) closeModal(); } }, panel);
+        root.append(backdrop);
+      }
+      function closeModal() { clear(document.getElementById("modalRoot")); }
+      function confirmAsk(title, message, onYes, yesLabel) {
+        modal(title, h("p", { class: "muted", text: message }), [
+          h("button", { class: "btn ghost", type: "button", text: "إلغاء", onclick: closeModal }),
+          h("button", {
+            class: "btn danger", type: "button", text: yesLabel || "تأكيد",
+            onclick: () => { closeModal(); onYes(); }
+          })
+        ]);
+      }
+
+      /* ───────────────────── Token encryption helpers ─────────────────── */
+      function bytesToB64(bytes) {
+        let binary = "";
+        for (const b of bytes) binary += String.fromCharCode(b);
+        return btoa(binary);
+      }
+      function b64ToBytes(value) {
+        const binary = atob(String(value).replace(/\s/g, ""));
+        const out = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) out[i] = binary.charCodeAt(i);
+        return out;
+      }
+      async function deriveKey(password, salt) {
+        const base = await crypto.subtle.importKey(
+          "raw", new TextEncoder().encode(password), "PBKDF2", false, ["deriveKey"]
+        );
+        return crypto.subtle.deriveKey(
+          { name: "PBKDF2", salt: salt, iterations: 600000, hash: "SHA-256" },
+          base,
+          { name: "AES-GCM", length: 256 },
+          false,
+          ["encrypt", "decrypt"]
+        );
+      }
+      async function encryptToken(token, password) {
+        const salt = crypto.getRandomValues(new Uint8Array(16));
+        const iv = crypto.getRandomValues(new Uint8Array(12));
+        const key = await deriveKey(password, salt);
+        const cipher = await crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, key, new TextEncoder().encode(token));
+        localStorage.setItem(ENC_KEY, JSON.stringify({
+          v: 1, salt: bytesToB64(salt), iv: bytesToB64(iv), ciphertext: bytesToB64(new Uint8Array(cipher))
+        }));
+      }
+      function storedEncrypted() {
+        try { return JSON.parse(localStorage.getItem(ENC_KEY) || "null"); }
+        catch (_) { return null; }
+      }
+      async function decryptToken(password) {
+        const record = storedEncrypted();
+        if (!record || !record.salt || !record.iv || !record.ciphertext) throw new Error("لا يوجد توكن محفوظ على هذا الجهاز.");
+        const key = await deriveKey(password, b64ToBytes(record.salt));
+        const plain = await crypto.subtle.decrypt(
+          { name: "AES-GCM", iv: b64ToBytes(record.iv) }, key, b64ToBytes(record.ciphertext)
+        );
+        return new TextDecoder().decode(plain);
+      }
+
+      /* ─────────────────────────── GitHub API ─────────────────────────── */
+      class ApiError extends Error {
+        constructor(message, status, conflict) {
+          super(message);
+          this.status = status || 0;
+          this.conflict = Boolean(conflict);
+        }
+      }
+      async function ghFetch(path, options, token) {
+        const headers = Object.assign(
+          {
+            Authorization: "Bearer " + (token || state.token || ""),
+            Accept: "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28"
+          },
+          (options && options.headers) || {}
+        );
+        let response;
+        try {
+          response = await fetch(API + path, Object.assign({}, options || {}, { headers: headers }));
+        } catch (error) {
+          throw new ApiError("تعذّر الاتصال بـ GitHub. تحقّق من الإنترنت.", 0);
+        }
+        if (response.status === 401) {
+          const error = new ApiError("التوكن غير صالح أو منتهي. سجّل الدخول من جديد.", 401);
+          if (state.authed) lockSession();
+          throw error;
+        }
+        if (response.status === 403) {
+          throw new ApiError("لا صلاحية كافية أو تجاوزت حد الطلبات. راجع صلاحيات التوكن.", 403);
+        }
+        if (response.status === 404) {
+          throw new ApiError("الملف أو المستودع غير موجود (404).", 404);
+        }
+        if (response.status === 409 || response.status === 422) {
+          throw new ApiError("تعارض في الحفظ: الملف تغيّر من مكان ثاني.", response.status, true);
+        }
+        if (!response.ok) {
+          throw new ApiError("طلب GitHub فشل (" + response.status + ").", response.status);
+        }
+        if (response.status === 204) return null;
+        return response.json();
+      }
+      async function verifyToken(token) {
+        const data = await ghFetch("/repos/" + OWNER + "/" + REPO, {}, token);
+        if (!data.permissions || data.permissions.push !== true) {
+          throw new ApiError("التوكن ما عنده صلاحية الكتابة.", 403);
+        }
+        return data;
+      }
+      async function readFile(path, ref) {
+        const url = "/repos/" + OWNER + "/" + REPO + "/contents/" + path +
+          "?ref=" + encodeURIComponent(ref || BRANCH);
+        const data = await ghFetch(url);
+        const text = new TextDecoder().decode(b64ToBytes(data.content || ""));
+        return { json: JSON.parse(text), sha: data.sha, text: text };
+      }
+      async function listDir(path) {
+        const data = await ghFetch("/repos/" + OWNER + "/" + REPO + "/contents/" + path + "?ref=" + BRANCH);
+        return (data || []).map((entry) => ({
+          name: entry.name,
+          path: entry.path,
+          sha: entry.sha
+        }));
+      }
+      async function getRecentCommits() {
+        return ghFetch("/repos/" + OWNER + "/" + REPO + "/commits?per_page=15");
+      }
+      async function commitMany(changes, message) {
+        for (let attempt = 0; attempt < 2; attempt++) {
+          try {
+            const ref = await ghFetch("/repos/" + OWNER + "/" + REPO + "/git/ref/heads/" + BRANCH);
+            const latest = ref.object.sha;
+            const base = await ghFetch("/repos/" + OWNER + "/" + REPO + "/git/commits/" + latest);
+            const entries = [];
+            for (const change of changes) {
+              if (change.remove) {
+                entries.push({ path: change.path, mode: "100644", type: "blob", sha: null });
+                continue;
+              }
+              const blob = await ghFetch("/repos/" + OWNER + "/" + REPO + "/git/blobs", {
+                method: "POST",
+                body: JSON.stringify({ content: change.content, encoding: change.encoding })
+              });
+              entries.push({ path: change.path, mode: "100644", type: "blob", sha: blob.sha });
+            }
+            const tree = await ghFetch("/repos/" + OWNER + "/" + REPO + "/git/trees", {
+              method: "POST",
+              body: JSON.stringify({ base_tree: base.tree.sha, tree: entries })
+            });
+            const commit = await ghFetch("/repos/" + OWNER + "/" + REPO + "/git/commits", {
+              method: "POST",
+              body: JSON.stringify({ message: message, parents: [latest], tree: tree.sha })
+            });
+            await ghFetch("/repos/" + OWNER + "/" + REPO + "/git/refs/heads/" + BRANCH, {
+              method: "PATCH",
+              body: JSON.stringify({ sha: commit.sha, force: false })
+            });
+            return commit;
+          } catch (error) {
+            if (error.conflict && attempt === 0) continue;
+            throw error;
+          }
+        }
+      }
+
+      /* ─────────────────────────── Session / draft ─────────────────────── */
+      function touch() { state.lastActivity = Date.now(); if (state.lockUntil) updateLockTimer(); }
+      document.addEventListener("pointerdown", touch, true);
+      document.addEventListener("keydown", touch, true);
+
+      function lockSession() {
+        state.token = null;
+        state.authed = false;
+        showLogin();
+        toast("تم قفل الجلسة. مسودتك محفوظة.", "warn");
+      }
+      function forgetDevice() {
+        localStorage.removeItem(ENC_KEY);
+        state.token = null;
+        state.authed = false;
+        showLogin();
+        toast("تم نسيان هذا الجهاز.", "ok");
+      }
+      window.addEventListener("beforeunload", (event) => {
+        if (state.changes.length) {
+          event.preventDefault();
+          event.returnValue = "";
+        }
+      });
+      setInterval(() => {
+        if (state.authed && state.token && Date.now() - state.lastActivity >= 15 * 60 * 1000) lockSession();
+        if (state.lockUntil) updateLockTimer();
+      }, 15000);
+
+      function saveDraft() {
+        if (!state.authed) return;
+        try {
+          const files = {};
+          for (const path of ALL_JSON_PATHS) {
+            if (state.files[path]) files[path] = { json: state.files[path].json, sha: state.files[path].sha };
+          }
+          sessionStorage.setItem(DRAFT_KEY, JSON.stringify({
+            files: files,
+            changes: state.changes,
+            imageDeletions: state.imageDeletions,
+            uploads: state.pendingUploads.map((u) => ({
+              name: u.name, path: u.path, base64: u.base64, dataUrl: u.dataUrl, size: u.size
+            }))
+          }));
+        } catch (_) { /* storage quota — edits remain in memory */ }
+      }
+      function restoreDraft() {
+        let raw;
+        try { raw = JSON.parse(sessionStorage.getItem(DRAFT_KEY) || "null"); }
+        catch (_) { return false; }
+        if (!raw || !raw.files) return false;
+        for (const path of ALL_JSON_PATHS) {
+          const saved = raw.files[path];
+          if (saved && state.files[path]) {
+            state.files[path].json = saved.json;
+            state.files[path].sha = saved.sha;
+          }
+        }
+        state.changes = raw.changes || [];
+        state.imageDeletions = raw.imageDeletions || [];
+        state.pendingUploads = raw.uploads || [];
+        return true;
+      }
+      function clearDraft() { sessionStorage.removeItem(DRAFT_KEY); }
+
+      /* ─────────────────────────── Login screen ─────────────────────────── */
+      function tokenHelp() {
+        return h("details", { class: "help" },
+          h("summary", { text: "كيف أنشئ التوكن؟ (اضغط للتوسيع)" }),
+          h("ol", {},
+            h("li", { text: "افتح GitHub ← Settings ← Developer settings ← Personal access tokens ← Fine-grained tokens." }),
+            h("li", { text: "Generate new token → Only select repositories → اختر diamond." }),
+            h("li", { text: "الصلاحية الوحيدة: Contents = Read and write (Metadata تلقائية). لا تضف شيئاً آخر." }),
+            h("li", { text: "حدّد تاريخ انتهاء (مثلاً 90 يوماً). إذا تسرب التوكن، ألغِه فوراً من GitHub." })
+          )
+        );
+      }
+      function showLogin() {
+        document.getElementById("appView").classList.add("hidden");
+        const view = document.getElementById("loginView");
+        view.classList.remove("hidden");
+        clear(view);
+        const saved = storedEncrypted();
+
+        if (saved) {
+          const password = h("input", { type: "password", autocomplete: "current-password", placeholder: "كلمة المرور المحلية" });
+          const button = h("button", { class: "btn primary big", type: "button", text: "فتح القفل" });
+          const status = h("div", { class: "muted tiny" });
+          const timer = h("div", { class: "notice warn hidden" });
+          button.onclick = async () => {
+            if (Date.now() < state.lockUntil) return;
+            button.disabled = true;
+            button.textContent = "جارٍ الفتح...";
+            try {
+              const token = await decryptToken(password.value);
+              await verifyToken(token);
+              state.token = token;
+              state.wrong = 0;
+              await enterApp();
+            } catch (error) {
+              state.wrong += 1;
+              if (state.wrong >= 5) {
+                state.lockUntil = Date.now() + 30000;
+                state.wrong = 0;
+                status.textContent = "محاولات خاطئة كثيرة. انتظر 30 ثانية.";
+                updateLockTimer();
+              } else {
+                status.textContent = "كلمة المرور غير صحيحة أو التوكن غير صالح. " + (error.message || "");
+              }
+              password.value = "";
+            } finally {
+              button.disabled = false;
+              button.textContent = "فتح القفل";
+            }
+          };
+          password.addEventListener("keydown", (e) => { if (e.key === "Enter") button.click(); });
+          view.append(h("div", { class: "login-card" },
+            h("div", { class: "brand" }, h("span", { class: "brand-mark" }), h("span", { text: "DIAMOND" })),
+            h("h1", { text: "لوحة التحكم" }),
+            h("p", { class: "hint", text: "أدخل كلمة المرور المحلية لفك تشفير التوكن وفتح اللوحة." }),
+            h("div", { class: "field" }, h("label", { text: "كلمة المرور" }), password),
+            timer,
+            status,
+            h("div", { style: "margin-top:14px" }, button),
+            h("button", {
+              class: "btn ghost small", type: "button", text: "استخدام توكن آخر",
+              style: "margin-top:10px",
+              onclick: () => { localStorage.removeItem(ENC_KEY); showLogin(); }
+            }),
+            h("button", {
+              class: "btn danger small", type: "button", text: "نسيان هذا الجهاز",
+              style: "margin-top:10px", onclick: () => { localStorage.removeItem(ENC_KEY); showLogin(); toast("تم حذف التوكن المشفّر.", "ok"); }
+            }),
+            tokenHelp()
+          ));
+          updateLockTimer();
+          return;
+        }
+
+        const tokenInput = h("input", { type: "password", autocomplete: "off", placeholder: "الصق التوكن هنا" });
+        const passInput = h("input", { type: "password", autocomplete: "new-password", placeholder: "10 أحرف على الأقل" });
+        const confirmInput = h("input", { type: "password", autocomplete: "new-password", placeholder: "أعد كلمة المرور" });
+        const remember = h("input", { type: "checkbox" });
+        const strength = h("div", { class: "muted tiny" });
+        passInput.addEventListener("input", () => {
+          const value = passInput.value;
+          const score = (value.length >= 10 ? 1 : 0) + (/[A-Z]/.test(value) ? 1 : 0) + (/\d/.test(value) ? 1 : 0) + (/[^A-Za-z0-9]/.test(value) ? 1 : 0);
+          strength.textContent = "قوة كلمة المرور: " + ["ضعيفة", "متوسطة", "جيدة", "قوية"][Math.max(0, score - 1)];
+        });
+        const status = h("div", { class: "muted tiny" });
+        const button = h("button", { class: "btn primary big", type: "button", text: "دخول" });
+        button.onclick = async () => {
+          const token = tokenInput.value.trim();
+          if (!token) { status.textContent = "الرجاء إدخال التوكن."; return; }
+          button.disabled = true;
+          button.textContent = "جارٍ التحقق...";
+          try {
+            await verifyToken(token);
+            state.token = token;
+            state.wrong = 0;
+            if (remember.checked) {
+              if (passInput.value.length < 10) { status.textContent = "كلمة المرور يجب أن تكون 10 أحرف على الأقل."; return; }
+              if (passInput.value !== confirmInput.value) { status.textContent = "تأكيد كلمة المرور غير مطابق."; return; }
+              await encryptToken(token, passInput.value);
+            }
+            await enterApp();
+          } catch (error) {
+            status.textContent = error.message || "تعذّر الدخول.";
+          } finally {
+            button.disabled = false;
+            button.textContent = "دخول";
+          }
+        };
+        view.append(h("div", { class: "login-card" },
+          h("div", { class: "brand" }, h("span", { class: "brand-mark" }), h("span", { text: "DIAMOND" })),
+          h("h1", { text: "لوحة التحكم" }),
+          h("p", { class: "hint", text: "التوكن هو الأمان الحقيقي: هذه الصفحة عامة لكنها عديمة الفائدة بدونه." }),
+          h("div", { class: "field" }, h("label", { text: "Fine-grained token" }), tokenInput),
+          h("div", { class: "field" }, h("label", { text: "كلمة مرور جديدة (لحفظ التوكن مشفّراً)" }), passInput, strength),
+          h("div", { class: "field" }, h("label", { text: "تأكيد كلمة المرور" }), confirmInput),
+          h("label", { class: "switch" }, remember, h("span", { text: "حفظ التوكن مشفّراً على هذا الجهاز" })),
+          h("p", { class: "muted tiny", text: "إن لم تختر الحفظ، سيبقى التوكن في الذاكرة فقط ويُفقد عند إغلاق الصفحة." }),
+          status,
+          h("div", { style: "margin-top:14px" }, button),
+          tokenHelp()
+        ));
+      }
+      function updateLockTimer() {
+        const node = document.querySelector("#loginView .notice.warn");
+        if (!node) return;
+        if (state.lockUntil <= Date.now()) { node.classList.add("hidden"); return; }
+        const seconds = Math.ceil((state.lockUntil - Date.now()) / 1000);
+        node.classList.remove("hidden");
+        node.textContent = "محاولات خاطئة كثيرة. انتظر " + seconds + " ثانية.";
+      }
+
+      /* ─────────────────────────── Boot data ─────────────────────────── */
+      async function enterApp() {
+        document.getElementById("loginView").classList.add("hidden");
+        document.getElementById("appView").classList.remove("hidden");
+        state.authed = true;
+        state.lastActivity = Date.now();
+        toast("جارٍ تحميل البيانات...");
+        try {
+          for (const path of ALL_JSON_PATHS) state.files[path] = await readFile(path);
+          await refreshImages();
+          if (restoreDraft()) toast("تمت استعادة المسودة المحفوظة.", "ok");
+          buildNav();
+          renderAll();
+        } catch (error) {
+          toast(error.message || "تعذّر تحميل البيانات.", "err");
+          if (error.status === 401) lockSession();
+        }
+      }
+      async function refreshImages() {
+        try {
+          const existing = await listDir("public/uploads/products");
+          state.images = existing.filter((image) => !state.imageDeletions.some((path) => path === image.path));
+        } catch (_) {
+          state.images = [];
+        }
+      }
+      function jsonText(path) { return JSON.stringify(state.files[path].json, null, 2) + "\n"; }
+      function productsArray() { return state.files[PATHS.products].json; }
+      function categoriesArray() { return state.files[PATHS.categories].json; }
+      function settingsObject() { return state.files[PATHS.settings].json; }
+      function messagesFor(code) { return state.files["messages/" + code + ".json"].json; }
+      function englishName(product) {
+        const item = messagesFor("en").products.items[product.id];
+        return item && item.name ? item.name : product.id;
+      }
+      function addChange(type, label, path) {
+        if (state.changes.some((change) => change.type === type && change.path === path && change.label === label)) return;
+        state.changes.push({ type: type, label: label, path: path });
+        saveDraft();
+        updateBadge();
+        if (state.currentScreen === "publish") renderPublish();
+        if (state.currentScreen === "dashboard") renderDashboard();
+      }
+      function updateBadge() {
+        const badge = document.getElementById("changeBadge");
+        badge.textContent = String(state.changes.length);
+        badge.classList.toggle("hidden", state.changes.length === 0);
+      }
+
+      /* ─────────────────────────── Navigation ─────────────────────────── */
+      function buildNav() {
+        const side = document.getElementById("sideNav");
+        clear(side);
+        SCREENS.forEach((screen) => {
+          side.append(h("button", {
+            class: "nav-item" + (state.currentScreen === screen.id ? " active" : ""),
+            type: "button", onclick: () => go(screen.id)
+          }, h("span", { class: "ico", text: screen.icon }), h("span", { text: screen.title })));
+        });
+        const bottom = document.getElementById("bottomNav");
+        clear(bottom);
+        MOBILE_TABS.forEach((id) => {
+          const screen = SCREENS.find((s) => s.id === id);
+          const isMore = id === "more";
+          const active = isMore
+            ? !MOBILE_TABS.slice(0, 4).includes(state.currentScreen)
+            : state.currentScreen === id;
+          bottom.append(h("button", {
+            class: active ? "active" : "", type: "button",
+            onclick: isMore ? showMoreMenu : () => go(id)
+          },
+            h("span", { class: "ico", text: isMore ? "⋯" : screen.icon }),
+            h("span", { text: isMore ? "المزيد" : screen.label })
+          ));
+        });
+      }
+      function showMoreMenu() {
+        const buttons = SCREENS.filter((s) => !MOBILE_TABS.slice(0, 4).includes(s.id)).map((screen) =>
+          h("button", {
+            class: "nav-item", type: "button",
+            onclick: () => { closeModal(); go(screen.id); }
+          }, h("span", { class: "ico", text: screen.icon }), h("span", { text: screen.title }))
+        );
+        buttons.push(h("button", {
+          class: "nav-item", type: "button",
+          onclick: () => { closeModal(); lockSession(); }
+        }, h("span", { class: "ico", text: "⏻" }), h("span", { text: "تسجيل الخروج" })));
+        modal("المزيد", h("div", { class: "nav-list" }, buttons));
+      }
+      function go(id) {
+        state.currentScreen = id;
+        SCREENS.forEach((screen) => {
+          document.getElementById("screen-" + screen.id).classList.toggle("hidden", screen.id !== id);
+        });
+        const screen = SCREENS.find((s) => s.id === id);
+        document.getElementById("screenTitle").textContent = screen ? screen.title : "لوحة التحكم";
+        buildNav();
+        renderScreen(id);
+        window.scrollTo(0, 0);
+      }
+      function renderScreen(id) {
+        ({
+          dashboard: renderDashboard, products: renderProducts, categories: renderCategories,
+          texts: renderTexts, images: renderImages, settings: renderSettings,
+          publish: renderPublish, history: renderHistory
+        })[id]();
+      }
+      function renderAll() { updateBadge(); renderScreen(state.currentScreen); }
+
+      /* ─────────────────────────── Dashboard ─────────────────────────── */
+      function renderDashboard() {
+        const node = document.getElementById("screen-dashboard");
+        clear(node);
+        const images = state.images.length + state.pendingUploads.length;
+        node.append(
+          h("div", { class: "stats" },
+            h("div", { class: "stat" }, h("b", { text: String(productsArray().length) }), h("span", { text: "منتج ظاهر" })),
+            h("div", { class: "stat" }, h("b", { text: String(images) }), h("span", { text: "صورة مرفوعة" })),
+            h("div", { class: "stat" }, h("b", { text: String(state.changes.length) }), h("span", { text: "تعديلات بانتظار النشر" }))
+          ),
+          h("div", { class: "card", style: "margin-top:14px" },
+            h("h3", { text: "النشر" }),
+            h("p", { class: "muted", text: "كل التعديلات تُحفظ في commit واحد، ثم يعمل GitHub Actions على تحديث الموقع تلقائياً." }),
+            h("button", { class: "btn primary big", type: "button", onclick: () => go("publish") },
+              h("span", { text: "افتح صفحة النشر" }),
+              h("span", { class: "badge", text: String(state.changes.length) })
+            )
+          ),
+          h("div", { class: "card" },
+            h("h3", { text: "روابط مفيدة" }),
+            h("div", { class: "row" },
+              h("a", { class: "btn ghost small", href: LIVE, target: "_blank", rel: "noopener", text: "الموقع المباشر" }),
+              h("a", { class: "btn ghost small", href: ACTIONS, target: "_blank", rel: "noopener", text: "GitHub Actions" })
+            )
+          )
+        );
+      }
+
+      /* ─────────────────────────── Products ─────────────────────────── */
+      function renderProducts() {
+        const node = document.getElementById("screen-products");
+        clear(node);
+        const products = productsArray().slice().sort((a, b) => a.order - b.order);
+        const search = h("input", { type: "search", placeholder: "ابحث عن منتج...", value: state.productsFilter });
+        search.addEventListener("input", () => { state.productsFilter = search.value; renderProducts(); });
+        node.append(
+          h("div", { class: "row", style: "margin-bottom:12px" },
+            search,
+            h("button", { class: "btn primary small", type: "button", text: "+ منتج جديد", onclick: () => editProduct(null) })
+          ),
+          h("div", { class: "card" })
+        );
+        const list = node.lastChild;
+        const query = state.productsFilter.trim().toLowerCase();
+        const shown = products.filter((p) => !query || englishName(p).toLowerCase().includes(query) || p.id.includes(query));
+        if (!shown.length) { list.append(h("p", { class: "muted", text: "لا توجد منتجات مطابقة." })); return; }
+        shown.forEach((product) => {
+          const imagePath = product.image;
+          const preview = imagePath ? imageUrl(imagePath) : null;
+          const thumb = preview
+            ? h("img", { class: "thumb", src: preview, alt: englishName(product) })
+            : h("div", { class: "thumb" });
+          list.append(h("div", { class: "list-row" },
+            thumb,
+            h("div", { class: "grow" },
+              h("div", { class: "title-line", text: englishName(product) }),
+              h("div", { class: "muted tiny", text: product.id + " · " + product.category })
+            ),
+            h("label", { class: "switch" },
+              h("input", {
+                type: "checkbox", checked: product.visible !== false,
+                onchange: (e) => {
+                  product.visible = e.target.checked;
+                  addChange("edit", "إظهار/إخفاء: " + englishName(product), PATHS.products);
+                  renderProducts();
+                }
+              }),
+              h("span", { text: product.visible === false ? "مخفي" : "ظاهر" })
+            ),
+            h("div", { class: "actions" },
+              h("button", { class: "btn ghost small", type: "button", title: "أعلى", text: "↑", onclick: () => moveProduct(product, -1) }),
+              h("button", { class: "btn ghost small", type: "button", title: "أسفل", text: "↓", onclick: () => moveProduct(product, 1) }),
+              h("button", { class: "btn ghost small", type: "button", text: "تعديل", onclick: () => editProduct(product.id) }),
+              h("button", { class: "btn danger small", type: "button", text: "حذف", onclick: () => deleteProduct(product) })
+            )
+          ));
+        });
+      }
+      function moveProduct(product, delta) {
+        const products = productsArray().slice().sort((a, b) => a.order - b.order);
+        const index = products.findIndex((p) => p.id === product.id);
+        const target = index + delta;
+        if (target < 0 || target >= products.length) return;
+        const temp = products[index];
+        products[index] = products[target];
+        products[target] = temp;
+        products.forEach((p, i) => { p.order = i + 1; });
+        productsArray().splice(0, productsArray().length, ...products);
+        addChange("edit", "ترتيب المنتجات", PATHS.products);
+        renderProducts();
+      }
+      function deleteProduct(product) {
+        const usedImages = [product.image, ...(product.gallery || [])].filter(Boolean);
+        const alsoImagesInput = h("input", { type: "checkbox" });
+        const body = h("div", {},
+          h("p", { class: "muted", text: "سيُحذف المنتج وكل نصوصه من اللغات الست. هل أنت متأكد؟" }),
+          h("label", { class: "switch" },
+            alsoImagesInput,
+            h("span", { text: "حذف صور هذا المنتج أيضاً (غير مفعّل افتراضياً)" })
+          )
+        );
+        modal("حذف المنتج", body, [
+          h("button", { class: "btn ghost", type: "button", text: "إلغاء", onclick: closeModal }),
+          h("button", {
+            class: "btn danger", type: "button", text: "حذف",
+            onclick: () => {
+              const products = productsArray();
+              const index = products.findIndex((p) => p.id === product.id);
+              if (index >= 0) products.splice(index, 1);
+              PATHS.messages.forEach((path) => {
+                delete state.files[path].json.products.items[product.id];
+                addChange("edit", "حذف نص منتج: " + product.id, path);
+              });
+              if (alsoImagesInput.checked) {
+                usedImages.forEach((path) => {
+                  if (!state.imageDeletions.includes(path)) state.imageDeletions.push(path);
+                  addChange("delete", "حذف صورة: " + path, path);
+                });
+              }
+              addChange("edit", "حذف منتج: " + englishName(product), PATHS.products);
+              closeModal();
+              renderProducts();
+            }
+          })
+        ]);
+      }
+      function imageUrl(path) {
+        if (!path) return null;
+        const pending = state.pendingUploads.find((u) => u.path === path);
+        if (pending) return pending.dataUrl;
+        return "https://raw.githubusercontent.com/" + OWNER + "/" + REPO + "/" + BRANCH + "/" + path;
+      }
+      function editProduct(id) {
+        const products = productsArray();
+        const isNew = !id;
+        let product = isNew
+          ? { id: "", visual: "glassCloth", image: null, gallery: [], category: categoriesArray()[0].id, sizes: [], featured: false, visible: true, order: products.length + 1 }
+          : products.find((p) => p.id === id);
+        if (!product) return;
+        const draft = JSON.parse(JSON.stringify(product));
+        const copy = {};
+        PATHS.messages.forEach((path) => {
+          const code = path.split("/")[1].split(".")[0];
+          let item = state.files[path].json.products.items[product.id];
+          if (!item) {
+            item = { name: "", short: "", detail: "", highlight: "", specs: [{ label: "", value: "" }] };
+            state.files[path].json.products.items[product.id] = item;
+          }
+          copy[code] = JSON.parse(JSON.stringify(item));
+        });
+        const body = h("div", {});
+        const idInput = h("input", { value: draft.id, disabled: !isNew, dir: "ltr", placeholder: "glass-cloth" });
+        const catSelect = h("select", {});
+        categoriesArray().forEach((category) => catSelect.append(h("option", { value: category.id, text: category.id })));
+        catSelect.value = draft.category;
+        const visualSelect = h("select", {});
+        VISUALS.forEach((visual) => visualSelect.append(h("option", { value: visual, text: visual })));
+        visualSelect.value = draft.visual || "glassCloth";
+        const sizesBox = h("div", { class: "row" });
+        const sizeInput = h("input", { dir: "ltr", placeholder: "مثلاً 45 cm", style: "max-width:170px" });
+        function renderSizes() {
+          clear(sizesBox);
+          draft.sizes.forEach((size, index) => {
+            sizesBox.append(h("span", { class: "pill", text: size + " " }),
+              h("button", {
+                class: "btn ghost small", type: "button", text: "×",
+                onclick: () => { draft.sizes.splice(index, 1); renderSizes(); }
+              }));
+          });
+        }
+        renderSizes();
+        sizeInput.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            const value = sizeInput.value.trim();
+            if (value && !draft.sizes.includes(value)) draft.sizes.push(value);
+            sizeInput.value = "";
+            renderSizes();
+          }
+        });
+        const visible = h("input", { type: "checkbox", checked: draft.visible !== false });
+        const featured = h("input", { type: "checkbox", checked: Boolean(draft.featured) });
+        const imagePath = h("input", { dir: "ltr", value: draft.image || "", placeholder: "/uploads/products/..." });
+        const langTabs = h("div", { class: "tabs" });
+        const langBody = h("div", {});
+        let activeLang = "en";
+        function renderLang() {
+          clear(langTabs);
+          LOCALES.forEach((locale) => {
+            const item = copy[locale.code];
+            const missing = !item.name || !item.short || !item.detail || !item.specs.length;
+            langTabs.append(h("button", {
+              class: activeLang === locale.code ? "active" : "", type: "button",
+              onclick: () => { activeLang = locale.code; renderLang(); }
+            }, h("span", { text: locale.label }), missing ? h("span", { class: "dot" }) : null));
+          });
+          clear(langBody);
+          const locale = LOCALES.find((l) => l.code === activeLang);
+          const item = copy[locale.code];
+          const ref = copy.en;
+          function textField(label, key, value) {
+            return h("div", { class: "field" },
+              h("label", { text: label + (locale.code !== "en" && ref[key] ? " — المرجع: " + String(ref[key]).slice(0, 90) : "") }),
+              h("textarea", {
+                dir: locale.dir, lang: locale.lang || locale.code, value: value || "",
+                oninput: (e) => { item[key] = e.target.value; }
+              })
+            );
+          }
+          langBody.append(
+            textField("الاسم", "name", item.name),
+            textField("وصف قصير", "short", item.short),
+            textField("وصف تفصيلي", "detail", item.detail),
+            textField("الرسالة الرئيسية", "highlight", item.highlight)
+          );
+          langBody.append(h("h3", { text: "المواصفات" }));
+          item.specs.forEach((spec, index) => {
+            langBody.append(h("div", { class: "row" },
+              h("input", {
+                dir: locale.dir, value: spec.label, placeholder: "العنوان",
+                style: "flex:1",
+                oninput: (e) => { spec.label = e.target.value; }
+              }),
+              h("input", {
+                dir: locale.dir, value: spec.value, placeholder: "القيمة",
+                style: "flex:1",
+                oninput: (e) => { spec.value = e.target.value; }
+              }),
+              h("button", {
+                class: "btn danger small", type: "button", text: "×",
+                onclick: () => {
+                  PATHS.messages.forEach((path) => {
+                    const arr = state.files[path].json.products.items[product.id].specs;
+                    if (arr.length > index) arr.splice(index, 1);
+                  });
+                  PATHS.messages.forEach((path) => {
+                    const code = path.split("/")[1].split(".")[0];
+                    copy[code].specs = JSON.parse(JSON.stringify(state.files[path].json.products.items[product.id].specs));
+                  });
+                  renderLang();
+                }
+              })
+            ));
+          });
+          langBody.append(h("button", {
+            class: "btn ghost small", type: "button", text: "+ مواصفة",
+            onclick: () => {
+              PATHS.messages.forEach((path) => {
+                state.files[path].json.products.items[product.id].specs.push({ label: "", value: "" });
+              });
+              PATHS.messages.forEach((path) => {
+                const code = path.split("/")[1].split(".")[0];
+                copy[code].specs = JSON.parse(JSON.stringify(state.files[path].json.products.items[product.id].specs));
+              });
+              renderLang();
+            }
+          }));
+        }
+        renderLang();
+
+        body.append(
+          h("div", { class: "grid cols-2" },
+            h("div", { class: "field" }, h("label", { text: "المعرّف (لا يتغير بعد الإنشاء)" }), idInput),
+            h("div", { class: "field" }, h("label", { text: "الفئة" }), catSelect),
+            h("div", { class: "field" }, h("label", { text: "الرسم الاحتياطي" }), visualSelect),
+            h("div", { class: "field" }, h("label", { text: "ترتيب العرض" }),
+              h("input", { type: "number", dir: "ltr", value: String(draft.order), oninput: (e) => { draft.order = Number(e.target.value); } }))
+          ),
+          h("div", { class: "field" }, h("label", { text: "الأحجام (اكتب ثم Enter)" }), sizesBox, sizeInput),
+          h("div", { class: "row", style: "margin-bottom:14px" },
+            h("label", { class: "switch" }, visible, h("span", { text: "ظاهر في الموقع" })),
+            h("label", { class: "switch" }, featured, h("span", { text: "منتج مميز في الرئيسية" }))
+          ),
+          h("div", { class: "field" }, h("label", { text: "الصورة الرئيسية" }), imagePath,
+            h("div", { class: "row" },
+              h("button", {
+                class: "btn ghost small", type: "button", text: "اختر من الصور",
+                onclick: () => pickImage((path) => { imagePath.value = path; })
+              })
+            )
+          ),
+          h("div", { class: "field" }, h("label", { text: "معرض الصور (مسارات مفصولة بفاصلة)" }),
+            h("input", {
+              dir: "ltr", value: (draft.gallery || []).join(", "),
+              oninput: (e) => { draft.gallery = e.target.value.split(",").map((s) => s.trim()).filter(Boolean); }
+            })
+          ),
+          langTabs,
+          langBody
+        );
+        modal(isNew ? "منتج جديد" : "تعديل المنتج", body, [
+          h("button", { class: "btn ghost", type: "button", text: "إلغاء", onclick: closeModal }),
+          h("button", {
+            class: "btn primary", type: "button", text: "حفظ",
+            onclick: () => {
+              let id = isNew ? idInput.value.trim().toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/^-|-$/g, "") : draft.id;
+              if (!id || !/^[a-z0-9-]+$/.test(id)) { toast("المعرّف يجب أن يكون لاتينياً صغيراً وشرطات فقط.", "err"); return; }
+              if (isNew && products.some((p) => p.id === id)) { toast("يوجد منتج بنفس المعرّف.", "err"); return; }
+              draft.id = id;
+              draft.visual = visualSelect.value;
+              draft.category = catSelect.value;
+              draft.visible = visible.checked;
+              draft.featured = featured.checked;
+              draft.image = imagePath.value.trim() || null;
+              if (isNew) products.push(draft);
+              else {
+                const index = products.findIndex((p) => p.id === draft.id);
+                products[index] = draft;
+              }
+              PATHS.messages.forEach((path) => {
+                const code = path.split("/")[1].split(".")[0];
+                state.files[path].json.products.items[id] = copy[code];
+                addChange("edit", "نص منتج: " + id + " (" + code + ")", path);
+              });
+              addChange("edit", (isNew ? "إضافة منتج: " : "تعديل منتج: ") + englishName(draft), PATHS.products);
+              closeModal();
+              renderProducts();
+              toast("تم حفظ المنتج في المسودة.", "ok");
+            }
+          })
+        ]);
+      }
+      function pickImage(onPick) {
+        const body = h("div", {});
+        const grid = h("div", { class: "images" });
+        function renderGridItems() {
+          clear(grid);
+          state.images.concat(state.pendingUploads).forEach((image) => {
+            grid.append(h("button", {
+              class: "image-card", type: "button",
+              onclick: () => { onPick(image.path); closeModal(); }
+            },
+              h("img", { src: imageUrl(image.path), alt: image.name }),
+              h("div", { class: "meta", text: image.name })
+            ));
+          });
+          if (!grid.children.length) grid.append(h("p", { class: "muted", text: "لا توجد صور بعد." }));
+        }
+        renderGridItems();
+        body.append(h("div", { class: "notice", text: "اختر صورة من القائمة، أو ارفع صورة جديدة من شاشة الصور ثم عد للاختيار." }), grid);
+        modal("اختيار صورة", body);
+      }
+
+      /* ─────────────────────────── Categories ─────────────────────────── */
+      function renderCategories() {
+        const node = document.getElementById("screen-categories");
+        clear(node);
+        node.append(h("div", { class: "card" },
+          h("h3", { text: "الفئات" }),
+          h("p", { class: "muted", text: "اسم الفئة يُعدَّل من الملفّات الستة، والترتيب هنا يحدّد ترتيب الفلاتر." }),
+          h("button", { class: "btn primary small", type: "button", text: "+ فئة جديدة", onclick: addCategory })
+        ));
+        const list = h("div", { class: "card" });
+        node.append(list);
+        categoriesArray().slice().sort((a, b) => categoriesArray().indexOf(a) - categoriesArray().indexOf(b)).forEach((category) => {
+          const used = productsArray().filter((p) => p.category === category.id);
+          const enLabel = messagesFor("en").categories[category.id] || category.id;
+          list.append(h("div", { class: "list-row" },
+            h("div", { class: "grow" },
+              h("div", { class: "title-line", text: enLabel }),
+              h("div", { class: "muted tiny", text: category.id + (used.length ? " · يستخدمها " + used.length + " منتج" : "") })
+            ),
+            h("div", { class: "actions" },
+              h("button", { class: "btn ghost small", type: "button", text: "↑", onclick: () => moveCategory(category, -1) }),
+              h("button", { class: "btn ghost small", type: "button", text: "↓", onclick: () => moveCategory(category, 1) }),
+              h("button", { class: "btn ghost small", type: "button", text: "أسماء", onclick: () => editCategoryLabels(category) }),
+              h("button", {
+                class: "btn danger small", type: "button", text: "حذف",
+                onclick: () => {
+                  if (used.length) {
+                    toast("لا يمكن حذف فئة تستخدمها منتجات: " + used.map(englishName).join("، "), "err");
+                    return;
+                  }
+                  confirmAsk("حذف الفئة", "حذف " + enLabel + "؟", () => {
+                    const arr = categoriesArray();
+                    arr.splice(arr.indexOf(category), 1);
+                    PATHS.messages.forEach((path) => {
+                      delete state.files[path].json.categories[category.id];
+                      addChange("edit", "حذف فئة: " + category.id, path);
+                    });
+                    addChange("edit", "حذف فئة: " + enLabel, PATHS.categories);
+                    renderCategories();
+                  }, "حذف");
+                }
+              })
+            )
+          ));
+        });
+      }
+      function moveCategory(category, delta) {
+        const arr = categoriesArray();
+        const index = arr.indexOf(category);
+        const target = index + delta;
+        if (target < 0 || target >= arr.length) return;
+        arr.splice(index, 1);
+        arr.splice(target, 0, category);
+        addChange("edit", "ترتيب الفئات", PATHS.categories);
+        renderCategories();
+      }
+      function addCategory() {
+        const idInput = h("input", { dir: "ltr", placeholder: "مثلاً: kitchen" });
+        const fields = LOCALES.map((locale) => ({
+          locale: locale,
+          input: h("input", { dir: locale.dir, lang: locale.lang || locale.code })
+        }));
+        const body = h("div", {},
+          h("div", { class: "field" }, h("label", { text: "معرّف الفئة" }), idInput),
+          ...fields.map((field) => h("div", { class: "field" },
+            h("label", { text: field.locale.label }), field.input
+          ))
+        );
+        modal("فئة جديدة", body, [
+          h("button", { class: "btn ghost", type: "button", text: "إلغاء", onclick: closeModal }),
+          h("button", {
+            class: "btn primary", type: "button", text: "إضافة",
+            onclick: () => {
+              const id = idInput.value.trim().toLowerCase().replace(/[^a-z0-9-]+/g, "-").replace(/^-|-$/g, "");
+              if (!/^[a-z0-9-]+$/.test(id)) { toast("معرّف غير صالح.", "err"); return; }
+              if (categoriesArray().some((c) => c.id === id)) { toast("الفئة موجودة.", "err"); return; }
+              categoriesArray().push({ id: id, labelKey: id });
+              PATHS.messages.forEach((path) => {
+                const code = path.split("/")[1].split(".")[0];
+                const field = fields.find((f) => f.locale.code === code);
+                state.files[path].json.categories[id] = field.input.value.trim();
+                addChange("edit", "فئة جديدة: " + id + " (" + code + ")", path);
+              });
+              addChange("edit", "إضافة فئة: " + id, PATHS.categories);
+              closeModal();
+              renderCategories();
+            }
+          })
+        ]);
+      }
+      function editCategoryLabels(category) {
+        const fields = LOCALES.map((locale) => ({
+          locale: locale,
+          input: h("input", {
+            dir: locale.dir, lang: locale.lang || locale.code,
+            value: messagesFor(locale.code).categories[category.id] || ""
+          })
+        }));
+        const body = h("div", {}, ...fields.map((field) => h("div", { class: "field" },
+          h("label", { text: field.locale.label }), field.input
+        )));
+        modal("أسماء الفئة: " + category.id, body, [
+          h("button", { class: "btn ghost", type: "button", text: "إلغاء", onclick: closeModal }),
+          h("button", {
+            class: "btn primary", type: "button", text: "حفظ",
+            onclick: () => {
+              PATHS.messages.forEach((path) => {
+                const code = path.split("/")[1].split(".")[0];
+                const field = fields.find((f) => f.locale.code === code);
+                state.files[path].json.categories[category.id] = field.input.value.trim();
+                addChange("edit", "اسم فئة: " + category.id + " (" + code + ")", path);
+              });
+              closeModal();
+              renderCategories();
+            }
+          })
+        ]);
+      }
+
+      /* ─────────────────────────── Texts ─────────────────────────── */
+      function walkLeaves(value, prefix, out) {
+        if (Array.isArray(value)) {
+          value.forEach((item, index) => walkLeaves(item, prefix ? prefix + "." + index : String(index), out));
+        } else if (value && typeof value === "object") {
+          Object.keys(value).forEach((key) => {
+            const path = prefix ? prefix + "." + key : key;
+            walkLeaves(value[key], path, out);
+          });
+        } else {
+          out.push({ path: prefix, value: value });
+        }
+      }
+      function getByPath(root, path) {
+        return String(path).split(".").reduce((node, key) => (node == null ? undefined : node[key]), root);
+      }
+      function setByPath(root, path, value) {
+        const parts = String(path).split(".");
+        let node = root;
+        for (let i = 0; i < parts.length - 1; i++) node = node[parts[i]];
+        node[parts[parts.length - 1]] = value;
+      }
+      function leafPaths(root) {
+        const leaves = [];
+        walkLeaves(root, "", leaves);
+        return leaves;
+      }
+      function placeholders(text) {
+        const out = [];
+        const regex = /\{([^}]+)\}/g;
+        let match;
+        while ((match = regex.exec(String(text || "")))) out.push(match[1]);
+        return out;
+      }
+      function renderTexts() {
+        const node = document.getElementById("screen-texts");
+        clear(node);
+        const langSelect = h("select", {});
+        LOCALES.forEach((locale) => langSelect.append(h("option", { value: locale.code, text: locale.label })));
+        langSelect.value = state.textsLang;
+        langSelect.onchange = () => { state.textsLang = langSelect.value; renderTexts(); };
+        const search = h("input", { type: "search", placeholder: "ابحث في المفاتيح أو النصوص...", value: state.textsQuery });
+        search.oninput = () => { state.textsQuery = search.value; renderTexts(); };
+        const onlyMissing = h("input", { type: "checkbox", checked: state.textsMissingOnly });
+        onlyMissing.onchange = () => { state.textsMissingOnly = onlyMissing.checked; renderTexts(); };
+        node.append(h("div", { class: "card" },
+          h("div", { class: "row" },
+            h("div", { class: "field", style: "flex:1;margin:0" }, h("label", { text: "اللغة" }), langSelect),
+            h("label", { class: "switch" }, onlyMissing, h("span", { text: "الناقصة فقط" }))
+          ),
+          h("div", { class: "field", style: "margin-top:10px" }, search),
+          h("p", { class: "muted tiny", text: "المفاتيح للقراءة فقط. تُعدَّل القيم فقط، لتبقى بنية الملفات الستة متطابقة." })
+        ));
+        const enLeaves = leafPaths(messagesFor("en").json || messagesFor("en"));
+        const targetMessages = messagesFor(state.textsLang);
+        const query = state.textsQuery.trim().toLowerCase();
+        const groups = {};
+        enLeaves.forEach((leaf) => {
+          const targetValue = getByPath(targetMessages, leaf.path);
+          const missing = typeof targetValue !== "string" || !targetValue.trim();
+          if (state.textsMissingOnly && !missing) return;
+          if (query && !(leaf.path.toLowerCase().includes(query) || String(leaf.value).toLowerCase().includes(query) || String(targetValue).toLowerCase().includes(query))) return;
+          const group = leaf.path.split(".")[0];
+          (groups[group] = groups[group] || []).push({ leaf: leaf, targetValue: targetValue, missing: missing });
+        });
+        const locale = LOCALES.find((l) => l.code === state.textsLang);
+        Object.keys(groups).forEach((group) => {
+          const details = h("details", { class: "tree", open: Boolean(query || state.textsMissingOnly) });
+          details.append(h("summary", { text: group + " (" + groups[group].length + ")" }));
+          const body = h("div", { class: "tree-body" });
+          groups[group].forEach((entry) => {
+            const reference = entry.leaf.value;
+            const warn = typeof reference === "string"
+              ? placeholders(reference).filter((token) => !placeholders(entry.targetValue).includes(token))
+              : [];
+            const area = h("textarea", {
+              dir: locale.dir, lang: locale.lang || locale.code,
+              value: typeof entry.targetValue === "string" ? entry.targetValue : "",
+              oninput: (event) => {
+                setByPath(targetMessages, entry.leaf.path, event.target.value);
+                addChange("edit", "نص " + state.textsLang.toUpperCase() + " → " + entry.leaf.path, "messages/" + state.textsLang + ".json");
+              }
+            });
+            const leaf = h("div", { class: "leaf" },
+              h("div", { class: "path", text: entry.leaf.path }),
+              h("div", { class: "ref", text: typeof reference === "string" ? reference : JSON.stringify(reference) }),
+              area,
+              warn.length ? h("div", { class: "warn", text: "تنبيه: ينقص " + warn.join("، ") }) : null
+            );
+            if (entry.missing) area.style.borderColor = "#b42318";
+            body.append(leaf);
+          });
+          details.append(body);
+          node.append(details);
+        });
+      }
+
+      /* ─────────────────────────── Images ─────────────────────────── */
+      function usedBy(path) {
+        return productsArray().filter((p) => p.image === path || (p.gallery || []).includes(path)).map(englishName);
+      }
+      function renderImages() {
+        const node = document.getElementById("screen-images");
+        clear(node);
+        const fileInput = h("input", { type: "file", accept: "image/jpeg,image/png,image/webp", multiple: true, class: "sr-only" });
+        fileInput.onchange = async () => {
+          for (const file of Array.from(fileInput.files || [])) {
+            try {
+              const upload = await processImage(file);
+              state.pendingUploads.push(upload);
+              addChange("upload", "رفع صورة: " + upload.name, upload.path);
+              toast("تمت معالجة " + upload.name, "ok");
+            } catch (error) { toast(error.message, "err"); }
+          }
+          fileInput.value = "";
+          renderImages();
+        };
+        const drop = h("div", { class: "notice", text: "اسحب الصور هنا أو اضغط رفع. JPG/PNG/WebP حتى 10MB، تُحوَّل إلى WebP تلقائياً." });
+        drop.addEventListener("dragover", (event) => event.preventDefault());
+        drop.addEventListener("drop", (event) => {
+          event.preventDefault();
+          fileInput.files = event.dataTransfer.files;
+          fileInput.dispatchEvent(new Event("change"));
+        });
+        node.append(h("div", { class: "card" },
+          h("div", { class: "row" },
+            h("button", { class: "btn primary small", type: "button", text: "رفع صور", onclick: () => fileInput.click() }),
+            h("button", { class: "btn ghost small", type: "button", text: "تحديث القائمة", onclick: async () => { await refreshImages(); renderImages(); } })
+          ),
+          fileInput,
+          drop
+        ));
+        const grid = h("div", { class: "images", style: "margin-top:12px" });
+        const all = state.images.concat(state.pendingUploads);
+        if (!all.length) grid.append(h("p", { class: "muted", text: "لا توجد صور مرفوعة بعد." }));
+        all.forEach((image) => {
+          const users = usedBy(image.path);
+          grid.append(h("div", { class: "image-card" },
+            h("img", { src: imageUrl(image.path), alt: image.name }),
+            h("div", { class: "meta", text: image.name + (users.length ? " — يستخدمها: " + users.join("، ") : "") }),
+            h("div", { class: "actions" },
+              h("button", {
+                class: "btn danger small", type: "button", text: "حذف",
+                onclick: () => {
+                  const doDelete = () => {
+                    const pendingIndex = state.pendingUploads.findIndex((u) => u.path === image.path);
+                    if (pendingIndex >= 0) state.pendingUploads.splice(pendingIndex, 1);
+                    else if (!state.imageDeletions.includes(image.path)) state.imageDeletions.push(image.path);
+                    addChange("delete", "حذف صورة: " + image.name, image.path);
+                    state.images = state.images.filter((i) => i.path !== image.path);
+                    saveDraft();
+                    renderImages();
+                  };
+                  if (users.length) confirmAsk("حذف صورة مستخدمة", "هذه الصورة مستخدمة في: " + users.join("، ") + ". حذفها سيترك المنتج بلا صورة.", doDelete, "حذف nevertheless");
+                  else doDelete();
+                }
+              })
+            )
+          ));
+        });
+        node.append(grid);
+      }
+      async function processImage(file) {
+        if (!/^image\/(jpeg|png|webp)$/.test(file.type)) throw new Error("الملف يجب أن يكون JPG أو PNG أو WebP.");
+        if (file.size > 10 * 1024 * 1024) throw new Error("الملف أكبر من 10MB.");
+        const bitmap = await createImageBitmap(file);
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+        let max = 1600;
+        let blob = null;
+        for (let attempt = 0; attempt < 4; attempt++) {
+          const scale = Math.min(1, max / Math.max(bitmap.width, bitmap.height));
+          const width = Math.max(1, Math.round(bitmap.width * scale));
+          const height = Math.max(1, Math.round(bitmap.height * scale));
+          canvas.width = width;
+          canvas.height = height;
+          context.drawImage(bitmap, 0, 0, width, height);
+          let quality = 0.82;
+          for (let i = 0; i < 3; i++) {
+            blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/webp", quality));
+            if (!blob) throw new Error("تعذّر تحويل الصورة إلى WebP.");
+            if (blob.size <= 500 * 1024) break;
+            quality -= 0.12;
+          }
+          if (blob.size <= 500 * 1024) break;
+          max = Math.round(max * 0.8);
+        }
+        bitmap.close();
+        const base64 = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(String(reader.result).split(",")[1]);
+          reader.onerror = reject;
+          reader.readAsDataURL(blob);
+        });
+        const name = "product-" + Date.now() + "-" + Math.random().toString(36).slice(2, 7) + ".webp";
+        return {
+          name: name,
+          path: "public/uploads/products/" + name,
+          base64: base64,
+          dataUrl: "data:image/webp;base64," + base64,
+          size: blob.size
+        };
+      }
+
+      /* ─────────────────────────── Settings ─────────────────────────── */
+      function renderSettings() {
+        const node = document.getElementById("screen-settings");
+        clear(node);
+        const settings = settingsObject();
+        const fields = {
+          whatsapp: h("input", { dir: "ltr", value: settings.contact.whatsapp || "" }),
+          email: h("input", { type: "email", dir: "ltr", value: settings.contact.email || "" }),
+          phone: h("input", { dir: "ltr", value: settings.contact.phone || "" }),
+          address: h("input", { value: settings.contact.address || "" }),
+          cataloguePdf: h("input", { dir: "ltr", value: settings.cataloguePdf || "" })
+        };
+        const body = h("div", { class: "card" },
+          h("div", { class: "field" }, h("label", { text: "واتساب (صيغة دولية: +9647701211099)" }), fields.whatsapp),
+          h("div", { class: "field" }, h("label", { text: "البريد الإلكتروني" }), fields.email),
+          h("div", { class: "field" }, h("label", { text: "رقم الهاتف للعرض" }), fields.phone),
+          h("div", { class: "field" }, h("label", { text: "العنوان (اختياري)" }), fields.address),
+          h("div", { class: "field" }, h("label", { text: "رابط PDF الكتالوج (اختياري)" }), fields.cataloguePdf),
+          h("p", { class: "muted tiny", text: "الحقل الفارغ يعني أن القناة معطّلة ولن يظهر خيار إرسالها." }),
+          h("button", {
+            class: "btn primary", type: "button", text: "حفظ الإعدادات",
+            onclick: () => {
+              settings.contact.whatsapp = fields.whatsapp.value.trim();
+              settings.contact.email = fields.email.value.trim();
+              settings.contact.phone = fields.phone.value.trim();
+              settings.contact.address = fields.address.value.trim();
+              settings.cataloguePdf = fields.cataloguePdf.value.trim() || null;
+              const problems = validateSettings(settings);
+              if (problems.length) { toast(problems.join(" · "), "err"); return; }
+              addChange("edit", "تعديل الإعدادات", PATHS.settings);
+              toast("تم حفظ الإعدادات في المسودة.", "ok");
+            }
+          })
+        );
+        node.append(body);
+      }
+      function validateSettings(settings) {
+        const problems = [];
+        const whatsapp = String(settings.contact.whatsapp || "").trim();
+        if (whatsapp && !/^\+?\d{8,15}$/.test(whatsapp)) problems.push("صيغة واتساب غير صحيحة");
+        const email = String(settings.contact.email || "").trim();
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) problems.push("صيغة البريد غير صحيحة");
+        return problems;
+      }
+
+      /* ─────────────────────────── Publish ─────────────────────────── */
+      function validateAll() {
+        const errors = [];
+        const warnings = [];
+        const products = productsArray();
+        const categories = categoriesArray();
+        const ids = new Set();
+        const categoryIds = new Set(categories.map((c) => c.id));
+        const allPaths = new Set(state.images.map((i) => i.path).concat(state.pendingUploads.map((u) => u.path)));
+        products.forEach((product, index) => {
+          if (!/^[a-z0-9-]+$/.test(product.id || "")) errors.push("معرّف منتج غير صالح: " + product.id);
+          if (ids.has(product.id)) errors.push("معرّف مكرر: " + product.id);
+          ids.add(product.id);
+          if (!categoryIds.has(product.category)) errors.push("فئة غير موجودة للمنتج: " + product.id);
+          if (typeof product.order !== "number" || !isFinite(product.order)) errors.push("ترتيب غير صالح للمنتج: " + product.id);
+          [product.image].concat(product.gallery || []).filter(Boolean).forEach((path) => {
+            if (!allPaths.has(path)) errors.push("صورة غير موجودة: " + path + " (" + product.id + ")");
+          });
+        });
+        const en = messagesFor("en");
+        const enLeaves = leafPaths(en).map((leaf) => leaf.path).sort();
+        LOCALES.forEach((locale) => {
+          const dict = messagesFor(locale.code);
+          const leaves = leafPaths(dict).map((leaf) => leaf.path).sort();
+          if (JSON.stringify(leaves) !== JSON.stringify(enLeaves)) {
+            errors.push("بنية ملف " + locale.code + " لا تطابق الإنجليزية");
+          }
+        });
+        products.forEach((product) => {
+          LOCALES.forEach((locale) => {
+            const item = messagesFor(locale.code).products.items[product.id];
+            if (!item || !String(item.name || "").trim() || !String(item.detail || "").trim()) {
+              if (locale.code === "en") errors.push("المنتج " + product.id + " ينقصه الاسم أو الوصف بالإنجليزية");
+              else warnings.push("المنتج " + product.id + " ينقصه الاسم أو الوصف بـ " + locale.label);
+            }
+          });
+        });
+        validateSettings(settingsObject()).forEach((problem) => errors.push(problem));
+        if (!state.changes.length) errors.push("لا توجد تغييرات للنشر.");
+        return { errors: errors, warnings: warnings };
+      }
+      function renderPublish() {
+        const node = document.getElementById("screen-publish");
+        clear(node);
+        const list = h("div", { class: "card" });
+        if (!state.changes.length) list.append(h("p", { class: "muted", text: "لا توجد تغييرات بعد." }));
+        state.changes.forEach((change) => {
+          list.append(h("div", { class: "list-row" },
+            h("div", { class: "grow" }, h("div", { class: "title-line", text: change.label }), h("div", { class: "muted tiny", text: change.path })),
+            h("span", { class: "badge", text: change.type })
+          ));
+        });
+        const messageInput = h("input", { dir: "ltr", value: "Admin: update content (" + state.changes.length + " changes)" });
+        const problems = h("div", {});
+        const publishButton = h("button", { class: "btn primary big", type: "button", text: "نشر على GitHub" });
+        publishButton.onclick = async () => {
+          problems.textContent = "";
+          publishButton.disabled = true;
+          publishButton.textContent = "جارٍ التحقق...";
+          try {
+            const result = validateAll();
+            if (result.errors.length) {
+              problems.append(h("div", { class: "notice error" }, ...result.errors.map((error) => h("div", { text: "• " + error }))));
+              return;
+            }
+            if (result.warnings.length) {
+              problems.append(h("div", { class: "notice warn" }, ...result.warnings.map((warning) => h("div", { text: "• " + warning }))));
+            }
+            publishButton.textContent = "فحص الملفات...";
+            for (const path of ALL_JSON_PATHS) {
+              if (!state.files[path]) continue;
+              const fresh = await readFile(path);
+              if (fresh.sha !== state.files[path].sha) {
+                modal("تعارض في الملفات", h("p", { class: "muted", text: "الملف تغيّر من مكان ثاني: " + path + ". أعد التحميل قبل النشر." }), [
+                  h("button", { class: "btn ghost", type: "button", text: "إغلاق", onclick: closeModal }),
+                  h("button", { class: "btn primary", type: "button", text: "إعادة التحميل", onclick: async () => { closeModal(); await enterApp(); } })
+                ]);
+                return;
+              }
+            }
+            publishButton.textContent = "جارٍ النشر...";
+            const byPath = new Map();
+            state.changes.filter((change) => ALL_JSON_PATHS.includes(change.path)).forEach((change) => {
+              byPath.set(change.path, { path: change.path, content: jsonText(change.path), encoding: "utf-8" });
+            });
+            state.pendingUploads.forEach((upload) => {
+              byPath.set(upload.path, { path: upload.path, content: upload.base64, encoding: "base64" });
+            });
+            state.imageDeletions.forEach((path) => {
+              byPath.set(path, { path: path, remove: true });
+            });
+            const commit = await commitMany(Array.from(byPath.values()), messageInput.value.trim() || "Admin: update content");
+            state.changes = [];
+            state.pendingUploads = [];
+            state.imageDeletions = [];
+            clearDraft();
+            for (const path of ALL_JSON_PATHS) state.files[path] = await readFile(path);
+            await refreshImages();
+            updateBadge();
+            renderAll();
+            modal("تم النشر بنجاح",
+              h("div", {},
+                h("div", { class: "notice", text: "الموقع رح يتحدّث خلال حوالي دقيقة." }),
+                h("a", { href: "https://github.com/" + OWNER + "/" + REPO + "/commit/" + commit.sha, target: "_blank", rel: "noopener", text: "عرض الـ commit" }),
+                h("br"),
+                h("a", { href: ACTIONS, target: "_blank", rel: "noopener", text: "فتح GitHub Actions" })
+              ),
+              [h("button", { class: "btn primary", type: "button", text: "حسناً", onclick: closeModal })]
+            );
+          } catch (error) {
+            problems.append(h("div", { class: "notice error", text: error.message || "تعذّر النشر." }));
+          } finally {
+            publishButton.disabled = false;
+            publishButton.textContent = "نشر على GitHub";
+          }
+        };
+        node.append(
+          h("div", { class: "card" }, h("h3", { text: "الملفات والتغييرات" }), list),
+          h("div", { class: "card" },
+            h("div", { class: "field" }, h("label", { text: "رسالة الـ commit" }), messageInput),
+            problems,
+            publishButton,
+            h("button", {
+              class: "btn danger small", type: "button", text: "تجاهل كل التعديلات", style: "margin-top:10px",
+              onclick: () => confirmAsk("تجاهل التعديلات", "سيتم إعادة تحميل البيانات من GitHub وفقدان كل التعديلات غير المنشورة.", async () => {
+                clearDraft();
+                await enterApp();
+              }, "تجاهل")
+            })
+          )
+        );
+      }
+
+      /* ─────────────────────────── History ─────────────────────────── */
+      function renderHistory() {
+        const node = document.getElementById("screen-history");
+        clear(node);
+        const box = h("div", { class: "card" }, h("p", { class: "muted", text: "جارٍ تحميل السجل..." }));
+        node.append(box);
+        getRecentCommits().then((commits) => {
+          clear(box);
+          box.append(h("h3", { text: "آخر 15 commit" }));
+          (commits || []).forEach((commit) => {
+            const restoreMenu = h("select", {});
+            restoreMenu.append(h("option", { value: "", text: "استعادة ملف..." }));
+            [PATHS.products, ...PATHS.messages].forEach((path) => {
+              restoreMenu.append(h("option", { value: path, text: path }));
+            });
+            restoreMenu.onchange = async () => {
+              const path = restoreMenu.value;
+              if (!path) return;
+              restoreMenu.value = "";
+              try {
+                const file = await readFile(path, commit.sha);
+                state.files[path].json = file.json;
+                addChange("restore", "استعادة " + path, path);
+                toast("تمت الاستعادة في المسودة. انشرها لإنشاء commit جديد.", "ok");
+              } catch (error) { toast(error.message, "err"); }
+            };
+            box.append(h("div", { class: "list-row" },
+              h("div", { class: "grow" },
+                h("div", { class: "title-line", text: commit.commit.message.split("\n")[0] }),
+                h("div", { class: "muted tiny", text: new Date(commit.commit.author.date).toLocaleString("ar") + " — " + (commit.author ? commit.author.login : commit.commit.author.name) })
+              ),
+              h("div", { class: "actions" },
+                h("a", { class: "btn ghost small", href: commit.html_url, target: "_blank", rel: "noopener", text: "عرض" }),
+                restoreMenu
+              )
+            ));
+          });
+        }).catch((error) => {
+          clear(box);
+          box.append(h("div", { class: "notice error", text: error.message }));
+        });
+      }
+
+      /* ─────────────────────────── Wire static buttons ─────────────────── */
+      document.getElementById("btnLogoutTop").addEventListener("click", lockSession);
+      document.getElementById("btnLogoutSide").addEventListener("click", lockSession);
+      document.getElementById("btnForgetSide").addEventListener("click", forgetDevice);
+
+      showLogin();
+    </script>
+  </body>
+</html>

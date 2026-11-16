@@ -1,6 +1,6 @@
 [
   {
-    "id": "glassCloth",
+    "id": "glass-cloth",
     "visual": "glassCloth",
     "image": null,
     "gallery": [],
@@ -11,29 +11,36 @@
     "order": 1
   },
   {
-    "id": "windowSqueegee",
+    "id": "window-squeegee",
     "visual": "windowSqueegee",
     "image": null,
     "gallery": [],
     "category": "glass",
-    "sizes": ["25 cm", "35 cm"],
+    "sizes": [
+      "25 cm",
+      "35 cm"
+    ],
     "featured": true,
     "visible": true,
     "order": 2
   },
   {
-    "id": "floorSqueegee",
+    "id": "floor-squeegee",
     "visual": "floorSqueegee",
     "image": null,
     "gallery": [],
     "category": "floor",
-    "sizes": ["45 cm", "55 cm", "75 cm"],
+    "sizes": [
+      "45 cm",
+      "55 cm",
+      "75 cm"
+    ],
     "featured": true,
     "visible": true,
     "order": 3
   },
   {
-    "id": "floorMop",
+    "id": "floor-mop",
     "visual": "floorMop",
     "image": null,
     "gallery": [],
@@ -44,7 +51,7 @@
     "order": 4
   },
   {
-    "id": "brushesBrooms",
+    "id": "brushes-brooms",
     "visual": "brushesBrooms",
     "image": null,
     "gallery": [],
@@ -55,12 +62,17 @@
     "order": 5
   },
   {
-    "id": "wasteBags",
+    "id": "waste-bags",
     "visual": "wasteBags",
     "image": null,
     "gallery": [],
     "category": "bags",
-    "sizes": ["30 L", "60 L", "120 L", "240 L"],
+    "sizes": [
+      "30 L",
+      "60 L",
+      "120 L",
+      "240 L"
+    ],
     "featured": false,
     "visible": true,
     "order": 6

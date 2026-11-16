@@ -23,6 +23,10 @@ const checks = [
   ["404 language links prefix", notFound.includes('href="/diamond/ar/"')],
   ["sitemap uses Pages URL", sitemap.includes("https://diamondhausde-hub.github.io/diamond/en/")],
   ["robots sitemap URL", robots.includes("https://diamondhausde-hub.github.io/diamond/sitemap.xml")],
+  ["robots disallows admin", robots.includes("Disallow: /diamond/admin/")],
+  ["sitemap excludes admin", !sitemap.includes("/admin/")],
+  ["admin page exported", fs.existsSync("out/admin/index.html")],
+  ["uploads folder exported", fs.existsSync("out/uploads/products/.gitkeep")],
   [".nojekyll exists", fs.existsSync("out/.nojekyll")],
 ];
 

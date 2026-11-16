@@ -165,7 +165,7 @@
   },
   "products": {
     "items": {
-      "glassCloth": {
+      "glass-cloth": {
         "name": "Chiffon DIAMOND pour verre et miroir",
         "short": "Une finition plus nette grâce à une microfibre premium conçue pour nettoyer efficacement le verre et les miroirs.",
         "detail": "Conçu pour nettoyer efficacement le verre et les miroirs, ce chiffon en microfibre élimine la saleté et les marques du quotidien tout en offrant une finition propre et sans traces.",
@@ -197,7 +197,7 @@
           }
         ]
       },
-      "windowSqueegee": {
+      "window-squeegee": {
         "name": "Raclette compacte pour vitres",
         "short": "Un outil pratique pour nettoyer les vitres, avec une lame souple en caoutchouc et une poignée confortable.",
         "detail": "Conçue pour faciliter le nettoyage du verre et des fenêtres, elle dispose d'une lame souple qui élimine efficacement l'eau et les résidus de surface.",
@@ -213,7 +213,7 @@
           }
         ]
       },
-      "floorSqueegee": {
+      "floor-squeegee": {
         "name": "Raclette professionnelle à double lame pour sols",
         "short": "Une solution pratique pour le nettoyage des sols, conçue pour éliminer efficacement l'eau.",
         "detail": "Sa double lame permet de rassembler et d'évacuer l'eau sur les sols lisses, pour un nettoyage quotidien plus simple et plus efficace.",
@@ -233,7 +233,7 @@
           }
         ]
       },
-      "floorMop": {
+      "floor-mop": {
         "name": "Balai à plat professionnel 360°",
         "short": "Un outil polyvalent pour nettoyer les sols, doté d'une articulation à rotation complète et d'une recharge microfibre lavable.",
         "detail": "Conçu pour faciliter le nettoyage des sols, son articulation rotative améliore la maniabilité, tandis que la recharge microfibre lavable accompagne un usage quotidien répété.",
@@ -257,7 +257,7 @@
           }
         ]
       },
-      "brushesBrooms": {
+      "brushes-brooms": {
         "name": "Brosses et balais de nettoyage renforcés",
         "short": "Des brosses de nettoyage durables, conçues pour différentes surfaces et tâches quotidiennes.",
         "detail": "Une gamme pratique de brosses de nettoyage adaptées à différents besoins, avec des options de poils souples et durs.",
@@ -281,7 +281,7 @@
           }
         ]
       },
-      "wasteBags": {
+      "waste-bags": {
         "name": "Sacs poubelle renforcés DIAMOND",
         "short": "Des sacs poubelle résistants, conçus pour la collecte pratique des déchets au quotidien.",
         "detail": "Conçus pour faciliter la collecte des déchets, les sacs DIAMOND associent résistance, capacités adaptées et fiabilité au quotidien.",

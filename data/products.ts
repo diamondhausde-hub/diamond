@@ -4,6 +4,14 @@ import rawCategories from "./categories.json";
 export type CategoryId = "glass" | "floor" | "brushes" | "bags";
 
 export type ProductId =
+  | "glass-cloth"
+  | "window-squeegee"
+  | "floor-squeegee"
+  | "floor-mop"
+  | "brushes-brooms"
+  | "waste-bags";
+
+export type VisualId =
   | "glassCloth"
   | "windowSqueegee"
   | "floorSqueegee"
@@ -14,7 +22,7 @@ export type ProductId =
 export type Product = {
   id: ProductId;
   /** Illustration key rendered by <ProductVisual />. Used when `image` is null. */
-  visual: ProductId;
+  visual: VisualId;
   /** Optional uploaded photograph. null = show the SVG illustration. */
   image: string | null;
   gallery: string[];

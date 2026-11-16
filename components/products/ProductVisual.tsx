@@ -1,7 +1,7 @@
-import type { ProductId } from "@/data/products";
+import type { VisualId } from "@/data/products";
 
 type Props = {
-  variant: ProductId;
+  variant: VisualId;
   className?: string;
 };
 
