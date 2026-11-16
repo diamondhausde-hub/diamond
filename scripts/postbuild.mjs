@@ -13,3 +13,7 @@ if (!fs.existsSync(path.join("out", "index.html")) && !fs.existsSync(path.join("
 
 fs.copyFileSync(source, target);
 console.log("postbuild: branded 404 page copied to out/404.html");
+
+// GitHub Pages must not run Jekyll over the `_next` folder.
+fs.copyFileSync(path.join("static", ".nojekyll"), path.join("out", ".nojekyll"));
+console.log("postbuild: .nojekyll copied to out/");

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AppLink } from "@/components/ui/AppLink";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -7,6 +8,17 @@ import { products } from "@/data/products";
 import { Logo } from "@/components/Logo";
 import { ProductVisual } from "@/components/products/ProductVisual";
 import { CatalogueActions } from "@/components/catalogue/CatalogueActions";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  return buildPageMetadata(locale, "catalog");
+}
 
 export default async function CatalogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

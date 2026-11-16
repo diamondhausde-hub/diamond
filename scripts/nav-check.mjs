@@ -12,7 +12,10 @@ page.on("response", (res) => {
   if (res.status() >= 400) logs.push(res.status() + " " + res.url());
 });
 
-await page.goto("http://localhost:4173/en/", { waitUntil: "networkidle" });
+await page.goto(
+  "http://localhost:4173" + (process.env.BASE_PATH ?? "/diamond") + "/en/",
+  { waitUntil: "networkidle" },
+);
 await page.waitForTimeout(800);
 logs.length = 0;
 await page.getByRole("link", { name: "Products", exact: true }).first().click();

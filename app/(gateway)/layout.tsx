@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { cairo, inter } from "@/lib/fonts";
+import { withBasePath } from "@/lib/paths";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Welcome to DIAMOND. Select your preferred language to enter the website.",
   robots: { index: false, follow: false },
-  icons: { icon: "/icon.svg" },
+  icons: { icon: withBasePath("/icon.svg") },
 };
 
 export default function GatewayRootLayout({ children }: { children: ReactNode }) {

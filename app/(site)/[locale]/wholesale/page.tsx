@@ -1,9 +1,21 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/i18n/messages";
+import { buildPageMetadata } from "@/lib/seo";
 import { isLocale } from "@/i18n/config";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { WholesaleCta } from "@/components/wholesale/WholesaleCta";
 import { Reveal } from "@/components/ui/Reveal";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  return buildPageMetadata(locale, "wholesale");
+}
 
 export default async function WholesalePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

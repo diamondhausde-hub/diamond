@@ -28,7 +28,7 @@ npm install
 npm run dev
 ```
 
-Open <http://localhost:3000>. The root `/` is the language gateway; each language lives under its prefix, e.g. `/en/`, `/ar/`, `/de/`.
+Open <http://localhost:3000/diamond/>. The site is configured for the GitHub Pages project path `/diamond` (see `next.config.ts`). The root `/diamond/` is the language gateway; each language lives under its prefix, e.g. `/diamond/en/`, `/diamond/ar/`.
 
 ## Build
 
@@ -46,13 +46,21 @@ The static site is written to `out/`.
 npm run preview
 ```
 
-Serves `out/` at <http://localhost:4173>. `npm start` serves the same export on port 3000.
+Serves `out/` at <http://localhost:4173/diamond/>. `npm start` serves the same export on port 3000.
 
 ## Deploy
 
-The output in `out/` is plain static files and can be hosted anywhere.
+The output in `out/` is plain static files and can be hosted anywhere. The project is preconfigured for GitHub Pages at `https://diamondhausde-hub.github.io/diamond/`.
 
-### Apache (recommended for classic hosting)
+### GitHub Pages (current setup)
+
+- `next.config.ts` sets `basePath: "/diamond"` and `assetPrefix: "/diamond/"`.
+- `.github/workflows/deploy.yml` builds on every push to `main`, uploads `out/` and deploys it with the official Pages actions. It also sets `NEXT_PUBLIC_SITE_URL` for canonical URLs, hreflang and the sitemap.
+- `scripts/postbuild.mjs` copies the branded `404.html` and a `.nojekyll` marker into `out/` (GitHub Pages uses the root `404.html` as its custom error page).
+- In the repository, go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**. Then push to `main` and watch the Actions tab.
+- If your default branch is `master` instead of `main`, change `branches: [main]` in the workflow.
+
+### Apache (classic hosting)
 
 1. Set the real domain (see [Configuration](#configuration)).
 2. Run `npm run build`.
@@ -70,7 +78,7 @@ root /var/www/diamond/out;
 index index.html;
 error_page 404 /404.html;
 
-location /_next/static/ {
+location /diamond/_next/static/ {
     add_header Cache-Control "public, max-age=31536000, immutable";
 }
 ```
@@ -81,7 +89,7 @@ location /_next/static/ {
 - Output directory: `out`
 - No server runtime is required.
 
-> **Sub-path hosting:** the configuration assumes the domain root. If the site must live under a sub-path, set `basePath`/`assetPrefix` in `next.config.ts` and adjust `.htaccess` / the 404 path accordingly.
+> **Changing the base path:** if the site moves to a domain root, set `basePath`/`assetPrefix` back to empty in `next.config.ts`, update `BASE_PATH` in `lib/paths.ts`, set `NEXT_PUBLIC_SITE_URL` to the new root URL, and update the defaults in `static/404.html` and the QA scripts.
 
 ---
 
@@ -92,10 +100,10 @@ location /_next/static/ {
 Create `.env.local` (or set the variable in your host's dashboard):
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://www.your-domain.com
+NEXT_PUBLIC_SITE_URL=https://diamondhausde-hub.github.io/diamond
 ```
 
-No trailing slash. Without it, canonical URLs fall back to `http://localhost:3000`, which is only suitable for local development. Rebuild after changing it.
+No trailing slash; include the `/diamond` path. The deploy workflow sets this automatically. For a local override, put it in `.env.local` (see `.env.example`). Without it, canonical URLs fall back to `http://localhost:3000`, which is only suitable for local development. Rebuild after changing it.
 
 ### 2. Contact channels
 

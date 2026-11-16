@@ -5,6 +5,7 @@ import { getDictionary } from "@/i18n/messages";
 import { getDirection, isLocale, locales, type Locale } from "@/i18n/config";
 import { siteConfig } from "@/config/site";
 import { cairo, inter } from "@/lib/fonts";
+import { withBasePath } from "@/lib/paths";
 import { LocaleProvider } from "@/components/LocaleProvider";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -15,7 +16,7 @@ import "../../globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   applicationName: "DIAMOND",
-  icons: { icon: "/icon.svg" },
+  icons: { icon: withBasePath("/icon.svg") },
   formatDetection: { telephone: false },
 };
 

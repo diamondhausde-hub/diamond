@@ -1,11 +1,23 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/i18n/messages";
+import { buildPageMetadata } from "@/lib/seo";
 import { isLocale } from "@/i18n/config";
 import { products } from "@/data/products";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { CatalogClient } from "@/components/products/CatalogClient";
 import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/config/site";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  return buildPageMetadata(locale, "products");
+}
 
 export default async function ProductsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AppLink } from "@/components/ui/AppLink";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
@@ -5,7 +6,7 @@ import { getDictionary } from "@/i18n/messages";
 import { isLocale, locales } from "@/i18n/config";
 import { products } from "@/data/products";
 import { siteConfig } from "@/config/site";
-import { absoluteUrl } from "@/lib/seo";
+import { absoluteUrl, buildPageMetadata } from "@/lib/seo";
 import { ProductVisual } from "@/components/products/ProductVisual";
 import { ProductCard } from "@/components/products/ProductCard";
 import { CompareSlider } from "@/components/glass-lab/CompareSlider";
@@ -13,6 +14,16 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Logo } from "@/components/Logo";
 import { JsonLd } from "@/components/JsonLd";
 import { WholesaleCta } from "@/components/wholesale/WholesaleCta";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  return buildPageMetadata(locale, "home");
+}
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

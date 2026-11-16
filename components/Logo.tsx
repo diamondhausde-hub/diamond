@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { withBasePath } from "@/lib/paths";
 
 type Props = {
   variant?: "navy" | "white";
@@ -12,7 +13,7 @@ export function Logo({ variant = "navy", className, priority, width = 200 }: Pro
   const height = Math.round((width * 151.69) / 710.33);
   return (
     <Image
-      src={variant === "white" ? "/brand/logo-white.svg" : "/brand/logo.svg"}
+      src={withBasePath(variant === "white" ? "/brand/logo-white.svg" : "/brand/logo.svg")}
       alt="DIAMOND"
       width={width}
       height={height}

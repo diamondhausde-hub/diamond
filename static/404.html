@@ -179,8 +179,8 @@
     <div class="wrap">
       <header>
         <div class="shell bar">
-          <a href="/en/" aria-label="DIAMOND">
-            <img src="/brand/logo.svg" alt="DIAMOND" width="148" height="28" />
+          <a data-logo-link href="/diamond/en/" aria-label="DIAMOND">
+            <img data-logo-img src="/diamond/brand/logo.svg" alt="DIAMOND" width="148" height="28" />
           </a>
           <span data-slogan>Cleanliness you can trust</span>
         </div>
@@ -193,8 +193,8 @@
           <h1 data-title>Page not found.</h1>
           <p data-description>The page you are looking for isn't here.</p>
           <div class="actions">
-            <a class="button primary" data-home href="/en/">Back to home</a>
-            <a class="button" data-products href="/en/products/">Products</a>
+            <a class="button primary" data-home href="/diamond/en/">Back to home</a>
+            <a class="button" data-products href="/diamond/en/products/">Products</a>
           </div>
         </div>
       </main>
@@ -202,12 +202,12 @@
       <footer>
         <div class="shell foot">
           <nav class="langs" aria-label="Languages">
-            <a href="/en/" data-lang="en" lang="en">English</a>
-            <a href="/ar/" data-lang="ar" lang="ar">العربية</a>
-            <a href="/de/" data-lang="de" lang="de">Deutsch</a>
-            <a href="/fr/" data-lang="fr" lang="fr">Français</a>
-            <a href="/it/" data-lang="it" lang="it">Italiano</a>
-            <a href="/zh/" data-lang="zh" lang="zh-Hans">中文</a>
+            <a href="/diamond/en/" data-lang="en" lang="en">English</a>
+            <a href="/diamond/ar/" data-lang="ar" lang="ar">العربية</a>
+            <a href="/diamond/de/" data-lang="de" lang="de">Deutsch</a>
+            <a href="/diamond/fr/" data-lang="fr" lang="fr">Français</a>
+            <a href="/diamond/it/" data-lang="it" lang="it">Italiano</a>
+            <a href="/diamond/zh/" data-lang="zh" lang="zh-Hans">中文</a>
           </nav>
           <p class="copy" data-copy>© DIAMOND. All rights reserved.</p>
         </div>
@@ -273,7 +273,10 @@
           },
         };
 
-        var segment = location.pathname.split("/")[1] || "en";
+        var parts = location.pathname.split("/").filter(Boolean);
+        var base = parts[0] === "diamond" ? "/diamond" : "";
+        if (base) parts.shift();
+        var segment = parts[0] || "en";
         var locale = copy[segment] ? segment : "en";
         var t = copy[locale];
 
@@ -291,15 +294,24 @@
         set("[data-slogan]", t.slogan);
         set("[data-copy]", "© " + new Date().getFullYear() + " DIAMOND. " + t.rights);
 
-        var home = document.querySelector("[data-home]");
-        var products = document.querySelector("[data-products]");
-        if (home) {
-          home.textContent = t.home;
-          home.setAttribute("href", "/" + locale + "/");
-        }
-        if (products) {
-          products.textContent = t.products;
-          products.setAttribute("href", "/" + locale + "/products/");
+        var link = function (selector, path) {
+          var el = document.querySelector(selector);
+          if (el) el.setAttribute("href", base + path);
+        };
+
+        link("[data-logo-link]", "/" + locale + "/");
+        link("[data-home]", "/" + locale + "/");
+        link("[data-products]", "/" + locale + "/products/");
+
+        var logo = document.querySelector("[data-logo-img]");
+        if (logo && base === "") logo.setAttribute("src", "/brand/logo.svg");
+
+        var langLinks = document.querySelectorAll("[data-lang]");
+        for (var i = 0; i < langLinks.length; i++) {
+          langLinks[i].setAttribute(
+            "href",
+            base + "/" + langLinks[i].getAttribute("data-lang") + "/",
+          );
         }
       })();
     </script>

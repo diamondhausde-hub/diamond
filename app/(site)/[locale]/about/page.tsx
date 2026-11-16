@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AppLink } from "@/components/ui/AppLink";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
@@ -6,6 +7,17 @@ import { isLocale } from "@/i18n/config";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal } from "@/components/ui/Reveal";
 import { Logo } from "@/components/Logo";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  return buildPageMetadata(locale, "about");
+}
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

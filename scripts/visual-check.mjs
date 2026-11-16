@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 import fs from "node:fs";
 import path from "node:path";
 
-const base = "http://localhost:4173";
+const base = "http://localhost:4173" + (process.env.BASE_PATH ?? "/diamond");
 const outDir = path.join(process.env.TEMP || ".", "diamond-qa");
 fs.mkdirSync(outDir, { recursive: true });
 const browser = await chromium.launch({ channel: "msedge" });

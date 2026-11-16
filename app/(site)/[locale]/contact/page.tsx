@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AppLink } from "@/components/ui/AppLink";
 import { notFound } from "next/navigation";
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
@@ -6,6 +7,17 @@ import { isLocale } from "@/i18n/config";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { siteConfig } from "@/config/site";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  return buildPageMetadata(locale, "contact");
+}
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

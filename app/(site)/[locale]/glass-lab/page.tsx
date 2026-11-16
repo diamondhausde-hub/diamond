@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AppLink } from "@/components/ui/AppLink";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
@@ -8,6 +9,17 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { CompareSlider } from "@/components/glass-lab/CompareSlider";
 import { ProductCard } from "@/components/products/ProductCard";
 import { Reveal } from "@/components/ui/Reveal";
+import { buildPageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  if (!isLocale(locale)) notFound();
+  return buildPageMetadata(locale, "glassLab");
+}
 
 export default async function GlassLabPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

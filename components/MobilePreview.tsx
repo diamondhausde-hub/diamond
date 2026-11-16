@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Monitor, Smartphone, X } from "lucide-react";
 import { useMessages } from "@/components/LocaleProvider";
+import { BASE_PATH } from "@/lib/paths";
 
 type Props = {
   /**
@@ -64,7 +65,7 @@ export function MobilePreview({ variant = "default", className = "" }: Props) {
                 className="pointer-events-none absolute left-1/2 top-2 z-10 h-[22px] w-[108px] -translate-x-1/2 rounded-full bg-navy"
               />
               <iframe
-                src={`${pathname}?preview=1`}
+                src={`${BASE_PATH}${pathname}?preview=1`}
                 title={messages.preview.title}
                 className="block h-[min(800px,calc(100dvh-170px))] w-[min(370px,calc(100vw-80px))] border-0 bg-white"
               />
