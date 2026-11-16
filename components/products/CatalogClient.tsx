@@ -73,7 +73,7 @@ export function CatalogClient() {
           item.highlight,
           messages.categories[product.category],
           ...item.specs.flatMap((spec) => [spec.label, spec.value]),
-          ...item.sizes,
+          ...product.sizes,
         ].join(" "),
       );
       return tokens.every((token) => haystack.includes(token));

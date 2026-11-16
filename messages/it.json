@@ -171,14 +171,31 @@
         "detail": "Progettato per pulire vetri e specchi in modo efficiente, questo panno in microfibra rimuove sporco e segni quotidiani offrendo una finitura pulita e senza aloni.",
         "highlight": "Vetro pulito. Risultati nitidi.",
         "specs": [
-          { "label": "Materiale", "value": "Microfibra tedesca" },
-          { "label": "Densità", "value": "450 g/m²" },
-          { "label": "Finitura", "value": "Pulizia senza pelucchi" },
-          { "label": "Risultato", "value": "Finitura senza aloni" },
-          { "label": "Ideale per", "value": "Vetri & specchi" },
-          { "label": "Uso", "value": "Efficace con sola acqua" }
-        ],
-        "sizes": []
+          {
+            "label": "Materiale",
+            "value": "Microfibra tedesca"
+          },
+          {
+            "label": "Densità",
+            "value": "450 g/m²"
+          },
+          {
+            "label": "Finitura",
+            "value": "Pulizia senza pelucchi"
+          },
+          {
+            "label": "Risultato",
+            "value": "Finitura senza aloni"
+          },
+          {
+            "label": "Ideale per",
+            "value": "Vetri & specchi"
+          },
+          {
+            "label": "Uso",
+            "value": "Efficace con sola acqua"
+          }
+        ]
       },
       "windowSqueegee": {
         "name": "Tergivetro compatto",
@@ -186,10 +203,15 @@
         "detail": "Progettato per pulire comodamente vetri e finestre, presenta una lama flessibile che rimuove efficacemente acqua e residui superficiali.",
         "highlight": "Pulizia fluida. Finitura limpida.",
         "specs": [
-          { "label": "Lama", "value": "Gomma / silicone tedesco flessibile" },
-          { "label": "Impugnatura", "value": "Design ergonomico" }
-        ],
-        "sizes": ["25 cm", "35 cm"]
+          {
+            "label": "Lama",
+            "value": "Gomma / silicone tedesco flessibile"
+          },
+          {
+            "label": "Impugnatura",
+            "value": "Design ergonomico"
+          }
+        ]
       },
       "floorSqueegee": {
         "name": "Tergipavimento professionale a doppia lama",
@@ -197,11 +219,19 @@
         "detail": "Il design a doppia lama raccoglie e rimuove l'acqua dalle superfici lisce, rendendo le pulizie quotidiane più semplici ed efficienti.",
         "highlight": "Asciugatura efficiente dei pavimenti.",
         "specs": [
-          { "label": "Lama", "value": "Doppia lama in schiuma ad alta densità" },
-          { "label": "Superfici", "value": "Ceramica e marmo" },
-          { "label": "Prestazioni", "value": "Rimozione efficiente dell'acqua" }
-        ],
-        "sizes": ["45 cm", "55 cm", "75 cm"]
+          {
+            "label": "Lama",
+            "value": "Doppia lama in schiuma ad alta densità"
+          },
+          {
+            "label": "Superfici",
+            "value": "Ceramica e marmo"
+          },
+          {
+            "label": "Prestazioni",
+            "value": "Rimozione efficiente dell'acqua"
+          }
+        ]
       },
       "floorMop": {
         "name": "Lavapavimenti professionale 360°",
@@ -209,12 +239,23 @@
         "detail": "Progettato per pulire i pavimenti con facilità, lo snodo rotante migliora la manovrabilità mentre il ricambio in microfibra lavabile supporta l'uso quotidiano ripetuto.",
         "highlight": "Movimento flessibile. Pulizia efficace.",
         "specs": [
-          { "label": "Snodo", "value": "Rotazione a 360°" },
-          { "label": "Ricambio", "value": "Microfibra altamente assorbente" },
-          { "label": "Cura", "value": "Ricambio lavabile" },
-          { "label": "Uso", "value": "Pulizia quotidiana pratica" }
-        ],
-        "sizes": []
+          {
+            "label": "Snodo",
+            "value": "Rotazione a 360°"
+          },
+          {
+            "label": "Ricambio",
+            "value": "Microfibra altamente assorbente"
+          },
+          {
+            "label": "Cura",
+            "value": "Ricambio lavabile"
+          },
+          {
+            "label": "Uso",
+            "value": "Pulizia quotidiana pratica"
+          }
+        ]
       },
       "brushesBrooms": {
         "name": "Spazzole e scope rinforzate",
@@ -222,12 +263,23 @@
         "detail": "Una gamma pratica di spazzole per la pulizia, adatta a diverse esigenze e disponibile con setole morbide o dure.",
         "highlight": "La spazzola giusta per ogni compito.",
         "specs": [
-          { "label": "Setole", "value": "Polimero PBT rinforzato" },
-          { "label": "Durata", "value": "Resistente alla deformazione e al calore" },
-          { "label": "Versione morbida", "value": "Per la pulizia interna" },
-          { "label": "Versione dura", "value": "Per lo sfregamento" }
-        ],
-        "sizes": []
+          {
+            "label": "Setole",
+            "value": "Polimero PBT rinforzato"
+          },
+          {
+            "label": "Durata",
+            "value": "Resistente alla deformazione e al calore"
+          },
+          {
+            "label": "Versione morbida",
+            "value": "Per la pulizia interna"
+          },
+          {
+            "label": "Versione dura",
+            "value": "Per lo sfregamento"
+          }
+        ]
       },
       "wasteBags": {
         "name": "Sacchi rifiuti DIAMOND ad alta resistenza",
@@ -235,13 +287,27 @@
         "detail": "Pensati per una raccolta comoda, i sacchi DIAMOND offrono un equilibrio pratico tra resistenza, capacità disponibili e affidabilità quotidiana.",
         "highlight": "Forza affidabile per l'uso quotidiano.",
         "specs": [
-          { "label": "Materiale", "value": "Film ad alta densità" },
-          { "label": "Struttura", "value": "Resistente alle perdite" },
-          { "label": "Robustezza", "value": "Resistente agli strappi" },
-          { "label": "Fondo", "value": "Saldatura a stella" },
-          { "label": "Chiusura", "value": "Opzione con laccio" }
-        ],
-        "sizes": ["30 L", "60 L", "120 L", "240 L"]
+          {
+            "label": "Materiale",
+            "value": "Film ad alta densità"
+          },
+          {
+            "label": "Struttura",
+            "value": "Resistente alle perdite"
+          },
+          {
+            "label": "Robustezza",
+            "value": "Resistente agli strappi"
+          },
+          {
+            "label": "Fondo",
+            "value": "Saldatura a stella"
+          },
+          {
+            "label": "Chiusura",
+            "value": "Opzione con laccio"
+          }
+        ]
       }
     }
   },

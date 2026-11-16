@@ -171,14 +171,31 @@
         "detail": "Conçu pour nettoyer efficacement le verre et les miroirs, ce chiffon en microfibre élimine la saleté et les marques du quotidien tout en offrant une finition propre et sans traces.",
         "highlight": "Un verre propre. Des résultats nets.",
         "specs": [
-          { "label": "Matière", "value": "Microfibre allemande" },
-          { "label": "Densité", "value": "450 g/m²" },
-          { "label": "Finition", "value": "Nettoyage sans peluches" },
-          { "label": "Résultat", "value": "Finition sans traces" },
-          { "label": "Conçu pour", "value": "Verre & miroirs" },
-          { "label": "Utilisation", "value": "Efficace à l'eau seule" }
-        ],
-        "sizes": []
+          {
+            "label": "Matière",
+            "value": "Microfibre allemande"
+          },
+          {
+            "label": "Densité",
+            "value": "450 g/m²"
+          },
+          {
+            "label": "Finition",
+            "value": "Nettoyage sans peluches"
+          },
+          {
+            "label": "Résultat",
+            "value": "Finition sans traces"
+          },
+          {
+            "label": "Conçu pour",
+            "value": "Verre & miroirs"
+          },
+          {
+            "label": "Utilisation",
+            "value": "Efficace à l'eau seule"
+          }
+        ]
       },
       "windowSqueegee": {
         "name": "Raclette compacte pour vitres",
@@ -186,10 +203,15 @@
         "detail": "Conçue pour faciliter le nettoyage du verre et des fenêtres, elle dispose d'une lame souple qui élimine efficacement l'eau et les résidus de surface.",
         "highlight": "Un nettoyage fluide. Une finition nette.",
         "specs": [
-          { "label": "Lame", "value": "Caoutchouc / silicone allemand souple" },
-          { "label": "Poignée", "value": "Design ergonomique" }
-        ],
-        "sizes": ["25 cm", "35 cm"]
+          {
+            "label": "Lame",
+            "value": "Caoutchouc / silicone allemand souple"
+          },
+          {
+            "label": "Poignée",
+            "value": "Design ergonomique"
+          }
+        ]
       },
       "floorSqueegee": {
         "name": "Raclette professionnelle à double lame pour sols",
@@ -197,11 +219,19 @@
         "detail": "Sa double lame permet de rassembler et d'évacuer l'eau sur les sols lisses, pour un nettoyage quotidien plus simple et plus efficace.",
         "highlight": "Un séchage efficace des sols.",
         "specs": [
-          { "label": "Lame", "value": "Double lame en mousse haute densité" },
-          { "label": "Surfaces", "value": "Céramique et marbre" },
-          { "label": "Performance", "value": "Élimination efficace de l'eau" }
-        ],
-        "sizes": ["45 cm", "55 cm", "75 cm"]
+          {
+            "label": "Lame",
+            "value": "Double lame en mousse haute densité"
+          },
+          {
+            "label": "Surfaces",
+            "value": "Céramique et marbre"
+          },
+          {
+            "label": "Performance",
+            "value": "Élimination efficace de l'eau"
+          }
+        ]
       },
       "floorMop": {
         "name": "Balai à plat professionnel 360°",
@@ -209,12 +239,23 @@
         "detail": "Conçu pour faciliter le nettoyage des sols, son articulation rotative améliore la maniabilité, tandis que la recharge microfibre lavable accompagne un usage quotidien répété.",
         "highlight": "Un mouvement souple. Un nettoyage efficace.",
         "specs": [
-          { "label": "Articulation", "value": "Rotation à 360°" },
-          { "label": "Recharge", "value": "Microfibre très absorbante" },
-          { "label": "Entretien", "value": "Recharge lavable" },
-          { "label": "Utilisation", "value": "Nettoyage quotidien pratique" }
-        ],
-        "sizes": []
+          {
+            "label": "Articulation",
+            "value": "Rotation à 360°"
+          },
+          {
+            "label": "Recharge",
+            "value": "Microfibre très absorbante"
+          },
+          {
+            "label": "Entretien",
+            "value": "Recharge lavable"
+          },
+          {
+            "label": "Utilisation",
+            "value": "Nettoyage quotidien pratique"
+          }
+        ]
       },
       "brushesBrooms": {
         "name": "Brosses et balais de nettoyage renforcés",
@@ -222,12 +263,23 @@
         "detail": "Une gamme pratique de brosses de nettoyage adaptées à différents besoins, avec des options de poils souples et durs.",
         "highlight": "La bonne brosse pour chaque tâche.",
         "specs": [
-          { "label": "Poils", "value": "Polymère PBT renforcé" },
-          { "label": "Durabilité", "value": "Résistant à la déformation et à la chaleur" },
-          { "label": "Version souple", "value": "Pour le nettoyage intérieur" },
-          { "label": "Version dure", "value": "Pour le récurage" }
-        ],
-        "sizes": []
+          {
+            "label": "Poils",
+            "value": "Polymère PBT renforcé"
+          },
+          {
+            "label": "Durabilité",
+            "value": "Résistant à la déformation et à la chaleur"
+          },
+          {
+            "label": "Version souple",
+            "value": "Pour le nettoyage intérieur"
+          },
+          {
+            "label": "Version dure",
+            "value": "Pour le récurage"
+          }
+        ]
       },
       "wasteBags": {
         "name": "Sacs poubelle renforcés DIAMOND",
@@ -235,13 +287,27 @@
         "detail": "Conçus pour faciliter la collecte des déchets, les sacs DIAMOND associent résistance, capacités adaptées et fiabilité au quotidien.",
         "highlight": "Une solidité fiable au quotidien.",
         "specs": [
-          { "label": "Matière", "value": "Film haute épaisseur" },
-          { "label": "Construction", "value": "Résistant aux fuites" },
-          { "label": "Solidité", "value": "Résistant à la déchirure" },
-          { "label": "Fond", "value": "Soudure en étoile" },
-          { "label": "Fermeture", "value": "Option cordon de serrage" }
-        ],
-        "sizes": ["30 L", "60 L", "120 L", "240 L"]
+          {
+            "label": "Matière",
+            "value": "Film haute épaisseur"
+          },
+          {
+            "label": "Construction",
+            "value": "Résistant aux fuites"
+          },
+          {
+            "label": "Solidité",
+            "value": "Résistant à la déchirure"
+          },
+          {
+            "label": "Fond",
+            "value": "Soudure en étoile"
+          },
+          {
+            "label": "Fermeture",
+            "value": "Option cordon de serrage"
+          }
+        ]
       }
     }
   },

@@ -18,7 +18,11 @@ const pages: { key: PageKey; path: string }[] = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
+  // The private admin panel lives in public/admin and must never be indexed.
+  const excluded = ["/admin/"];
+
   for (const page of pages) {
+    if (excluded.some((path) => page.path.includes(path))) continue;
     const languages: Record<string, string> = {};
     for (const locale of locales) {
       languages[locale] = `${siteConfig.url}/${locale}${page.path}`;

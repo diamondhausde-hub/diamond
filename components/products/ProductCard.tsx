@@ -4,6 +4,7 @@ import { AppLink } from "@/components/ui/AppLink";
 import { ArrowRight } from "lucide-react";
 import { useLocale } from "@/components/LocaleProvider";
 import { ProductVisual } from "@/components/products/ProductVisual";
+import { withBasePath } from "@/lib/paths";
 import type { Product } from "@/data/products";
 
 type Props = {
@@ -24,7 +25,7 @@ export function ProductCard({ product, onOpen }: Props) {
         {product.image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={product.image}
+            src={withBasePath(product.image)}
             alt={item.name}
             className="h-full w-full object-cover"
             loading="lazy"
